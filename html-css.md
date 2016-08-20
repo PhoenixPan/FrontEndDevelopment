@@ -1,4 +1,23 @@
 
+
+1. Change radius:  
+```
+border-radius: 50%; // Round
+border-radius: 10px; 
+```
+2. Hyperlink for text and pitcure:  
+```
+<p>Click here for <a href="#">cat photos</a>.</p>
+
+<a href = "#"><img class="classA classB" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat. "></a>
+```
+
+
+
+
+
+
+
 ```
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
@@ -34,12 +53,26 @@
   <a href="http://www.freecatphotoapp.com">cat photos</a>
 </p>
 
-<img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back. ">
+<a href = "#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back. "></a>
 
 <p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
 
+<p>Things cats love:</p>
+<ul>
+  <li>cat nip</li>
+  <li>laser pointers</li>
+  <li>lasagna</li>
+</ul>
+
+<p>Top 3 things cats hate:</p>
+<ol>
+  <li>flea treatment</li>
+  <li>thunder</li>
+  <li>other cats</li>
+</ol>
+
+<form action="/submit-cat-photo">
+  <input type="text" placeholder="cat photo URL">
+</form>
+
 ```
-
-1. 
-2. 
-
