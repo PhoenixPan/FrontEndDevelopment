@@ -39,6 +39,6 @@
 <p class="red-text">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
 ```
 
-1. <a href="#"> creates a dead link;  
+1.  "<a href="#">" creates a dead link;  
 2. 
 
