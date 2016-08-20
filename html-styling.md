@@ -5,9 +5,10 @@
 ```
 <style>
   body {
-    background-color: black;
+    background-color: #000000;  //hex code color
+    background-color: rgb(255, 165, 0); //RGB color
     font-family: Monospace;
-    color: green;
+    color: F0F;                 // shortened version
   }
   #orange-text {
     color: orange;
