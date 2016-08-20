@@ -109,7 +109,7 @@ Add <__link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css
 ```
 8. Font Awesome icons
 Add on the top: <_link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/_>  
-In text:
+In text: a button with "like" icon  
 ```
 <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"></i>Like</button>
 ```
