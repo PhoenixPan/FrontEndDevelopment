@@ -11,7 +11,7 @@ border-radius: 10px;
 
 <a href = "#"><img class="classA classB" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat. "></a>
 ```
-3. Within <style>, use "." to indicate class and "#" to indicate id  
+3. Within style, use "." to indicate class and "#" to indicate id  
 
 
 
