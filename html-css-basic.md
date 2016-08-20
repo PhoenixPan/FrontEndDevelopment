@@ -1,6 +1,7 @@
 ##Basic
 
 ```
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
   .red-text {
@@ -87,3 +88,4 @@ border-radius: 10px;
 <a href = "#"><img class="classA classB" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat. "></a>
 ```
 3. Within style, use "." to indicate class and "#" to indicate id  
+4. Bootstrap, add <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/> at the top to automatically resize your html page  
