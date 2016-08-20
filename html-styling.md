@@ -1,5 +1,29 @@
 ##HTML styling
 
+1. Override priority:  
+!important(pink) > inline style(white) > id(orange) > bottom of style(blue) > top of style(pink)
+```
+<style>
+  body {
+    background-color: black;
+    font-family: Monospace;
+    color: green;
+  }
+  #orange-text {
+    color: orange;
+  }
+  .pink-text {
+    color: pink !important;
+  }
+  .blue-text {
+    color: blue;
+  }
+  
+</style>
+<h1 id="orange-text" class="pink-text blue-text" style = "color:white">Hello World!</h1>
+```
+
+
 
 ```
 <style>
@@ -17,7 +41,8 @@
 
   .yellow-box {
     background-color: yellow;
-    padding: 10px;
+    padding: 20px 40px 20px 40px;  //top, right, bottom, left
+    margin: 20px 40px 20px 40px;
   }
   
   .red-box {
