@@ -11,7 +11,7 @@ border-radius: 10px;
 
 <a href = "#"><img class="classA classB" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat. "></a>
 ```
-
+3. Within <style>, use "." to indicate class and "#" to indicate id  
 
 
 
@@ -44,6 +44,15 @@ border-radius: 10px;
   .smaller-image {
     width: 100px;
   }
+  
+  .silver-background {
+    background-color:silver;
+  }
+  
+  #cat-photo-form {
+    background-color:green;
+  }
+  
 </style>
 
 <h2 class="red-text">CatPhotoApp</h2>
@@ -72,7 +81,7 @@ border-radius: 10px;
   </ol>
 </div>
 
-<form action="/submit-cat-photo">
+<form id = "cat-photo-form" action="/submit-cat-photo">
   <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
   <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
   <label><input type="checkbox" name="personality" checked> Loving</label>
