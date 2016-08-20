@@ -1,8 +1,6 @@
 
 ```
-
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-<img src="https://bit.ly/fcc-relaxing-cat" alt="Kitty picture ">
 <style>
   .red-text {
     color: red;
@@ -16,9 +14,22 @@
     font-size: 16px;
     font-family: Monospace;
   }
+
+  .thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+  }
+
+  .smaller-image {
+    width: 100px;
+    border-radius:10px; <!--border-radius: 50%;-->
+  }
 </style>
 
 <h2 class="red-text">CatPhotoApp</h2>
+
+<img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back. ">
 
 <p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
 <p class="red-text">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
