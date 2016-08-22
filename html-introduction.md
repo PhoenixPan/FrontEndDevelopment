@@ -73,6 +73,32 @@ Click to send an email example, use %20 to replace space.
 </p>
 ```
 
+##Image  
+Background (gif and jpg only).   
+```
+<body background="/i/eg_background.jpg">
+```
+Use alt to display a text message when the picture is unavailable.  
+```
+<img src="boat.gif" alt="This is not available">
+```
+Insert image in other elements and align it accordingly (bottom, middle, top).  
+```
+<p>Picture <img src="/i/eg_cute.gif" align="bottom"> in text.</p>
+```
+Image map: http://www.w3school.com.cn/tiy/t.asp?f=html_areamap  
+```
+<img src="/i/eg_planets.jpg" usemap="#planetmap" />
+<map name="planetmap" id="planetmap">
+
+<area
+shape="rect"
+coords="0,0,110,260"
+href ="/example/html/sun.html"/>
+
+</map>
+```
+
 ##Depreciated (replace with style):
 ```
 <center>
@@ -92,7 +118,7 @@ Click to send an email example, use %20 to replace space.
 ```
 
 
-##CSS  
+#CSS  
 1. Change the style of the entire page in <_head_>, change some elements in a leading <_style_> block, or change one element within it <_p style="color: red"_><_/p_>  
 2. Remove underline in hyperlink: style="text-decoration:none"  
 3. Limit the application of class. In this case, only <_span_> within <_p_> will be affected.   
