@@ -2,8 +2,16 @@
 1. Newline: 
 ```
 line1 <br /> line2
+<p>Paragraph A<br />Paragraph B</p>
 ```
 
+Depreciated:
+```
+<center>
+<font> and <basefont>
+<s> and <strike>	
+<u>
+```
 
 
 ##Attributes: http://www.w3school.com.cn/tags/html_ref_standardattributes.asp
@@ -16,3 +24,13 @@ line1 <br /> line2
 <hr />
 <p>Paragraph B</p>
 ```
+Depreciated:
+```
+align
+bgcolor
+color
+```
+
+##Charactistics:  
+1. Format: spaces in source code will be reduced to one and in-text newline does not work either. Use one or more "<*br /*>". 
+2. 
