@@ -1,14 +1,14 @@
-##Tag 
+#Tag 
 http://www.w3school.com.cn/tags/index.asp  
 http://www.w3school.com.cn/html/html_formatting.asp  
   
-Newline: 
+##Newline 
 ```
 line1 <br /> line2
 <p>Paragraph A<br />Paragraph B</p>
 ```
   
-Text modification  
+##Text modification  
 ```
 <b>
 <strong>
@@ -24,14 +24,15 @@ Text modification
 <blockquote> // indent
 ```
 
+##SEO
 Provide useful information for search engine or translation: abbrevation, cite, define  
 ```
 <p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
 <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
 <p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> was founded in 1948.</p>
 ```
-
-Code elements:http://www.w3school.com.cn/html/html_quotation_elements.asp  
+##Code elements  
+http://www.w3school.com.cn/html/html_quotation_elements.asp  
 Use <_pre_> to keep spaces and lines  
 ```
 <p>Coding Example:</p>
@@ -48,12 +49,13 @@ var person = {
 </code>
 ```
 
-<_Span_>: change a part of the content  
+##<_Span_>  
+change a part of the content  
 ```
 <p><span style="color:red">some text.</span>some other text.</p>
 ```
 
-Hyper link or anchor  
+##Anchor (hyper link)    
 Use target="_blank" to open in a new page  
 ```
 <a href="http://www.w3school.com.cn/" target="_blank">Visit W3School!</a>
@@ -63,9 +65,15 @@ Use name to jump to a tag in the same page (of course other pages as well). Gran
 <a name="tips">Mainpage - Help</a>
 <a href="#tips">Help</a>
 ```
+Click to send an email example, use %20 to replace space.  
+```
+<p>
+这是另一个 mailto 链接：
+<a href="mailto:someone@microsoft.com?cc=someoneelse@microsoft.com&bcc=andsomeoneelse2@microsoft.com&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!">发送邮件！</a>
+</p>
+```
 
-
-#####Depreciated (replace with style):
+##Depreciated (replace with style):
 ```
 <center>
 <font> and <basefont> (style="font-family:verdana")
