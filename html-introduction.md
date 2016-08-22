@@ -1,13 +1,13 @@
 ##Tag: 
 http://www.w3school.com.cn/tags/index.asp  
 http://www.w3school.com.cn/html/html_formatting.asp  
-  
-1. Newline: 
+Newline: 
 ```
 line1 <br /> line2
 <p>Paragraph A<br />Paragraph B</p>
 ```
-2. Text modification:  
+  
+Text modification:  
 ```
 <b>
 <strong>
@@ -22,13 +22,15 @@ line1 <br /> line2
 <q> // add quotation: <p>Our goal is:<q>Cure the world.</q></p>
 <blockquote> // indent
 ```
-3. Provide useful information for search engine or translation: abbrevation, cite, define;  
+
+Provide useful information for search engine or translation: abbrevation, cite, define;  
 ```
 <p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
 <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
 <p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> was founded in 1948.</p>
 ```
-4. Code elements:http://www.w3school.com.cn/html/html_quotation_elements.asp  
+
+Code elements:http://www.w3school.com.cn/html/html_quotation_elements.asp  
 Use <_pre_> to keep spaces and lines  
 ```
 <p>Coding Example:</p>
