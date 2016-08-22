@@ -104,11 +104,11 @@ p.tip span {
 ```
 
 #Attributes  
-http://www.w3school.com.cn/tags/html_ref_standardattributes.asp
-1. Alignment: style="text-align:center"
-2. Background: style="background-color:yellow" 
+http://www.w3school.com.cn/tags/html_ref_standardattributes.asp  
+1. Alignment: style="text-align:center"  
+2. Background: style="background-color:yellow"  
 3. Quotation: use either " or '. Use ' when " is in text: name='Bill "HelloWorld" Gates'  
-4. Divide line: 
+4. Divide line:  
 ```
 <p>Paragraph A</p>
 <hr />
