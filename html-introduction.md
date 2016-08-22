@@ -1,13 +1,14 @@
 ##Tag: 
 http://www.w3school.com.cn/tags/index.asp  
 http://www.w3school.com.cn/html/html_formatting.asp  
+  
 Newline: 
 ```
 line1 <br /> line2
 <p>Paragraph A<br />Paragraph B</p>
 ```
   
-Text modification:  
+Text modification  
 ```
 <b>
 <strong>
@@ -23,7 +24,7 @@ Text modification:
 <blockquote> // indent
 ```
 
-Provide useful information for search engine or translation: abbrevation, cite, define;  
+Provide useful information for search engine or translation: abbrevation, cite, define  
 ```
 <p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
 <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
@@ -45,6 +46,11 @@ var person = {
 }
 </pre>
 </code>
+```
+
+<_Span_>: change a part of the content  
+```
+<p><span style="color:red">some text.</span>some other text.</p>
 ```
 
 #####Depreciated (replace with style):
@@ -75,4 +81,21 @@ color
 
 ##Charactistics:  
 1. Format: spaces in source code will be reduced to one and in-text newline does not work either. Use one or more "<*br /*>". 
-2. 
+2. Conditional annotation
+```
+<!--[if IE 8]>
+    .... some HTML here ....
+<![endif]-->
+```
+
+
+##CSS:   
+1. Change the style of the entire page in <_head_>, change some elements in a leading <_style_> block, or change one element within it <_p style="color: red"_><_/p_>  
+2. Remove underline in hyperlink: style="text-decoration:none"  
+3. Limit the application of class. In this case, only <_span_> within <_p_> will be affected.   
+```
+p.tip span {
+	font-weight:bold;
+	color:#ff9955;
+	}
+```
