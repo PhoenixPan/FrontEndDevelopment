@@ -102,10 +102,18 @@ href ="/example/html/sun.html"/>
 ##Frameset  
 Display multiple htmls in the same page.  
 ```
-<frameset cols="25%,75%">
-   <frame src="frame_a.htm">
-   <frame src="frame_b.htm">
+<html>
+<frameset cols="25%,50%,25%">
+  <frame src="/example/html/frame_a.html">
+  <frame src="/example/html/frame_b.html">
+  <frame src="/example/html/frame_c.html">
+
+<noframes>
+<body>您的浏览器无法处理框架！</body>
+</noframes>
+
 </frameset>
+</html>
 ```
 
 ##Depreciated (replace with style):
