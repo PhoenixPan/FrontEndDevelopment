@@ -1,36 +1,31 @@
 #Tag 
 http://www.w3school.com.cn/tags/index.asp  
 http://www.w3school.com.cn/html/html_formatting.asp  
-  
-##Newline 
+
+##<_head_>
+Title: define title in browser and search engine;  
+Base: provides default link and target;  
+Link: links to outside resources, such as style;  
+Meta: used in many services and serarch engine;  
 ```
-line1 <br /> line2
-<p>Paragraph A<br />Paragraph B</p>
-```
-  
-##Text modification  
-```
-<b>
-<strong>
-<big>
-<small>
-<em>
-<i>
-<sub>
-<sup>
-<ins>
-<del>
-<q> // add quotation: <p>Our goal is:<q>Cure the world.</q></p>
-<blockquote> // indent
+<head>
+  <title>Title of the document</title> 
+  <base href="http://www.w3school.com.cn/images/" />
+  <base target="_blank" />
+  <link rel="stylesheet" type="text/css" href="mystyle.css" />
+  <meta name="description" content="Free Web tutorials on HTML, CSS, XML" />
+  <meta name="author" content="w3school.com.cn">
+</head>
 ```
 
-##SEO
+##More SEO
 Provide useful information for search engine or translation: abbrevation, cite, define  
 ```
 <p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
 <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
 <p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> was founded in 1948.</p>
 ```
+
 ##Code elements  
 http://www.w3school.com.cn/html/html_quotation_elements.asp  
 Use <_pre_> to keep spaces and lines  
@@ -68,8 +63,8 @@ Use name to jump to a tag in the same page (of course other pages as well). Gran
 Click to send an email example, use %20 to replace space.  
 ```
 <p>
-这是另一个 mailto 链接：
-<a href="mailto:someone@microsoft.com?cc=someoneelse@microsoft.com&bcc=andsomeoneelse2@microsoft.com&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!">发送邮件！</a>
+Another mailto link:
+<a href="mailto:someone@microsoft.com?cc=someoneelse@microsoft.com&bcc=andsomeoneelse2@microsoft.com&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!">Send!</a>
 </p>
 ```
 
@@ -109,7 +104,7 @@ Display multiple htmls in the same page.
   <frame src="/example/html/frame_c.html">
 
 <noframes>
-<body>您的浏览器无法处理框架！</body>
+<body>Your browser does not support frameset!</body>
 </noframes>
 
 </frameset>
@@ -133,6 +128,8 @@ Display multiple htmls in the same page.
     .... some HTML here ....
 <![endif]-->
 ```
+3. Special text content such as < and > or space, see: http://www.w3school.com.cn/tags/html_ref_entities.html  
+4. 
 
 
 #Attributes  
@@ -146,6 +143,28 @@ http://www.w3school.com.cn/tags/html_ref_standardattributes.asp
 <hr />
 <p>Paragraph B</p>
 ```
+5. Target: open links with the same target in the target window or the same window
+```
+
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a></p> //Open in "iframe_a"
+
+// Open a new tag when clicked the first time, but uses the same page for more clicks  
+<h3>Table of Contents</h3>
+<ul>
+  <li><a href="/example/html/pref.html" target="view_window">Preface</a></li>
+  <li><a href="/example/html/chap1.html" target="view_window">Chapter 1</a></li>
+  <li><a href="/example/html/chap2.html" target="view_window">Chapter 2</a></li>
+  <li><a href="/example/html/chap3.html" target="view_window">Chapter 3</a></li>
+</ul>
+```
+6. Action:  
+```
+<form action="www.google.com">
+<input></input>
+</form>
+```
+
 #####Depreciated(replace with style):
 ```
 align
