@@ -99,6 +99,15 @@ href ="/example/html/sun.html"/>
 </map>
 ```
 
+##Frameset  
+Display multiple htmls in the same page.  
+```
+<frameset cols="25%,75%">
+   <frame src="frame_a.htm">
+   <frame src="frame_b.htm">
+</frameset>
+```
+
 ##Depreciated (replace with style):
 ```
 <center>
