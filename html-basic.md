@@ -1,8 +1,8 @@
-#Tag 
+#Tag  
 http://www.w3school.com.cn/tags/index.asp  
 http://www.w3school.com.cn/html/html_formatting.asp  
 
-##<_head_>
+##<**head**> - Container of metadata
 Title: define title in browser and search engine;  
 Base: provides default link and target;  
 Link: links to outside resources, such as style;  
@@ -18,33 +18,8 @@ Meta: used in many services and serarch engine;
 </head>
 ```
 
-##More SEO
-Provide useful information for search engine or translation: abbrevation, cite, define  
-```
-<p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
-<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
-<p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> was founded in 1948.</p>
-```
 
-##Code elements  
-http://www.w3school.com.cn/html/html_quotation_elements.asp  
-Use <_pre_> to keep spaces and lines  
-```
-<p>Coding Example:</p>
-
-<code>
-<pre>
-var person = {
-    firstName:"Bill",
-    lastName:"Gates",
-    age:50,
-    eyeColor:"blue"
-}
-</pre>
-</code>
-```
-
-##<_Span_>  
+##<**Span**>  
 change a part of the content  
 ```
 <p><span style="color:red">some text.</span>some other text.</p>
@@ -92,6 +67,29 @@ coords="0,0,110,260"
 href ="/example/html/sun.html"/>
 
 </map>
+```
+
+##More SEO
+Provide useful information for search engine or translation: abbrevation, cite, define  
+```
+<p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+<p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> was founded in 1948.</p>
+```
+
+##<**pre**> to maintain format
+```
+<p>
+<pre>
+   My Bonnie lies over the ocean.
+
+   My Bonnie lies over the sea.
+
+   My Bonnie lies over the ocean.
+
+   Oh, bring back my Bonnie to me.
+</pre>
+</p>
 ```
 
 ##Frameset  
@@ -145,7 +143,6 @@ http://www.w3school.com.cn/tags/html_ref_standardattributes.asp
 ```
 5. Target: open links with the same target in the target window or the same window
 ```
-
 <iframe src="demo_iframe.htm" name="iframe_a"></iframe>
 <p><a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a></p> //Open in "iframe_a"
 
