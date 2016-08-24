@@ -25,7 +25,6 @@ New multimedia elements: <**audio**> and <**video**>.
 
 ##Elements removed
 Tags removed since HTML5 and their replacements  
-Migration from HTML4 to HTML5: http://www.w3schools.com/html/html5_migration.asp  
 
 |    Removed     | Replacement |
 | -------------- |:-----------:|
@@ -69,7 +68,7 @@ Migration from HTML4 to HTML5: http://www.w3schools.com/html/html5_migration.asp
 <!--| <**wbr**>        	| Defines a possible line-break                                                             	|-->
 
 ##Arrtibute syntax
-Type: Empty, Unquoted, Single-quoted, and Double-quoted  
+Type: Empty, Unquoted, Single-quoted, and Double-quoted.  
 
 | Syntax       | Result      |
 |--------------|:-----------:|
@@ -78,24 +77,36 @@ Type: Empty, Unquoted, Single-quoted, and Double-quoted
 | "'John Doe'" | 'John Doe'  |
 | ""John Doe"" | None        |
 
-''John Doe''
-'"John Doe"'
-"'John Doe'"
-""John Doe""
+##New Semantic Elements
+Why? 
+1. Readability is way much better than a cluster of <**div**>;  
+2. Allow search engines to identify the correct pages;  
+3. Allows data to be shared and reused across applications, enterprises, and communities.  
+<**div**>: A generic container element for styling purposes or as a convenience for scripting;   
+<**section**>: Used to represent a group of related elements, consisting a part of a program;  
+<**article**>: Used to hold an INDEPENDENT unit, making sense on its own.  
 
 
 
-Adjust to older browser  
+##Browser support
+Browser support: http://www.w3schools.com/html/html5_browsers.asp  
+Migration from HTML4 to HTML5: http://www.w3schools.com/html/html5_migration.asp  
 ```
 <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 ```
 
-
-
-
-
+h1 and p will be displayed in default format  
+http://html5.group.iteye.com/group/wiki/3293-html5  
+```
+<div class="outer">
+     <aaa>
+         <h1>title</h1>
+         <p>text</p>
+     </aaa>
+</div>
+```
 
 
 
