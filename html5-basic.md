@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"/>
 <title>Title of the document</title>
 </head>
 
@@ -77,7 +77,7 @@ Type: Empty, Unquoted, Single-quoted, and Double-quoted.
 | ""John Doe"" | None        |
 
 ##New Semantic Elements
-Why? 
+Why?  
 1. Readability is way much better than a cluster of <**div**>;  
 2. Allow search engines to identify the correct pages;  
 3. Allows data to be shared and reused across applications, enterprises, and communities.  
@@ -87,9 +87,9 @@ Why?
 
 
 
-##Migration to HTML5
-Browser support: http://www.w3schools.com/html/html5_browsers.asp  
-Migration from HTML4 to HTML5: http://www.w3schools.com/html/html5_migration.asp  
+##Migration from HTML4 to HTML5  
+(http://www.w3schools.com/html/html5_migration.asp)  
+(Browser support: http://www.w3schools.com/html/html5_browsers.asp )  
 
 #####Change semantic elements and corresponding CSS names
 |     Typical HTML4      |   Typical HTML5   |
@@ -98,32 +98,62 @@ Migration from HTML4 to HTML5: http://www.w3schools.com/html/html5_migration.asp
 | <**div id="menu"**>    | <**nav**>         |
 | <**div id="content"**> | <**section**>     |
 | <**div id="post"**>    | <**article**>     |
-| <**div id="footer"**>  | <**footer**>      |
+| <**div id="footer"**>  | <**footer**>      |  
+  
 #####Change Doctype  
 ```
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-```
-to  
-```
+to
 <!DOCTYPE html>
-```
+```  
+  
 #####Change to HTML5 Encoding  
 ```
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-```
-to  
-```
+to
 <meta charset="utf-8">
-```
+```  
+  
 #####Add The Shiv  
 Teach old browser HTML5 
 ```
 <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+```  
+  
+##Conventions
+1. use lower case. use lower case. use lower case.   
+2. Always close empty html elements <**meta charset="utf-8" /**>;  
+3. Always quote attribute values;  
+4. Always give images alt value in case of failure. Always define image size as it reduces flickering because the browser can reserve space for images before they are loaded;  
 ```
+<**img src="html5.gif" alt="HTML5" style="width:128px;height:128px"**>
+```
+5. No space needed around "=";  
+6. Indentation: use two spaces, do not use TAB;  
+7. Do not omit <**html lang="en-US"**> and <**body**> tags, it reduces search engine exposure and errors;  
+8. Omit <**head**> tag is still an unfamiliar approach. Even if you do it, all elements before <**body**> will still be added to a default head tag; 
+9. <**title**> is required and has to be meaningful;  
+10. Comments example:  
+```
+// Single line with one space before and after
+<!-- This is a comment --> 
 
+// Multiple lines
+<!-- 
+  This is a long comment example. This is a long comment example. This is a long comment example.
+  This is a long comment example. This is a long comment example. This is a long comment example.
+-->
+```
+11. Simple style can be compressed on one line:   
+```
+p.into {font-family: Verdana; font-size: 16em;}
+```
+12. Always use lower case file names to avoid consistency issue on different servers;   
+  
 
+  
 ##Others
 h1 and p will be displayed in default format  
 http://html5.group.iteye.com/group/wiki/3293-html5  
