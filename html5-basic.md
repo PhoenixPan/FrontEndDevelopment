@@ -17,7 +17,6 @@ Content of the document......
 ```
 
 ##What's new?  
-New elements:  
 New semantic elements like <**header**>, <**footer**>, <**article**>, and <**section**>.  
 New form control attributes like number, date, time, calendar, and range.  
 New graphic elements: <**svg**> and <**canvas**>.  
@@ -78,43 +77,56 @@ Type: Empty, Unquoted, Single-quoted, and Double-quoted.
 | ""John Doe"" | None        |
 
 ##New Semantic Elements
-#####Why?   
+Why? 
 1. Readability is way much better than a cluster of <**div**>;  
 2. Allow search engines to identify the correct pages;  
 3. Allows data to be shared and reused across applications, enterprises, and communities.  
-
-#####Differences between <**div**>, <**section**>, and <**article**>:  
 <**div**>: A generic container element for styling purposes or as a convenience for scripting;   
 <**section**>: Used to represent a group of related elements, consisting a part of a program;  
 <**article**>: Used to hold an INDEPENDENT unit, making sense on its own.  
 
-<!--| Tag          | Description                                                                                 |-->
-<!--|--------------|---------------------------------------------------------------------------------------------|-->
-<!--| <article>    | Defines an article                                                                          |-->
-<!--| <aside>      | Defines content aside from the page content                                                 |-->
-<!--| <details>    | Defines additional details that the user can view or hide                                   |-->
-<!--| <figcaption> | Defines a caption for a <figure> element                                                    |-->
-<!--| <figure>     | Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. |-->
-<!--| <footer>     | Defines a footer for a document or section                                                  |-->
-<!--| <header>     | Specifies a header for a document or section                                                |-->
-<!--| <main>       | Specifies the main content of a document                                                    |-->
-<!--| <mark>       | Defines marked/highlighted text                                                             |-->
-<!--| <nav>        | Defines navigation links                                                                    |-->
-<!--| <section>    | Defines a section in a document                                                             |-->
-<!--| <summary>    | Defines a visible heading for a <details> element                                           |-->
-<!--| <time>       | Defines a date/time                                                                         |-->
 
 
-##HTML5 Migration  
+##Migration to HTML5
 Browser support: http://www.w3schools.com/html/html5_browsers.asp  
-Migration guide: http://www.w3schools.com/html/html5_migration.asp  
+Migration from HTML4 to HTML5: http://www.w3schools.com/html/html5_migration.asp  
+
+#####Change semantic elements and corresponding CSS names
+|     Typical HTML4      |   Typical HTML5   |
+|------------------------|-------------------|
+| <**div id="header"**>  | <**header**>      |
+| <**div id="menu"**>    | <**nav**>         |
+| <**div id="content"**> | <**section**>     |
+| <**div id="post"**>    | <**article**>     |
+| <**div id="footer"**>  | <**footer**>      |
+#####Change Doctype  
+```
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+```
+to  
+```
+<!DOCTYPE html>
+```
+#####Change to HTML5 Encoding  
+```
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+```
+to  
+```
+<meta charset="utf-8">
+```
+#####Add The Shiv  
+Teach old browser HTML5 
 ```
 <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 ```
-#####Unrecognized tag in different browser
+
+
+##Others
 h1 and p will be displayed in default format  
+http://html5.group.iteye.com/group/wiki/3293-html5  
 ```
 <div class="outer">
      <aaa>
@@ -123,7 +135,9 @@ h1 and p will be displayed in default format
      </aaa>
 </div>
 ```
-(http://html5.group.iteye.com/group/wiki/3293-html5)
+
+
+
 
 
 
