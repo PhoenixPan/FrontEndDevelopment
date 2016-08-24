@@ -124,18 +124,19 @@ Teach old browser HTML5
   
 ##Conventions
 1. use lower case. use lower case. use lower case.   
-2. Always close empty html elements <**meta charset="utf-8" /**>;  
-3. Always quote attribute values;  
-4. Always give images alt value in case of failure. Always define image size as it reduces flickering because the browser can reserve space for images before they are loaded;  
-```
-<**img src="html5.gif" alt="HTML5" style="width:128px;height:128px"**>
-```
+2. Always use lower case file names to avoid consistency issue on different servers;   
+3. Always close empty html elements <**meta charset="utf-8" /**>;  
+4. Always quote attribute values;  
 5. No space needed around "=";  
 6. Indentation: use two spaces, do not use TAB;  
 7. Do not omit <**html lang="en-US"**> and <**body**> tags, it reduces search engine exposure and errors;  
 8. Omit <**head**> tag is still an unfamiliar approach. Even if you do it, all elements before <**body**> will still be added to a default head tag; 
 9. <**title**> is required and has to be meaningful;  
-10. Comments example:  
+10. Always give images alt value in case of failure. Always define image size as it reduces flickering because the browser can reserve space for images before they are loaded;  
+```
+<**img src="html5.gif" alt="HTML5" style="width:128px;height:128px"**>
+```
+Comments example:  
 ```
 // Single line with one space before and after
 <!-- This is a comment --> 
@@ -146,11 +147,10 @@ Teach old browser HTML5
   This is a long comment example. This is a long comment example. This is a long comment example.
 -->
 ```
-11. Simple style can be compressed on one line:   
+Simple style can be compressed on one line:   
 ```
 p.into {font-family: Verdana; font-size: 16em;}
 ```
-12. Always use lower case file names to avoid consistency issue on different servers;   
   
 
   
