@@ -1,6 +1,29 @@
 #HTML5
 
-##Removed
+##Basic structrue  
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+</head>
+
+<body>
+Content of the document......
+</body>
+
+</html>
+```
+
+##What's new?  
+New elements:  
+New semantic elements like <**header**>, <**footer**>, <**article**>, and <**section**>.  
+New form control attributes like number, date, time, calendar, and range.  
+New graphic elements: <**svg**> and <**canvas**>.  
+New multimedia elements: <**audio**> and <**video**>.  
+
+##Elements removed
 Tags removed since HTML5 and their replacements  
 Migration from HTML4 to HTML5: http://www.w3schools.com/html/html5_migration.asp  
 
@@ -19,35 +42,46 @@ Migration from HTML4 to HTML5: http://www.w3schools.com/html/html5_migration.asp
 | <**strike**>   | CSS         |
 | <**tt**>       | CSS         |
 
-##Added
-|   New Elements    | Definition                                                                                	|
-|-----------------	|:-------------------------------------------------------------------------------------------:|
-| <**article**>    	| Defines an article in the document                                                        	|
-| <**aside**>      	| Defines content aside from the page content                                               	|
-| <**bdi**>        	| Defines a part of text that might be formatted in a different direction from other text   	|
-| <**details**>    	| Defines additional details that the user can view or hide                                 	|
-| <**dialog**>     	| Defines a dialog box or window                                                            	|
-| <**figcaption**> 	| Defines a caption for a <figure> element                                                  	|
-| <**figure**>     	| Defines self-contained content, like illustrations, diagrams, photos, code listings, etc. 	|
-| <**footer**>     	| Defines a footer for the document or a section                                            	|
-| <**header**>     	| Defines a header for the document or a section                                            	|
-| <**main**>       	| Defines the main content of a document                                                    	|
-| <**mark**>       	| Defines marked or highlighted text                                                        	|
-| <**menuitem**>   	| Defines a command/menu item that the user can invoke from a popup menu                    	|
-| <**meter**>      	| Defines a scalar measurement within a known range (a gauge)                               	|
-| <**nav**>        	| Defines navigation links in the document                                                  	|
-| <**progress**>   	| Defines the progress of a task                                                            	|
-| <**rp**>         	| Defines what to show in browsers that do not support ruby annotations                     	|
-| <**rt**>         	| Defines an explanation/pronunciation of characters (for East Asian typography)            	|
-| <**ruby**>       	| Defines a ruby annotation (for East Asian typography)                                     	|
-| <**section**>    	| Defines a section in the document                                                         	|
-| <**summary**>    	| Defines a visible heading for a <details> element                                         	|
-| <**time**>       	| Defines a date/time                                                                       	|
-| <**wbr**>        	| Defines a possible line-break                                                             	|
+<!--##Added-->
+<!--|   New Elements    | Definition                                                                                	|-->
+<!--|-----------------	|:-------------------------------------------------------------------------------------------:|-->
+<!--| <**article**>    	| Defines an article in the document                                                        	|-->
+<!--| <**aside**>      	| Defines content aside from the page content                                               	|-->
+<!--| <**bdi**>        	| Defines a part of text that might be formatted in a different direction from other text   	|-->
+<!--| <**details**>    	| Defines additional details that the user can view or hide                                 	|-->
+<!--| <**dialog**>     	| Defines a dialog box or window                                                            	|-->
+<!--| <**figcaption**> 	| Defines a caption for a <figure> element                                                  	|-->
+<!--| <**figure**>     	| Defines self-contained content, like illustrations, diagrams, photos, code listings, etc. 	|-->
+<!--| <**footer**>     	| Defines a footer for the document or a section                                            	|-->
+<!--| <**header**>     	| Defines a header for the document or a section                                            	|-->
+<!--| <**main**>       	| Defines the main content of a document                                                    	|-->
+<!--| <**mark**>       	| Defines marked or highlighted text                                                        	|-->
+<!--| <**menuitem**>   	| Defines a command/menu item that the user can invoke from a popup menu                    	|-->
+<!--| <**meter**>      	| Defines a scalar measurement within a known range (a gauge)                               	|-->
+<!--| <**nav**>        	| Defines navigation links in the document                                                  	|-->
+<!--| <**progress**>   	| Defines the progress of a task                                                            	|-->
+<!--| <**rp**>         	| Defines what to show in browsers that do not support ruby annotations                     	|-->
+<!--| <**rt**>         	| Defines an explanation/pronunciation of characters (for East Asian typography)            	|-->
+<!--| <**ruby**>       	| Defines a ruby annotation (for East Asian typography)                                     	|-->
+<!--| <**section**>    	| Defines a section in the document                                                         	|-->
+<!--| <**summary**>    	| Defines a visible heading for a <details> element                                         	|-->
+<!--| <**time**>       	| Defines a date/time                                                                       	|-->
+<!--| <**wbr**>        	| Defines a possible line-break                                                             	|-->
 
+##Arrtibute syntax
+Type: Empty, Unquoted, Single-quoted, and Double-quoted  
 
+| Syntax       | Result      |
+|--------------|:-----------:|
+| ''John Doe'' | None        |
+| '"John Doe"' | "John Doe"  |
+| "'John Doe'" | 'John Doe'  |
+| ""John Doe"" | None        |
 
-
+''John Doe''
+'"John Doe"'
+"'John Doe'"
+""John Doe""
 
 
 
