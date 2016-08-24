@@ -43,6 +43,22 @@ Another mailto link:
 </p>
 ```
 
+##Text  
+1. <**b**> and <**i**> are presentationl elements that convey no extra importance;  
+2. <**em**> and <**strong**> are phrase elements that strength SEO, while <**strong**> is stronger than <**em**>;  
+3. <**mark**> to highlight;  
+4. <**sub**> and <**sup**> to subscript or superscript;  
+5. <**blockquote**> to quote and cite;  
+6. <**bdo dir="rtl"**> to inverse a text;  
+
+7. Provide useful information for search engine or translation: abbrevation, cite, define  
+```
+<p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+<p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> was founded in 1948.</p>
+```
+
+
 ##Image  
 Background (gif and jpg only).   
 ```
@@ -67,14 +83,6 @@ coords="0,0,110,260"
 href ="/example/html/sun.html"/>
 
 </map>
-```
-
-##More SEO
-Provide useful information for search engine or translation: abbrevation, cite, define  
-```
-<p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
-<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
-<p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> was founded in 1948.</p>
 ```
 
 ##<**pre**> to maintain format
