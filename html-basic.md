@@ -143,13 +143,14 @@ http://www.w3school.com.cn/tags/html_ref_standardattributes.asp
 1. Alignment: style="text-align:center"  
 2. Background: style="background-color:yellow"  
 3. Quotation: use either " or '. Use ' when " is in text: name='Bill "HelloWorld" Gates'  
-4. Divide line:  
+4. target="_blank" opens a new tab
+5. Divide line:  
 ```
 <p>Paragraph A</p>
 <hr />
 <p>Paragraph B</p>
 ```
-5. Target: open links with the same target in the target window or the same window
+Target: open links with the same target in the target window or the same window
 ```
 <iframe src="demo_iframe.htm" name="iframe_a"></iframe>
 <p><a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a></p> //Open in "iframe_a"
@@ -163,7 +164,7 @@ http://www.w3school.com.cn/tags/html_ref_standardattributes.asp
   <li><a href="/example/html/chap3.html" target="view_window">Chapter 3</a></li>
 </ul>
 ```
-6. Action:  
+Action:  
 ```
 <form action="www.google.com">
 <input></input>
