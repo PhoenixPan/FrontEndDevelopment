@@ -8,7 +8,12 @@ p.tip span {
 	color:#ff9955;
 	}
 ```
-
+4. Table:
+```
+    border: 5px solid red;
+    border-collapse:collapse;
+    text-align:center;
+```
 
 #Addition
 
