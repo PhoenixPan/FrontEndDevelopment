@@ -19,7 +19,7 @@ Meta: used in many services and serarch engine;
 ```
 
 
-##<**Span**>  
+##<**span**>  
 change a part of the content  
 ```
 <p><span style="color:red">some text.</span>some other text.</p>
@@ -117,6 +117,41 @@ Display multiple htmls in the same page.
 </html>
 ```
 
+##<**list**>  
+1. Change labels: <**ol type="A"**>;  
+2. Change marks: style="list-style-type:square";  
+
+##<**form**>  
+```
+<form>
+  <input type="radio" name="gender" value="male"> Male
+  <input type="radio" name="gender" value="female"> Female
+</form>
+
+<form action="action_page.php">
+  <select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="ford">Ford</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+
+<form action="action_page.php">
+  <textarea name="note"></textarea>
+  <input type="submit">
+</form>
+
+
+<form action="action_page.php">
+  Quantity (between 1 and 5):
+  <input type="number" name="quantity" min="1" max="5"></input>
+  <input type="submit">
+</form>
+```
+
+
 ##Depreciated (replace with style):
 ```
 <center>
@@ -140,11 +175,13 @@ Display multiple htmls in the same page.
 
 #Attributes  
 http://www.w3school.com.cn/tags/html_ref_standardattributes.asp  
-1. Alignment: style="text-align:center"  
-2. Background: style="background-color:yellow"  
-3. Quotation: use either " or '. Use ' when " is in text: name='Bill "HelloWorld" Gates'  
-4. target="_blank" opens a new tab
-5. Divide line:  
+1. alignment: style="text-align:center"  
+2. background: style="background-color:yellow"  
+3. quotation: use either " or '. Use ' when " is in text: name='Bill "HelloWorld" Gates'  
+4. target="_blank" opens a new tab  
+5. placeholder: provides hint in text  
+6. size: the length of input area  
+Divide line:  
 ```
 <p>Paragraph A</p>
 <hr />
