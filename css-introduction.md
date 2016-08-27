@@ -24,6 +24,110 @@ PS: external reference has lower priority than !impotant and inline, but could b
 <h1 id="orange-text" class="pink-text blue-text" style = "color:white">Hello World!</h1>
 ```
 
+##Background Image
+```
+body {
+  background-image: url("gradient_bg.png");
+    
+  // Rules for repeating image  
+  background-repeat: repeat-x;
+  background-repeat: no-repeat;
+    
+  background-position: right top;
+  background-attachment: fixed; // image will not move as you scroll
+  
+  // Shorthand property in order: color, image, repeat, attachment, position
+  background: pink url("img_tree.png") no-repeat fixed right top; 
+}
+```
+
+##Border  
+```
+// Styles
+border-style: dotted;
+border-style: dashed;
+border-style: solid;
+border-style: double;
+border-style: groove;
+border-style: ridge;
+border-style: inset;
+border-style: outset;
+border-style: none;
+border-style: hidden;
+border-style: dotted dashed solid double;
+
+border-top-style: dotted;
+border-right-style: solid;
+border-bottom-style: dotted;
+border-left-style: solid;
+}
+// Width
+border-width: medium;
+border-width: 2px;
+border-width: 1px 2px 3px 4px;
+
+// Color
+border-color:red;
+
+// Shorthand property in order:width style(required) color
+border: 5px solid red;
+border-left: 5px solid red;
+
+// Round cornor
+border-radius:5px;
+```
+
+##Margin
+```
+// Prefix
+margin:50px 25px 50px 25px;
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+// Postfix
+auto
+length: px, pt, cm, etc.
+%
+inherit: inherit from the parent
+```
+1. Top and bottom margins sometimes collapse into one single margin, which is the larger value of the two.  
+2. Left and right margin won't collapse.   
+3. margin:auto: make it center, for image, also make it a block element.  
+
+
+##Padding
+```
+// Prefix
+padding
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+// Postfix
+length
+%
+inherit
+```
+
+##Height/Width
+```
+// Prefix
+height
+max-height
+min-height
+width
+max-width
+min-width
+
+// Postfix
+auto
+length
+%
+```
+
 1. Change the style of the entire page in <_head_>, change some elements in a leading <_style_> block, or change one element within it <_p style="color: red"_><_/p_>  
 2. Remove underline in hyperlink: style="text-decoration:none"  
 3. Limit the application of class. In this case, only <_span_> within <_p_> will be affected.   
