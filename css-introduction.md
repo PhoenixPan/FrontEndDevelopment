@@ -112,7 +112,7 @@ length
 inherit
 ```
 
-##Height/Width
+##Height/Width (only the content area)
 ```
 // Prefix
 height
@@ -127,6 +127,29 @@ auto
 length
 %
 ```
+
+##Box model
+![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)  
+1. Internet Explorer 8 and earlier versions, include padding and border in the width property. To fix this problem, add a <!DOCTYPE html> to the HTML page.  
+2. 
+
+
+##Outline
+```
+// Prefix
+outline	
+outline-color:invert // Opposite to the background color	
+outline-offset 	//Specifies the space between an outline and the edge or border of an element
+outline-style
+outline-width
+
+// Shorthand property in order: width style(required) color
+outline: 5px dotted red
+```
+
+
+
+
 
 1. Change the style of the entire page in <_head_>, change some elements in a leading <_style_> block, or change one element within it <_p style="color: red"_><_/p_>  
 2. Remove underline in hyperlink: style="text-decoration:none"  
