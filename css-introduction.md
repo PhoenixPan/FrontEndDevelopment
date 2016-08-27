@@ -1,5 +1,18 @@
 #CSS  
 
+
+##General  
+1. Change the style of the entire page in <_head_>, change some elements in a leading <_style_> block, or change one element within it <_p style="color: red"_><_/p_>  
+2. Remove underline in hyperlink: style="text-decoration:none"  
+
+#####Limit the application of class. In this case, only <_span_> within <_p_> will be affected.   
+```
+p.tip span {
+  font-weight:bold;
+  color:#ff9955;
+}
+```
+
 ##Apply CSS
 1. External: refer in head tag: <**link rel="stylesheet" type="text/css" href="mystyle.css"**>;  
 2. Internal: use <**style**>;  
@@ -23,6 +36,8 @@ PS: external reference has lower priority than !impotant and inline, but could b
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 <h1 id="orange-text" class="pink-text blue-text" style = "color:white">Hello World!</h1>
 ```
+
+
 
 ##Background Image
 ```
@@ -130,11 +145,14 @@ length
 
 ##Box model
 ![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)  
-1. Internet Explorer 8 and earlier versions, include padding and border in the width property. To fix this problem, add a <!DOCTYPE html> to the HTML page.  
-2. 
-
+1. Total element width = width + left padding + right padding + left border + right border + left margin + right margin  
+2. Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin  
+3. Internet Explorer 8 and earlier versions, include padding and border in the width property. To fix this problem, add a <!DOCTYPE html> to the HTML page.  
 
 ##Outline
+![outline](https://cloud.githubusercontent.com/assets/14355257/18029801/67e9a206-6c70-11e6-9c42-01c07208a1e3.jpg)  
+1. The outline is NOT a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.  
+2. Declare the outline-style property if you'll apply the outline-color property, no style, no color.  
 ```
 // Prefix
 outline	
@@ -147,19 +165,33 @@ outline-width
 outline: 5px dotted red
 ```
 
-
-
-
-
-1. Change the style of the entire page in <_head_>, change some elements in a leading <_style_> block, or change one element within it <_p style="color: red"_><_/p_>  
-2. Remove underline in hyperlink: style="text-decoration:none"  
-3. Limit the application of class. In this case, only <_span_> within <_p_> will be affected.   
+##Text  
 ```
-p.tip span {
-	font-weight:bold;
-	color:#ff9955;
-	}
+text-align: justify;        // makes words spread and have the same width in each line
+// center, left, right  
+
+text-decoration:none        // removes hyper link underline
+// overline, line-through, underline  
+
+text-transform:uppercase    // specifies upper or lower case 
+// uppercase, lowercase, capitalize  
+
+text-indent: 50px;
+letter-spacing: 3px;       // specifies space between characters in text
+word-spacing: 10px;        // specifies space between words in text
+line-height: 2;            // specifies space between lines
+direction:rtl;             // changes text direction  
+white-space:nonrap;        // specifies how white-space inside an element is handled
+vertical-align
+unicode-bidi
+text-shadow:text-shadow:1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;  // multiple: horizental, vertical, blur, color
 ```
+1. For <**div**>, use: box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 white;  
+
+
+
+
+
 4. Table:
 ```
     border: 5px solid red;
@@ -167,75 +199,4 @@ p.tip span {
     text-align:center;
 ```
 
-Specify the tag that a class(es) can apply to
-```
-p, h1.center {
-  color: red;
-}
-```
 
-#Addition
-
-1. Override priority:  
-!important(pink) > inline style(white) > id(orange) > bottom of style(blue) > top of style(pink)
-```
-<style>
-  body {
-    background-color: #000000;  //hex code color
-    background-color: rgb(255, 165, 0); //RGB color
-    font-family: Monospace;
-    color: F0F;                 // shortened version
-  }
-  #orange-text {
-    color: orange;
-  }
-  .pink-text {
-    color: pink !important;
-  }
-  .blue-text {
-    color: blue;
-  }
-  
-</style>
-<h1 id="orange-text" class="pink-text blue-text" style = "color:white">Hello World!</h1>
-```
-
-
-
-```
-<style>
-  .injected-text {
-    margin-bottom: -25px;
-    text-align: center;
-  }
-
-  .box {
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    text-align: center;
-  }
-
-  .yellow-box {
-    background-color: yellow;
-    padding: 20px 40px 20px 40px;  //top, right, bottom, left
-    margin: 20px 40px 20px 40px;
-  }
-  
-  .red-box {
-    background-color: red;
-    padding: 20px;
-  }
-
-  .green-box {
-    background-color: green;
-    padding: 10px;
-  }
-</style>
-<h5 class="injected-text">margin</h5>
-
-<div class="box yellow-box">
-  <h5 class="box red-box">padding</h5>
-  <h5 class="box green-box">padding</h5>
-</div>
-```
