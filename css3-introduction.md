@@ -1,6 +1,6 @@
 3. Combine several css files into one using: @import "this.css"; 
 
-##Target
+##Target an element
 ```
 // Change all elements
 * {font-family: "Arial Black", sans-serif;}
