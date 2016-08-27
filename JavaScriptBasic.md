@@ -37,3 +37,11 @@
 1 - "2" // -1        
 "2" - 1 // 1
 ```
+```
+  var x = 5; // var will be treated as a number:6,7,8...
+  // var x = prompt("Give me a number");  //var will be treated as string: 51,511,5111...
+  function test() {
+    x += 1;
+	document.getElementById("text").innerHTML=x;
+  }
+```
