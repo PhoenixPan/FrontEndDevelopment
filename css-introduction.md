@@ -1,4 +1,29 @@
 #CSS  
+
+##Apply CSS
+1. External: refer in head tag: <**link rel="stylesheet" type="text/css" href="mystyle.css"**>;  
+2. Internal: use <**style**>;  
+3. Inline: <**h1 style="color:blue;"**>;  
+4. Multiple style sheets & override priority: Use the last read value.    
+!important(pink) > inline style(white) > id(orange) > external(css)> bottom of style(blue) > top of style(pink)  
+PS: external reference has lower priority than !impotant and inline, but could be higher than others depending on where it is.  
+```
+<style>
+  #orange-text {
+    color: orange;
+  }
+  .pink-text {
+    color: pink !important;
+  }
+  .blue-text {
+    color: blue;
+  }
+  
+</style>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<h1 id="orange-text" class="pink-text blue-text" style = "color:white">Hello World!</h1>
+```
+
 1. Change the style of the entire page in <_head_>, change some elements in a leading <_style_> block, or change one element within it <_p style="color: red"_><_/p_>  
 2. Remove underline in hyperlink: style="text-decoration:none"  
 3. Limit the application of class. In this case, only <_span_> within <_p_> will be affected.   
@@ -13,6 +38,13 @@ p.tip span {
     border: 5px solid red;
     border-collapse:collapse;
     text-align:center;
+```
+
+Specify the tag that a class(es) can apply to
+```
+p, h1.center {
+  color: red;
+}
 ```
 
 #Addition
