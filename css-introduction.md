@@ -95,7 +95,9 @@ border-radius:5px;
 ##Margin
 ```
 // Prefix
-margin:50px 25px 50px 25px;
+margin:50px 25px 50px 25px;  // top, right, bottom, left
+margin:50px 25px 50px;       // top, left and right, bottom
+margin:50px 25px;            // top and bottom, left and right
 margin-top
 margin-right
 margin-bottom
@@ -115,7 +117,9 @@ inherit: inherit from the parent
 ##Padding
 ```
 // Prefix
-padding
+padding:50px 25px 50px 25px;  // top, right, bottom, left
+padding:50px 25px 50px;       // top, left and right, bottom
+padding:50px 25px;            // top and bottom, left and right
 padding-top
 padding-right
 padding-bottom
@@ -234,18 +238,45 @@ list-style-type:none  // circle, square, lower-roman, lower-alpha. more: http://
 list-style-image: url('sqpurple.gif');
 list-style-position: inside; // outside, marker is inside or outside of the content flow  
 
-// Shorthand property
+// Shorthand property in order: type, position, image
 list-style: square inside url("sqpurple.gif");
-
+```
+1. Modify last child, as sometimes it overlaps with the bottom border of the list;  
+```
+ul li:last-child {border-bottom: none;}
 ```
 
-
-
-4. Table:
+##Table  
 ```
-    border: 5px solid red;
-    border-collapse:collapse;
-    text-align:center;
+// Collapse to single border(only in table)
+table {
+  border-collapse:collapse;
+}
+
+// Height & Width
+table {
+  width:100%;    // % or length
+  height:50px;   // em or length
+}
+th, td {
+  width:100%;    // uneven distribution: |      1      |  2  |3|
+  height:50px;   // em or length
+}
+tr {
+  // no width
+  height:50px;   // em or length
+}
+
+// Striped tables
+tr:nth-child(even) {background-color: grey}
+tr:nth-child(odd) {background-color: white}
+
+// Responsive tables: automatically add a scroll bar to the section when the screen is too small
+<div style="overflow-x:auto;">
+<table>
+//... table content ...
+</table>
+</div>
 ```
 
 
