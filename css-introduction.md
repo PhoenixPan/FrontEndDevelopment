@@ -137,8 +137,8 @@ inherit
 height
 max-height
 min-height
-width
-max-width
+width       // when the screen becomes small, the view will not shrink to multiple lines to ensure readability
+max-width   // unlike with width, it will shrink like default setting
 min-width
 
 // Postfix
@@ -185,7 +185,7 @@ letter-spacing: 3px;       // specifies space between characters in text
 word-spacing: 10px;        // specifies space between words in text
 line-height: 2;            // specifies space between lines
 direction:rtl;             // changes text direction  
-white-space:nonrap;        // specifies how white-space inside an element is handled
+white-space:nonrap;        // specifies how white-space inside an element is handled. No new lines  
 vertical-align
 unicode-bidi
 text-shadow:text-shadow:1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;  // multiple: horizental, vertical, blur, color
@@ -278,5 +278,75 @@ tr:nth-child(odd) {background-color: white}
 </table>
 </div>
 ```
+
+##Display  
+1. display:block;  A block-level element always starts on a new line and takes up the full width available;  
+2. display:inline; An inline element does not start on a new line and only takes up as much width as necessary;  
+3. display:none;   commonly used with JavaScript to hide and show elements;  
+4. "display:none" does not take up any space, whereas "visibility:hidden" does;  
+5. 
+
+##Position  
+#####static: default value. Not affected by top, bottom, left and right properties;    
+#####relative: relative to its normal position. Add gap to sides defined and wrap the content;  
+```
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid green;
+}
+
+// Use this as default container
+div.relative {
+  position: relative;  
+}
+```
+#####fixed: it always stays in the same place even if the page is scrolled regardless of where you put the statement;  
+```
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+// "Up" and "Down" will stay together while "Fixed" on the lower-right cornor
+<p>Up</p>        
+<div>Fixed</div>
+<p>Down</p>
+```
+#####absolute: relative to its parent element(except static).However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;    
+
+#####Overlapping: an overlapping element has to be positioned(except static). An element with greater stack order is always in front of an element with a lower stack order. If two elements have the same stack, the one declared later will be displayed on the top;  
+```
+z-index: -1;  // set the stack order of an element
+```
+#####Chip: can chip only absolutely positioned element
+```
+img {
+    position: absolute;
+    clip: rect(0px,60px,200px,0px);
+}
+```
+#####Cursor: change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+```
+<span style="cursor:help">help</span><br>
+```
+
+##Overflow  
+```
+overflow: visiable;   // default, won't clip, let the content leaks out
+overflow: hidden;     // hide additional content(no scroll bar)
+overflow: scroll;     // add two scrollbars anyway
+overflow: auto;       // add a scrollbar only when necessary
+overflow-x: hidden;   // add a scrollbar horizentally, white-space: nowrap;
+overflow-y: scroll;   // add a scrollbar vertically
+```
+
+##Float
+```
+
+```
+
+
 
 
