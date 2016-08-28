@@ -229,7 +229,15 @@ background-color:red;
 
 
 ##List  
+```
+list-style-type:none  // circle, square, lower-roman, lower-alpha. more: http://www.w3schools.com/cssref/pr_list-style-type.asp
+list-style-image: url('sqpurple.gif');
+list-style-position: inside; // outside, marker is inside or outside of the content flow  
 
+// Shorthand property
+list-style: square inside url("sqpurple.gif");
+
+```
 
 
 
