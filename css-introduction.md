@@ -187,7 +187,48 @@ unicode-bidi
 text-shadow:text-shadow:1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;  // multiple: horizental, vertical, blur, color
 ```
 1. For <**div**>, use: box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 white;  
+```
+font-style: italic       // normal, italic, obelique 
+font-size                // length, em, %
+font-variant: small-caps // small-caps or normal
+font-weight              // normal, bold, bolder, lighter, initial(default value), inherit, 100-900
+font-family: "Times New Roman", Times, serif;\\
 
+// Shorthand property
+font:italic bold small-caps 12px/30px Georgia, serif; // style, weight, variant, font-size/line space, font-family
+
+```
+##Font
+1. Start with the font you want, and end with a generic family;  
+2. If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman";  
+3. "italic" is a special version of font, whereas "oblique" just inclines the font a bit. Since not all fonts have italic version, we use "oblique" to make the font italic when italic version is absent;  
+4. If font-size is not specified, the default size is 16px;
+5. 1em is equal to the current font size, 1em=16px;  
+6. 
+
+##Links
+```
+// unvisited link
+a:link {color: red;}
+
+// visited link
+a:visited {color: green;}
+
+// mouse over link
+a:hover {color: hotpink;}
+
+// Selected link: the moment you click it
+a:active {color: blue;}
+
+text-decoration: none;
+background-color:red;
+```
+1. a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective;  
+2. a:active MUST come after a:hover in the CSS definition in order to be effective; 
+3. 
+
+
+##List  
 
 
 
