@@ -336,6 +336,42 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nu
 
 // display:inline-block; ~= float + clear (http://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block)
 ```
+  
+1. float: left; - use floa t to get block elements to slide next to each other  
+2. display: block; - Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify padding (and height, width, margins, etc. if you want)  
+3. padding: 8px; - Since block elements take up the full width available, they cannot float next to each other. Therefore, specify some padding to make them look good  
+4. overflow:hidden is added to the ul element to prevent li elements from going outside of the list.  
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+    float: left;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</body>
+</html>
+```
 
 ##Align  
 To center an element or image  
@@ -565,3 +601,5 @@ img {
     background: rgba(76, 175, 80, 0.3) /* Green background with 30% opacity */
 }
 ```
+
+
