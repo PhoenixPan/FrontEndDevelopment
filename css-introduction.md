@@ -351,13 +351,16 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #dddddd;
 }
 
 li {
-    display: block;
-    padding: 8px;
-    background-color: #dddddd;
-    float: left;
+    float: left;      // all <li> should be on the same row
+}
+
+li a {
+    display: block;   // <a> should extends to the entire <li>
+    padding: 8px;     // padding on <a>, not <li>, otherwise this area is unclickable
 }
 </style>
 </head>
