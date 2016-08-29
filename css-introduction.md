@@ -104,7 +104,7 @@ margin-bottom
 margin-left
 
 // Postfix
-auto
+auto    // margin:auto; align center
 length: px, pt, cm, etc.
 %
 inherit: inherit from the parent
@@ -314,8 +314,10 @@ div.fixed {
 <div>Fixed</div>
 <p>Down</p>
 ```
-#####absolute: relative to its parent element(except static).However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;    
+#####absolute: relative to its parent element(except static).However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
 
+*Absolute positioned elements are removed from the normal flow, and can overlap elements.  
+  
 #####Overlapping: an overlapping element has to be positioned(except static). An element with greater stack order is always in front of an element with a lower stack order. If two elements have the same stack, the one declared later will be displayed on the top;  
 ```
 z-index: -1;  // set the stack order of an element
@@ -342,20 +344,25 @@ overflow-x: hidden;   // add a scrollbar horizentally, white-space: nowrap;
 overflow-y: scroll;   // add a scrollbar vertically
 ```
 
-##Float
+##Float  
+Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_layout_clearfix  
 ```
 // float:whether or not an element should float
 float: left;  // left, right, none, initial, inherit
 
-
-// clear: remove the previous float effect from this element
+// clear:  specify a clear property for the element after the floating boxes to
 clear: both;  // left, right, both
 
 // overflow: extend the border to include all contents
 <div style="overflow: auto"><img class="img2" src="w3css.gif" width="100" height="140">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
-```
-Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_layout_clearfix
 
+// display:inline-block; ~= float + clear (http://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block)
+```
+
+##Align  
+1. When aligning elements with position, always define margin and padding for the <**body**> element. This is to avoid visual differences in different browsers;  
+2. Absolute positioned elements are removed from the normal flow, and can overlap elements;  
+3. 
 
 
