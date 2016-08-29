@@ -344,9 +344,18 @@ overflow-y: scroll;   // add a scrollbar vertically
 
 ##Float
 ```
+// float:whether or not an element should float
+float: left;  // left, right, none, initial, inherit
 
+
+// clear: remove the previous float effect from this element
+clear: both;  // left, right, both
+
+// overflow: extend the border to include all contents
+<div style="overflow: auto"><img class="img2" src="w3css.gif" width="100" height="140">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
 ```
-
+Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_layout_clearfix
 
 
 
