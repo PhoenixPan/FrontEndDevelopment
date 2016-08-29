@@ -2,10 +2,9 @@
 
 
 ##General  
-1. Change the style of the entire page in <_head_>, change some elements in a leading <_style_> block, or change one element within it <_p style="color: red"_><_/p_>  
-2. Remove underline in hyperlink: style="text-decoration:none"  
+1. Change the style of the entire page in a leading <**style**> block in <**head**>;  
 
-#####Limit the application of class. In this case, only <_span_> within <_p_> will be affected.   
+#####Limit the application of class. In this case, only <**span**> within <**p**> will be affected.   
 ```
 p.tip span {
   font-weight:bold;
@@ -361,8 +360,37 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nu
 ```
 
 ##Align  
-1. When aligning elements with position, always define margin and padding for the <**body**> element. This is to avoid visual differences in different browsers;  
-2. Absolute positioned elements are removed from the normal flow, and can overlap elements;  
-3. 
+To center an element or image  
+```
+margin:auto;
+```
+Left or right align using position or float. When aligning elements with position and float, always define margin and padding for the <**body**> element. This is to avoid visual differences in different browsers. Absolute positioned elements are removed from the normal flow, and can overlap elements, whereas float cannot;  
+```
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.right {
+    position: absolute;
+    right: 0px;
+}
+
+.right {
+    float: right;
+}
+```
+To center vertically, use padding:  
+or setting line-height equal to height: http://www.w3schools.com/css/tryit.asp?filename=trycss_align_line-height
+or using transform: http://www.w3schools.com/css/tryit.asp?filename=trycss_align_transform
+```
+.center {
+    padding: 10px 0;
+    border: 3px solid green;
+}
+```
+
+
+
 
 
