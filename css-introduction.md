@@ -346,7 +346,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nu
 <html>
 <head>
 <style>
-ul {
+ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -354,11 +354,11 @@ ul {
     background-color: #dddddd;
 }
 
-li {
+ul.topnav li {
     float: left;      // all <li> should be on the same row
 }
 
-li a {
+ul.topnav li a {
     display: block;   // <a> should extends to the entire <li>
     padding: 8px;     // padding on <a>, not <li>, otherwise this area is unclickable
 }
@@ -366,7 +366,7 @@ li a {
 </head>
 <body>
 
-<ul>
+<ul class="topnav">
   <li><a href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
@@ -374,6 +374,36 @@ li a {
 </ul>
 </body>
 </html>
+```
+Fixed bar example:
+```
+body {
+  padding:0;
+  margin:0;
+}
+ul.topnav {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+  background: black;
+  position:fixed;
+  top:0;                       // otherwise there will be a gap. Why?
+  width:100%;
+}
+ul.topnav li {
+  float: left;
+}
+ul.topnav li a {
+  text-decoration:none;
+  font-family:"Times New Roman";
+  color:white;
+  display: block;
+  padding:8px;
+}
+ul.topnav li a:hover {
+  background:grey;
+}
 ```
 
 ##Align  
