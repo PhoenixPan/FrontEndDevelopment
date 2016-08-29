@@ -209,28 +209,6 @@ font:italic bold small-caps 12px/30px Georgia, serif; // style, weight, variant,
 5. 1em is equal to the current font size, 1em=16px;  
 6. 
 
-##Links
-```
-// unvisited link
-a:link {color: red;}
-
-// visited link
-a:visited {color: green;}
-
-// mouse over link
-a:hover {color: hotpink;}
-
-// Selected link: the moment you click it
-a:active {color: blue;}
-
-text-decoration: none;
-background-color:red;
-```
-1. a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective;  
-2. a:active MUST come after a:hover in the CSS definition in order to be effective; 
-3. 
-
-
 ##List  
 ```
 list-style-type:none  // circle, square, lower-roman, lower-alpha. more: http://www.w3schools.com/cssref/pr_list-style-type.asp
@@ -390,7 +368,162 @@ or using transform: http://www.w3schools.com/css/tryit.asp?filename=trycss_align
 }
 ```
 
+##Use combinators to target an element  
+  
+Descendant Selector: select all descendants  
+```
+div p {...;}
 
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <span><p>Paragraph 2 in the div.</p></span> // will change
+</div>
+```
+Child Selector: select only immediate children  
+```
+div > p {...;}
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <span><p>Paragraph 2 in the div.</p></span> // will not change
+</div>
+```
+
+Adjacent Sibling Selector: have the same parent, immediately following
+```
+div + p {...;}
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+</div>
+<p>Paragraph 3. Not in a div.</p> // only this will change
+<p>Paragraph 4. Not in a div.</p>
+
+// More
+div + div > p {...;}
+<div>
+  <p>Paragraph 1 in the div.</p>
+</div>
+<div>
+  <p>Paragraph 2. Not in a div.</p> // only this will change
+</div>
+```
+General Sibling Selector: have the same parent, following
+```
+div ~ p {...,}
+<p>Paragraph 1. Not in a div.</p>
+<div>
+  <p>Paragraph 2 in the div.</p>
+</div>
+<p>Paragraph 3. Not in a div.</p>
+<p>Paragraph 4. Not in a div.</p>
+```
+
+Select all elements  
+```
+* {font-family: "Arial Black", sans-serif;}
+```
+Select all elements with a tag  
+```
+div * {font-family:"Comic Sans MS, cursive;}
+```
+Select all elements with attribute "alt" whose value is "value"  
+```
+*[alt~="value"] {...;}
+```
+Select all elements with the class "testclass"
+```
+.testclass {...;}
+```
+Select all elements with the id "testid"
+```
+#testid {...;}
+```
+
+Select elements with certain tag that has the class: <p class="testclass">
+```
+p.testclass {...;}
+```
+
+Select elements with a certain tag that has a class
+```
+p[class]{...;}
+```
+
+Select elements with a certain tag that has the id <p id="testid">
+```
+p#testid{...;}
+```
+
+Select elements with a certain tag that has an id
+```
+p[id]{...;}
+```
+
+Select the children elements whose parent element's parent element has an id of "testid"
+#testid ol li {...;}
+#testid ul li {...;}
+```
+<div id="testid">
+<ol>
+  <li>ElementOne</li>
+</ol>
+<ul>
+  <li>ElementTwo</li>
+</ul>
+</div>
+```
+
+##Pseudo-class
+
+#####Links
+```
+// unvisited link
+a:link {color: red;}
+
+// visited link
+a:visited {color: green;}
+
+// mouse over link
+a:hover {color: hotpink;}
+
+// Selected link: the moment you click it
+a:active {color: blue;}
+
+text-decoration: none;
+background-color:red;
+```
+1. a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective;  
+2. a:active MUST come after a:hover in the CSS definition in order to be effective; 
+
+#####hover: to change a child, hover on div will change its child p
+```
+p {display: none;}
+
+div:hover p {display: block;}
+
+<div>
+  <p>Tada! Here I am!</p> // will be displayed
+</div>
+<p>Tada! Here I am!</p>   // will not be displayed
+```
+
+#####first-child: matches a specified element that is the first child of another element
+```
+p:first-child {color: blue;}
+
+<p>This is some text.</p>   // will change
+<p>This is some text.</p>
+<div>
+  <p>This is some text.</p> // will change
+  <p>This is some text.</p>
+</div>
+
+// More
+p:first-child i {color: blue;}
+
+<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p> // both <i> will change
+<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+```
 
 
 
