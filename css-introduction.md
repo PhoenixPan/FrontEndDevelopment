@@ -232,16 +232,16 @@ table {
 
 // Height & Width
 table {
-  width:100%;    // % or length
-  height:50px;   // em or length
+  width:100%;  // unit could be %, em, px, ...
+  height:50px;  
 }
 th, td {
   width:100%;    // uneven distribution: |      1      |  2  |3|
-  height:50px;   // em or length
+  height:50px;
 }
 tr {
   // no width
-  height:50px;   // em or length
+  height:50px; 
 }
 
 // Striped tables
@@ -261,7 +261,7 @@ tr:nth-child(odd) {background-color: white}
 2. display:inline; An inline element does not start on a new line and only takes up as much width as necessary;  
 3. display:none;   commonly used with JavaScript to hide and show elements;  
 4. "display:none" does not take up any space, whereas "visibility:hidden" does;  
-5. 
+
 
 ##Position  
 #####static: default value. Not affected by top, bottom, left and right properties;    
@@ -556,9 +556,12 @@ All references: http://www.w3schools.com/css/css_pseudo_elements.asp
 5. p::selection:	Selects the portion of an element that is selected by a user
 
 ##Opacity  
+Can be used on many element, not only image  
 ```
+// ways to apply opacity
 img {
     opacity: 0.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
+    background: rgba(76, 175, 80, 0.3) /* Green background with 30% opacity */
 }
 ```
