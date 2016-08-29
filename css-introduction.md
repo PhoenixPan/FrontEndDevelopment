@@ -545,3 +545,20 @@ q:lang(cn) {
 ```
 input:focus {background-color: yellow;}
 ```
+
+##Pseudo elements  
+All references: http://www.w3schools.com/css/css_pseudo_elements.asp  
+  
+1. p::after:	Insert content after every <p> element
+2. p::before:	Insert content before every <p> element
+3. p::first-letter:	Selects the first letter of every <p> element
+4. p::first-line:	Selects the first line of every <p> element
+5. p::selection:	Selects the portion of an element that is selected by a user
+
+##Opacity  
+```
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+```
