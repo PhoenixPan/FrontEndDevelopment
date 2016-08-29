@@ -474,7 +474,7 @@ Select the children elements whose parent element's parent element has an id of 
 ```
 
 ##Pseudo-class
-
+Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.asp  
 #####Links
 ```
 // unvisited link
@@ -525,5 +525,23 @@ p:first-child i {color: blue;}
 <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
 ```
 
+#####p:lang(anything): define special rules for different language  
+```
+q:lang(en) {
+  quotes:"prefix "" postfix";
+  background:lightblue;
+}
 
+q:lang(cn) {
+  quotes:"1""2";
+  background:pink;
+}
 
+<p>Some text <q lang="en">English</q> Some text.</p>
+<p>Some text <q lang="cn">Chinese</q> Some text.</p>
+```
+
+#####focus: take actions when the element gains focus   
+```
+input:focus {background-color: yellow;}
+```
