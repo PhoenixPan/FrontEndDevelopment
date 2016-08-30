@@ -17,7 +17,7 @@ p.tip span {
 2. Internal: use <**style**>;  
 3. Inline: <**h1 style="color:blue;"**>;  
 4. Multiple style sheets & override priority: Use the last read value.    
-!important(pink) > inline style(white) > id(orange) > external(css)> bottom of style(blue) > top of style(pink)  
+!important(pink) > inline style(white) > id(orange) > external(css)> class on bottom(blue) > class on top(pink)  
 PS: external reference has lower priority than !impotant and inline, but could be higher than others depending on where it is.  
 ```
 <style>
