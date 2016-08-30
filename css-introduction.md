@@ -658,4 +658,38 @@ img {
 }
 ```
 
+##Positioning  
+1. Position to right: left:100%;
+2. Hardcode position: If you increase its padding, also increase the value of the top property to ensure that it stays in the middle
+```
+.parent {
+  position:relative;
+  display:inline-block;
+  padding:8px;
+}
+
+.child {
+  position:absolute;
+  z-index: 1;
+  top:4px;        // vertical center 
+  right: 100%; 
+}
+```
+```
+.parent {
+    position: relative;
+    display: inline-block;
+}
+
+.child {
+    width: 120px;
+    border:1px solid black;
+    
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+```
 
