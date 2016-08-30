@@ -26,12 +26,27 @@ change a part of the content
 ```
 
 ##Anchor (hyper link)    
-Target:  
-_self: default. Opens the linked document in the same frame as it was clicked;  
-_blank: Opens the linked document in a new window or tag;  
-_parent: Opens the linked document in the parent frame;  
-_top: Opens the linked document in the full body of the window;  
+Target
+**_self**: default. Opens the linked document in the same frame as it was clicked;  
+**_blank**: Opens the linked document in a new window or tag;  
+**_parent**: Opens the linked document in the parent frame;  
+**_top**: Opens the linked document in the full body of the window;  
 _framename_: 	Opens the linked document in a named frame;  
+  
+Open links with the same target in the target window or the same window
+```
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a></p> //Open in "iframe_a"
+
+// Open a new tag when clicked the first time, but uses the same page for more clicks  
+<h3>Table of Contents</h3>
+<ul>
+  <li><a href="/example/html/pref.html" target="view_window">Preface</a></li>
+  <li><a href="/example/html/chap1.html" target="view_window">Chapter 1</a></li>
+  <li><a href="/example/html/chap2.html" target="view_window">Chapter 2</a></li>
+  <li><a href="/example/html/chap3.html" target="view_window">Chapter 3</a></li>
+</ul>
+```
 
 Use name to jump to a tag in the same page (of course other pages as well). Grant each section a name anchor to organize the page. If the anchor is not found, the page will return to the top. No errors.    
 ```
@@ -165,7 +180,7 @@ Display multiple htmls in the same page.
   
 
 #Charactistics  
-1. Format: spaces in source code will be reduced to one and in-text newline does not work either. Use one or more "<*br /*>". 
+1. Format: spaces in source code will be reduced to one and in-text newline does not work either. Use one or more "<**br /**>". 
 2. Conditional annotation
 ```
 <!--[if IE 8]>
@@ -181,29 +196,15 @@ http://www.w3school.com.cn/tags/html_ref_standardattributes.asp
 1. alignment: style="text-align:center"  
 2. background: style="background-color:yellow"  
 3. quotation: use either " or '. Use ' when " is in text: name='Bill "HelloWorld" Gates'  
-4. target="_blank" opens a new tab  
-5. placeholder: provides hint in text  
-6. size: the length of input area  
+4. placeholder: provides hint in text  
+5. size: the length of input area  
 Divide line:  
 ```
 <p>Paragraph A</p>
 <hr />
 <p>Paragraph B</p>
 ```
-Target: open links with the same target in the target window or the same window
-```
-<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
-<p><a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a></p> //Open in "iframe_a"
 
-// Open a new tag when clicked the first time, but uses the same page for more clicks  
-<h3>Table of Contents</h3>
-<ul>
-  <li><a href="/example/html/pref.html" target="view_window">Preface</a></li>
-  <li><a href="/example/html/chap1.html" target="view_window">Chapter 1</a></li>
-  <li><a href="/example/html/chap2.html" target="view_window">Chapter 2</a></li>
-  <li><a href="/example/html/chap3.html" target="view_window">Chapter 3</a></li>
-</ul>
-```
 Action:  
 ```
 <form action="www.google.com">
