@@ -36,7 +36,22 @@ PS: external reference has lower priority than !impotant and inline, but could b
 <h1 id="orange-text" class="pink-text blue-text" style = "color:white">Hello World!</h1>
 ```
 
+```
+// medium priority
+ul.topnav li a:hover {           
+  background:silver;
+}
 
+// low priority
+li a:hover {           
+  background:silver;
+}
+
+// high priority
+#dropdown-content a:hover {
+  background:blue;
+}
+```
 
 ##Background Image
 ```
