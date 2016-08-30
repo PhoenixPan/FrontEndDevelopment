@@ -71,6 +71,20 @@ body {
 ```
 
 ##Border  
+Border actually consist of four triangles or trapezoid facing a center point. To generate a tringle:  
+```
+.trinangle {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+```
+
 ```
 // Styles
 border-style: dotted;
@@ -641,11 +655,11 @@ input:focus {background-color: yellow;}
 ##Pseudo elements  
 All references: http://www.w3schools.com/css/css_pseudo_elements.asp  
   
-1. p::after:	Insert content after every <p> element
-2. p::before:	Insert content before every <p> element
-3. p::first-letter:	Selects the first letter of every <p> element
-4. p::first-line:	Selects the first line of every <p> element
-5. p::selection:	Selects the portion of an element that is selected by a user
+1. p::after:	Insert content after every p element  
+2. p::before:	Insert content before every p element  
+3. p::first-letter:	Selects the first letter of every p element  
+4. p::first-line:	Selects the first line of every p element  
+5. p::selection:	Selects the portion of an element that is selected by a user  
 
 ##Opacity  
 Can be used on many element, not only image  
