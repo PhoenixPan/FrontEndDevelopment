@@ -481,8 +481,9 @@ Child Selector: select only immediate children
 ```
 div > p {...;}
 <div>
-  <p>Paragraph 1 in the div.</p>
-  <span><p>Paragraph 2 in the div.</p></span> // will not change
+  <p>Paragraph 1 in the div.</p>              // will change
+  <p>Paragraph 2 in the div.</p>              // will change
+  <span><p>Paragraph 3 in the div.</p></span> // will not change
 </div>
 ```
 
@@ -542,20 +543,44 @@ Select elements with certain tag that has the class: <p class="testclass">
 p.testclass {...;}
 ```
 
-Select elements with a certain tag that has a class
-```
-p[class]{...;}
-```
-
 Select elements with a certain tag that has the id <p id="testid">
 ```
 p#testid{...;}
 ```
 
-Select elements with a certain tag that has an id
+Select elements with a certain tag that has an attribute, including html elements, class, id
 ```
-p[id]{...;}
+// elements with this attribute
+p[attribute]{...;}            
+
+// elements with a certain value
+p[attribute="value"]{...;}
+
+// elements that contain a certain value
+p[attribute~="value"]{...;}     // only separate words, "value x" is ok, but ""value-x" and "values" will not work 
+p[attribute*="value"]{...;}     // any place
+
+// elements that start with a certain value
+p[attribute|="value"]{...;}    // only single word or with "-", "value" and "value-x", not "value x"
+p[attribute^="value"]{...;}    // any place
+
+// elements that end with a certain value, no rules, "-value", "_value", "xvalue" will all be ok
+p[attribute$="value"]{...;}  
 ```
+
+Example:  
+```
+input[type="text"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: yellow;
+}
+
+Firstname:<input type="text" name="Name" value="Peter" size="20">
+```
+
+
 
 Select the children elements whose parent element's parent element has an id of "testid"
 #testid ol li {...;}
@@ -707,3 +732,19 @@ img {
 }
 ```
 
+
+
+##Image Sprites
+Avoid using many images and save bandwidth.   
+Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_sprites_nav  
+  
+1. <img id="home" src="img_trans.gif"> - Only defines a small transparent image because the src attribute cannot be empty. The displayed image will be the background image we specify in CSS;  
+2. width: 46px; height: 44px; - Defines the size of the image we want to use;  
+3. background: url(img_navsprites.gif) 0 0; - Defines the background image and its position (left 0px, top 0px).  
+```
+#home {
+    width: 46px;
+    height: 44px;
+    background: url(img_navsprites.gif) 0 0;
+}
+```
