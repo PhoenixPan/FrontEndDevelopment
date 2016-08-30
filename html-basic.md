@@ -170,6 +170,7 @@ Display multiple htmls in the same page.
 ```
 
 
+
 ##Depreciated (replace with style):
 ```
 <center>
