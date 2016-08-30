@@ -575,7 +575,15 @@ div:hover p {display: block;}
 </div>
 <p>Tada! Here I am!</p>   // will not be displayed
 ```
+```
+div:hover .test{background:blue;}
+.test {background:yellow;}
 
+<div>
+  <p class="test">Tada! Here I am!</p> // will change color
+</div>
+<p class="test">Tada! Here I am!</p>   // will not change color
+```
 #####first-child: matches a specified element that is the first child of another element
 ```
 p:first-child {color: blue;}
