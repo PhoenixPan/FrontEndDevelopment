@@ -26,10 +26,13 @@ change a part of the content
 ```
 
 ##Anchor (hyper link)    
-Use target="_blank" to open in a new page  
-```
-<a href="http://www.w3school.com.cn/" target="_blank">Visit W3School!</a>
-```
+Target:  
+_self: default. Opens the linked document in the same frame as it was clicked;  
+_blank: Opens the linked document in a new window or tag;  
+_parent: Opens the linked document in the parent frame;  
+_top: Opens the linked document in the full body of the window;  
+_framename_: 	Opens the linked document in a named frame;  
+
 Use name to jump to a tag in the same page (of course other pages as well). Grant each section a name anchor to organize the page. If the anchor is not found, the page will return to the top. No errors.    
 ```
 <a name="tips">Mainpage - Help</a>
