@@ -9,6 +9,11 @@
 2. Declare all variables at the beginning of a script;  
 3. 
 
+## Best practice 
+1. Avoid global variable and always declare local variable, otherwise it will become global variables;  
+2. Declare and initialize all variable on the top, including loop index;  
+3. 
+
 ##Where To  
 1. JavaScript, both internal and external ones, can be placed within <**head**> or <**body**> or both of them;  
 2. Use external .js file <**script src="myScript.js"**><**/script**>   
@@ -209,7 +214,7 @@ Complete reference: http://www.w3schools.com/jsref/jsref_obj_string.asp
 var num = str.length;  
 var num = str.indexOf("a");  
 var num = str.lastIndexOf("a");  
-var num = str.search("a");        // equal to indexOf() but more powerful  
+var num = str.search("a");        // equal to indexOf() but more powerful wth regexp
   
 var str = str.slice(start, end)          // accept negative values, not in IE8 or earlier  
 var str = str.slice(start)               // to the end
@@ -217,8 +222,8 @@ var str = str.substring(start, end)      // don't accept negative values
 var str = str.substring(start)           // to the end
 var str = str.substr(start, length)      // start can be negative  
 
-var str = str.replace("Microsoft","W3Schools");  // replace only the first, accept regular expression
-var str = str.replace(/Microsoft/g,"W3Schools"); // add a g tag to replace all
+var str = str.replace("Microsoft","mypattern");  // replace only the first, accept regular expression
+var str = str.replace(/Microsoft/g,"mypattern"); // add a g tag to replace all
 
 var str = str.toUpperCase(); 
 var str = str.toLowerCase(); 
@@ -244,6 +249,7 @@ document.getElementById("demo").innerHTML = arr[0];
 ```
 
 ## Number
+Complete reference: http://www.w3schools.com/jsref/jsref_obj_number.asp  
 1. JS numbers are always 64-bits floating point;  
 2. Integers are considered accurate up to 15 digits: var y = 9999999999999999; // y = 10000000000000000;  
 3. The maximum number of decimals is 17, but the floating point is not always accurate: var x = 0.2 + 0.1; // x = 0.30000000000000004;   
@@ -258,7 +264,7 @@ var y = 123e5;      // 12300000
 var z = 123e-5;     // 0.00123
 ```
 ##### NaN - Not a Number
-Number type. 
+Type is number. 
 ```
 // operate with non-numeric string
 var x = 100 / "Apple";
@@ -271,6 +277,9 @@ var z = x + y;
 var x, y = 5;
 var z = x + y;         
 
+// operate two non-numeric values
+"Hello" - "Dolly" // NaN
+
 // NaN5: operate a string with a NaN
 var x = NaN, var y = "5";
 var z = x + y;    
@@ -278,9 +287,74 @@ var z = x + y;
 
 ## Number methods
 ```
-// All return a STRING
+// Return a STRING
 (1 + 1).toString();
 (1).toExponential();  // 3.000000e+0
 (5.555).toFixed(2);   // 5.56  perfect for working with money
+(1923.656).toPrecision(2)  // 1.9e+3   only display these many units
+
+// Return a NUMBER
+(123).valueOf(); // used internally to convert number objects to primitive values. Not in your code. 
+
+// Convert variables to number
+innerHTML = Number("10");     // 10
+innerHTML = Number("10 10");  // NaN
+innerHTML = parseInt("10")    // 10
+innerHTML = parseInt("10.33 10")  // 10
+innerHTML = parseInt("year 10")   // NaN
+innerHTML = parseFloat("10.33")   // 10.33
+```
+##### Number properties  
+Number.MAX_VALUE:	Returns the largest number possible in JavaScript  
+Number.MIN_VALUE:	Returns the smallest number possible in JavaScript  
+Number.NEGATIVE_INFINITY:	Represents negative infinity (returned on overflow)  
+Number.NaN:	Represents a "Not-a-Number" value  
+Number.POSITIVE_INFINITY:	Represents infinity (returned on overflow)  
+
+## Date()
+getDate()	Get the day as a number (1-31)  
+getDay()	Get the weekday a number (0-6)  
+getFullYear()	Get the four digit year (yyyy)  
+getHours()	Get the hour (0-23)  
+getMilliseconds()	Get the milliseconds (0-999)  
+getMinutes()	Get the minutes (0-59)  
+getMonth()	Get the month (0-11)  
+getSeconds()	Get the seconds (0-59)  
+getTime()	Get the time (milliseconds since January 1, 1970)  
+
+## RegExp
+/pattern/modifiers;  
+```
+var n = str.search(/mypattern/i);
+var n = str.search(/mypattern/i);
+
+/e/.test("The best things in life are free!"); // return true
+/e/.exec("The best things in life are free!"); // return match text if found, or null if not
+```
+i:	Perform case-insensitive matching
+g:	Perform a global match (find all matches rather than stopping after the first match)
+m:	Perform multiline matching
+
+## Mistakes
+true, because x is now 10, and 10 is true
+```
+var x = 0;
+if (x = 10)
+```
+
+## JSON 
+```
+<p id="demo"></p>
+
+<script>
+var text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
 
 ```
