@@ -1,6 +1,7 @@
 
 ## Ghost gap
-It's actually the margin of <**p**>
+It's actually the margin of <**p**>  
+https://www.w3.org/TR/CSS21/box.html#collapsing-margins  
 ```
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
