@@ -251,6 +251,7 @@ document.getElementById("demo").innerHTML = arr[0];
 5. If a number goes outside of the largest possible value, it becomes "Infinity": while (num != -Infinity);   
 6. Divide by 0 will also give Infinity: var y = -2 / 0; // y = -Infinity;  
 7. Infinity is a number type;  
+
 ##### Scientific notation
 ```
 var y = 123e5;      // 12300000
@@ -276,4 +277,10 @@ var z = x + y;
 ```
 
 ## Number methods
+```
+// All return a STRING
+(1 + 1).toString();
+(1).toExponential();  // 3.000000e+0
+(5.555).toFixed(2);   // 5.56  perfect for working with money
 
+```
