@@ -34,6 +34,7 @@
 ?:	ternary operator
 typeof:	Returns the type of a variable
 instanceof:	Returns true if an object is an instance of an object type
+Exponentiation:	10 ** 2
 ```
 //Same as Java
 "a" + 1 + 2 // a12
@@ -54,7 +55,7 @@ function test() {
 ```
 
 ##Variable
-1. Variable with no assignment(var carName;) will display "undefined";  
+1. Variable with no assignment(var carName;) will display "undefined", if it's an operation, will display "NaN";  
 2. You can re-declare a variable. If you don't assign a new value, it will keep the old one:  
 ```
 var carName = "Volvo";
