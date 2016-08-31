@@ -9,3 +9,7 @@ It simplifies data sharing
 It simplifies data transport  
 It simplifies platform changes  
 It simplifies data availability  
+
+
+## Ajax
+http://www.ibm.com/developerworks/library/j-ajax1/  
