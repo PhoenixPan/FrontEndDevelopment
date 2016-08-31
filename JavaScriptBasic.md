@@ -33,8 +33,8 @@
 innerHTML = typeof "John";	Returns the type of a variable
 instanceof:	Returns true if an object is an instance of an object type
 Exponentiation:	10 ** 2
-##### Minus string with number
-A string will be recognized as a number in MINUS operation if it consisits only numeric values
+##### Operate string with number
+A string will be recognized as a number as long as it's not in PLUS operation and it consisits only numeric values
 ```
 //Same as Java
 "a" + 1 + 2 // a12
@@ -42,7 +42,10 @@ A string will be recognized as a number in MINUS operation if it consisits only 
 
 //Different from Java
 1 - "2" // -1        
-"2" - 1 // 1
+"2" - "1" // 1
+"100" / 10 // 10
+"10" * "10" // 100
+
 ```
 ##### Add new line in output
 ```
@@ -100,11 +103,6 @@ var x;               // Now x is undefined
 var x = 5;           // Now x is a Number
 var x = "John";      // Now x is a String
 ```
-##### Scientific notation
-```
-var y = 123e5;      // 12300000
-var z = 123e-5;     // 0.00123
-```
 ##### Unassigned value 
 ```
 var num1;
@@ -140,13 +138,14 @@ null == undefined            // true
 
 ## Object
 1. Values pairs are called properties;  
-2. JavaScript objects cannot be compared, (x == y) is false ;  
-3. Change properties in two ways:  
+2. JavaScript objects cannot be compared, (x == y) is always false ;  
+3. JavaScript treats primitive values as objects when executing methods and properties;  
+4. Change properties in two ways:  
 ```
 objectName["propertyName"]
 objectName.propertyName
 ```
-3. Methods are build-in functions:  
+5. Methods are build-in functions:  
 ```
 var person = {
     firstName: "John",
@@ -156,8 +155,15 @@ var person = {
        return this.firstName + " " + this.lastName;
     }
 };
-
 person.fullName();
+```
+6. primitive objects
+```
+var x = 500;             
+var y = new Number(500);
+
+// (x == y) is true because x and y have equal values
+// (x === y) is false because x and y have different types
 ```
 
 ## HTML events
@@ -177,8 +183,8 @@ var y = "We are the so-called \"Vikings\" from the north."
 \':	single quote  
 \":double quote    
 **\****\**:	backslash  
-\n:	new line. It is rendered as 1 space in html. Use "<br>"
-\r:	carriage return  
+\n seems to work as new line, but it only renders one space in html. Use "<br>" to be effective.  
+\r:	carriage return   
 \t:	tab  
 \b:	backspace  
 \f:	form feed  
@@ -194,9 +200,6 @@ Actually break it is the safest way
 document.getElementById("demo").innerHTML = "Hello" + 
 "Dolly!";
 ```
-
-##### New line
-\n seems to work as new line, but it only renders one space in html. Use "<br>" to be effective.  
 
 ##### Don't create string objects, it's slow, confusing, and unpredictable.
 
@@ -239,3 +242,38 @@ var arr = str.split();       // put the entire string in arr[0]
 //var arr = str.split("");   // Split in characters
 document.getElementById("demo").innerHTML = arr[0];
 ```
+
+## Number
+1. JS numbers are always 64-bits floating point;  
+2. Integers are considered accurate up to 15 digits: var y = 9999999999999999; // y = 10000000000000000;  
+3. The maximum number of decimals is 17, but the floating point is not always accurate: var x = 0.2 + 0.1; // x = 0.30000000000000004;   
+4. To ensure an accurate decimal, to multiply and divide: var x = (0.2 * 10 + 0.1 * 10) / 10;  
+5. If a number goes outside of the largest possible value, it becomes "Infinity": while (num != -Infinity);   
+6. Divide by 0 will also give Infinity: var y = -2 / 0; // y = -Infinity;  
+7. Infinity is a number type;  
+##### Scientific notation
+```
+var y = 123e5;      // 12300000
+var z = 123e-5;     // 0.00123
+```
+##### NaN - Not a Number
+Number type. 
+```
+// operate with non-numeric string
+var x = 100 / "Apple";
+
+// operate a number with a NaN
+var x = NaN, y = 5;
+var z = x + y;   
+
+// operate a number with an undefined value
+var x, y = 5;
+var z = x + y;         
+
+// NaN5: operate a string with a NaN
+var x = NaN, var y = "5";
+var z = x + y;    
+```
+
+## Number methods
+
