@@ -35,3 +35,5 @@ To make the program work for remove action, what does "remove&item" means?
 ```
  req.send("action=remove&item="+itemCode);
 ```
+
+See demo code: 
