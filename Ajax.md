@@ -23,6 +23,8 @@ Ajax isn't a technology, it's more of a pattern.
 5. Put "web.xml" under "Web Pages" - "WEB-INF".  
 6. Run the program!  
 
+See demo code: 
+
 
 ##Questions
 Why "application/xml" not "text/xml"?  
@@ -36,4 +38,3 @@ To make the program work for remove action, what does "remove&item" means?
  req.send("action=remove&item="+itemCode);
 ```
 
-See demo code: 
