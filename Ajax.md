@@ -6,7 +6,7 @@ Ajax isn't a technology, it's more of a pattern.
 2. Dramatically decrease the data that needs to be transferred and allow a part of execution been completed on clint side.  
 3. Dropback: hard to move back the page.  
 
-##Workflow and code example:  
+##Workflow and code example   
 1. On client side, create a JavaScript object called XMLHttpRequest (set on which the HTML method for GET or POST request and the destination URL) to perform HTTP request and parse server response;  
 2. Register a callback function for each XMLHttpRequest and then dispatch XMLHttpRequest asynchronously;  
 3. The control returns to the browser, which keeps interacting with the user for other actions;  
@@ -14,20 +14,14 @@ Ajax isn't a technology, it's more of a pattern.
 5. Back on client side, the server's response arrives and calls the callback function to process the XML document arrived;  
 6. Update the user interface using JavaScript to manipulate HTML DOM.    
   
-See code example [here](http://www.ibm.com/developerworks/library/j-ajax1/#Listing 1) and also in this repository.    
-
-
-
-##Simple implementation
+#####Code example  
 1. Download the sample code from the end of [this article](http://www.ibm.com/developerworks/library/j-ajax1/#Listing 1);  
 2. Create a new Java Web project;  
 3. Put "src" - "developerworks" under "Source Packages";  
 4. Put files in "web" folder under "Web Pages";  
 5. Put "web.xml" under "Web Pages" - "WEB-INF".  
 6. Run the program!  
-
-
-
+  
 ##Questions
 Why "application/xml" not "text/xml"?  
 ```
