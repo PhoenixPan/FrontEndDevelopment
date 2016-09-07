@@ -6,14 +6,13 @@ Ajax isn't a technology, it's more of a pattern.
 2. Dramatically decrease the data that needs to be transferred and allow a part of execution been completed on clint side.  
 3. Dropback: hard to move back the page.  
 
-##Flow  
-1. On client side, create a JavaScript object called XMLHttpRequest to perform HTTP request and parse server response;  
-2. Set on the XMLHttpRequest object the HTML method for GET or POST request and the destination URL;  
-2. Dispatch XMLHttpRequest asynchronously and register a callback function for each request;  
-3. The control returns to the browser, which keeps interacting with the user;  
+##Workflow   
+1. On client side, create a JavaScript object called XMLHttpRequest (set on which the HTML method for GET or POST request and the destination URL) to perform HTTP request and parse server response;  
+2. Register a callback function for each XMLHttpRequest and then dispatch XMLHttpRequest asynchronously;  
+3. The control returns to the browser, which keeps interacting with the user for other actions;  
 4. On server, the Java Web server parses the request just like any other HttpServletResponse: the serlet invokes necessary steps, serialize its response into XML, and write it to the HttpServletResponse;  
 5. Back on client side, the server's response arrives and calls the callback function to process the XML document arrived;  
-6. Update the user interface.  
+6. Update the user interface using JavaScript to manipulate HTML DOM.    
 
 ##Simple implementation
 1. Download the sample code from the end of [this article](http://www.ibm.com/developerworks/library/j-ajax1/#Listing 1);  
