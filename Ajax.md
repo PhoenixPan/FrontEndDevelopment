@@ -334,6 +334,6 @@ public class Cart {
 ```
 
 These three classes have no changes comparing with the oringinal ones in the demo code:  
-CartServlet.java 
-Catelog.java 
+CartServlet.java  
+Catelog.java  
 Item.java  
