@@ -34,8 +34,10 @@ function onMessageArrived(message) {
   console.log("onMessageArrived:"+message.payloadString);
 }
 ```
-(https://eclipse.org/paho/clients/js/)
+(https://eclipse.org/paho/clients/js/)  
 
+Include mqttws31.js library in your project:  
+https://raw.githubusercontent.com/eclipse/paho.mqtt.javascript/master/src/mqttws31.js  
 
 ##Installing Mosquitto on a PC  
 1. Download mosquitto setup file from   http://www.eclipse.org/downloads/download.php?file=/mosquitto/binary/win32/mosquitto-1.4.10-install-win32.exe  
