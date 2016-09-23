@@ -14,6 +14,13 @@
 2. Declare and initialize all variable on the top, including loop index;  
 3. 
 
+##### The order of importing scripts matter!
+If "client" uses functions from "mqttws31", import it later. Otherwise an "class not defined" error will raise.  
+```
+<script type="text/javascript" src="mqttws31.js"></script>
+<script type="text/javascript" language="javascript" src="client.js"></script>
+```
+
 ##Where To  
 1. JavaScript, both internal and external ones, can be placed within <**head**> or <**body**> or both of them;  
 2. Use external .js file <**script src="myScript.js"**><**/script**>   
