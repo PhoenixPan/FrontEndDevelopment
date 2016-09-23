@@ -37,7 +37,7 @@ function onMessageArrived(message) {
 (https://eclipse.org/paho/clients/js/)
 
 
-##Installing Mosquito on aPC  
+##Installing Mosquitto on a PC  
 1. Download mosquitto setup file from   http://www.eclipse.org/downloads/download.php?file=/mosquitto/binary/win32/mosquitto-1.4.10-install-win32.exe  
 2. Run the setup file and follow the steps to complete the installation.  
 3. Download and Install Win32 OpenSSL v1.0.2h from here http://slproweb.com/products/Win32OpenSSL.html and copy libeay32.dll and ssleay32.dll to the mosquitto root.  
@@ -47,7 +47,7 @@ function onMessageArrived(message) {
 mosquitto.exe -v -c mosquitto.conf
 ```
 
-## Use remote mosqutto server  
+## Use remote Mosquitto server  
 ```
 client = new Paho.MQTT.Client("broker.hivemq.com", 8000, "uniqueId");
 ```
