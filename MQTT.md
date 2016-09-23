@@ -1,4 +1,4 @@
-Simple demo JS code
+##Simple JS demo  
 
 ```
 // Create a client instance
