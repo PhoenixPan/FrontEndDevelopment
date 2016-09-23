@@ -40,8 +40,8 @@ function onMessageArrived(message) {
 ##Installing Mosquito on aPC  
 1. Download mosquitto setup file from   http://www.eclipse.org/downloads/download.php?file=/mosquitto/binary/win32/mosquitto-1.4.10-install-win32.exe  
 2. Run the setup file and follow the steps to complete the installation.  
-3. Download and Install Win32 OpenSSL v1.0.2h from here http://slproweb.com/products/Win32OpenSSL.html. Copy libeay32.dll and ssleay32.dll to the mosquitto root.  
-4. Download pthreadVC2.dll from ftp://sources.redhat.com/pub/pthreads-win32/dll-latest/dll/x86/ and Copy it to mosquitto root.  
+3. Download and Install Win32 OpenSSL v1.0.2h from here http://slproweb.com/products/Win32OpenSSL.html and copy libeay32.dll and ssleay32.dll to the mosquitto root.  
+4. Download pthreadVC2.dll from ftp://sources.redhat.com/pub/pthreads-win32/dll-latest/dll/x86/ and copy it to mosquitto root.  
 5. Testing: Open command prompt and run the following commands under mosquitto root:  
 ```
 mosquitto.exe -v -c mosquitto.conf
