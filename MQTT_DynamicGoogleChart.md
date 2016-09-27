@@ -31,7 +31,13 @@ function onMessageArrived(message) {
   elements = elements.split(':');
   document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + "<br>" + "Temperature: " + elements[0] + " F, Timestamp: " + elements[1];
   // Append the received message to contents, which used to draw the chart
-  content[count] = [count + '', parseInt(elements[1]), parseInt(elements[0]), parseInt(elements[0])]
+  if (timestamp == 0) {
+    content[count] = [count + '', timestamp, parseInt(elements[0]), parseInt(elements[0])]
+    timestamp = parseInt(elements[1])
+  }
+  else {
+    content[count] = [count + '', (parseInt(elements[1]) - timestamp)/1000, parseInt(elements[0]), parseInt(elements[0])]
+  }
   drawSeriesChart();
   count++;
 }
@@ -49,6 +55,7 @@ function onMessageArrived(message) {
             // Initialzie Google charts
             google.charts.load('current', {'packages': ['corechart']});
             var count = 1         // Used to trace the number of tuples received
+            var timestamp = 0     // Used to record time
             var content = [];     // Contents based on which the chart would be drawn 
             // Initialize the columns of the chart. The second temperature is used to activate different colors
             content[0] = ['ID', 'Timestamp', 'Temperature','Temperature']; 
