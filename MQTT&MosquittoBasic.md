@@ -1,4 +1,4 @@
-##Simple JS demo  
+#Simple JS demo  
 
 ```
 // Create a client instance
@@ -49,7 +49,7 @@ https://raw.githubusercontent.com/eclipse/paho.mqtt.javascript/master/src/mqttws
 mosquitto.exe -v -c mosquitto.conf
 ```
 
-## Use remote Mosquitto server  
+# Use remote Mosquitto server  
 ```
 client = new Paho.MQTT.Client("broker.hivemq.com", 8000, "uniqueId");
 ```
