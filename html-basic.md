@@ -191,6 +191,13 @@ When you want to display a greater-than symbol in the text, you can use a named 
 
 http://w3c.github.io/html/syntax.html#named-character-references
 
+# Quirks Mode and Standards Mode
+For HTML documents, browsers use a DOCTYPE in the **beginning** of the document to decide whether to handle it in quirks mode or standards mode. For full standards mode, use:   
+```
+<!DOCTYPE html>
+```
+XHTML does not require this line as everything will be in full standards mode.  
+
 #Charactistics  
 1. Format: spaces in source code will be reduced to one and in-text newline does not work either. Use one or more "<**br /**>". 
 2. Conditional annotation
