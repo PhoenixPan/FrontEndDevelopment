@@ -9,7 +9,7 @@ footer, header, hgroup, menu, nav, section {
 ```
 
 ```
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
     ul.topnav li.right,
     ul.topnav li {float: none;}
 }
