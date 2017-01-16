@@ -22,6 +22,7 @@ Meta: used in many services and serarch engine;
 ```
 
 
+
 ##<**span**>  
 change a part of the content  
 ```
@@ -172,8 +173,6 @@ Display multiple htmls in the same page.
 </form>
 ```
 
-
-
 ##Depreciated (replace with style):
 ```
 <center>
@@ -181,7 +180,14 @@ Display multiple htmls in the same page.
 <s> and <strike>	
 <u>
 ```
-  
+
+# Named character references
+When you want to display a greater-than symbol in the text, you can use a named character reference. You should know these four common named character references:
+
+&gt; denotes the greater-than sign (>)
+&lt; denotes the less-than sign (<)
+&amp; denotes the ampersand (&)
+&quot; denotes double quote (")
 
 #Charactistics  
 1. Format: spaces in source code will be reduced to one and in-text newline does not work either. Use one or more "<**br /**>". 
