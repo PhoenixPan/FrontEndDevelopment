@@ -1,3 +1,6 @@
+# Concepts
+1. The hierarchical structure of HTML is called the DOM (document object model);  
+
 #Tag  
 http://www.w3school.com.cn/tags/index.asp  
 http://www.w3school.com.cn/html/html_formatting.asp  
