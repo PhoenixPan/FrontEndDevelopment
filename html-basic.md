@@ -37,7 +37,7 @@ Target
 **_blank**: Opens the linked document in a new window or tag;  
 **_parent**: Opens the linked document in the parent frame;  
 **_top**: Opens the linked document in the full body of the window;  
-_framename_: 	Opens the linked document in a named frame;  
+**_framename**: 	Opens the linked document in a named frame;  
   
 Open links with the same target in the target window or the same window
 ```
