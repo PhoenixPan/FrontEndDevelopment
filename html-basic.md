@@ -2,13 +2,12 @@
 1. The hierarchical structure of HTML is called the DOM (document object model);  
 
 #Tag  
-All tags:  
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+All elements:  
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element  
 http://www.w3school.com.cn/tags/index.asp  
-http://www.w3school.com.cn/html/html_formatting.asp  
 
 ###Anchor (hyper link)    
-Target
+Target  
 **_self**: default. Opens the linked document in the same frame as it was clicked;  
 **_blank**: Opens the linked document in a new window or tag;  
 **_parent**: Opens the linked document in the parent frame;  
@@ -45,7 +44,7 @@ Another mailto link:
 
 ###Text  
 1. <**b**> and <**i**> are presentationl elements that convey no extra importance;  
-2. <**em**> and <**strong**> are phrase elements that strength SEO, while <**strong**> is stronger than <**em**>;  
+2. <**strong**> and <**em**> are phrase elements that strength SEO, while <**strong**> is stronger than <**em**>;  
 3. <**mark**> to highlight;  
 4. <**sub**> and <**sup**> to subscript or superscript;  
 5. <**blockquote**> to quote and cite;  
@@ -84,7 +83,7 @@ href ="/example/html/sun.html"/>
 </map>
 ```
 ###<**head**> - Container of metadata
-Title: define title in browser and search engine;  
+Title: define the title in browser tag and in search engine;  
 Base: provides default link and target;  
 Link: links to outside resources, such as style;  
 Meta: used in many services and serarch engine;  
@@ -99,10 +98,12 @@ Meta: used in many services and serarch engine;
 </head>
 ```
 
-###<**span**>  
-change a part of the content  
+###<**div**> and <**span**>  
+Ways of grouping things together. The scope of div is larger than span. div is a block-level element that will incur a new line.    
 ```
+<div>
 <p><span style="color:red">some text.</span>some other text.</p>
+</div>
 ```
 
 ###<**pre**> to maintain format
@@ -171,7 +172,7 @@ Display multiple htmls in the same page.
 </form>
 ```
 
-###Depreciated Tags (replace with style):
+###Depreciated tags (replace with style):
 ```
 <center>
 <font> and <basefont> (style="font-family:verdana")
