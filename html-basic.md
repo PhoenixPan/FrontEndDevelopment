@@ -189,6 +189,8 @@ When you want to display a greater-than symbol in the text, you can use a named 
 &amp; denotes the ampersand (&)
 &quot; denotes double quote (")
 
+http://w3c.github.io/html/syntax.html#named-character-references
+
 #Charactistics  
 1. Format: spaces in source code will be reduced to one and in-text newline does not work either. Use one or more "<**br /**>". 
 2. Conditional annotation
