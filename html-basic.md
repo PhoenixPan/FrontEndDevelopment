@@ -199,14 +199,12 @@ XHTML does not require this line as everything will be in full standards mode.
 
 #Charactistics  
 1. Format: spaces in source code will be reduced to one and in-text newline does not work either. Use one or more "<**br /**>". 
-2. Conditional annotation
-    ```
-    <!--[if IE 8]>
-        .... some HTML here ....
-    <![endif]-->
-    ```
-3. Special text content such as < and > or space, see: http://www.w3school.com.cn/tags/html_ref_entities.html  
-4. 
+2. Conditional annotation  
+```
+<!--[if IE 8]>
+    .... some HTML here ....
+<![endif]-->
+```
 
 
 #Attributes  
