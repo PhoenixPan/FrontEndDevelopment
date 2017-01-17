@@ -51,9 +51,10 @@ li a:hover {
 ```
 
 ## Color
-1. Default named color, such as red, gold, black. Check all of them here: http://colours.neilorangepeel.com/
-2. Hexadecimal: #000000, RGB color. Red #FF0000, green #00FF00, blue #0000FF
-
+1. Default: color: red; such as red, gold, black. Check all of them here: http://colours.neilorangepeel.com/
+2. Hexadecimal: color: #000000; The first two digits stand for red #FF0000, the next two for green #00FF00, the last two for blue #0000FF
+3. RGB: color: rgb(0,0,0); The first value stands for red rgb(255,0,0) , the next one green rgb(0,255,0), the last one for blue rgb(0,0,255)
+4. RGBA: color: rgba(0,0,0,0); The last channel is used to set transparency level from 0 to 1
 
 
 ## Background Image
