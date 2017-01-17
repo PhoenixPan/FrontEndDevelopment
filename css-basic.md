@@ -1,10 +1,6 @@
-#CSS  
+# CSS Basic
 
-
-##General  
-1. Change the style of the entire page in a leading <**style**> block in <**head**>;  
-
-#####Limit the application of class. In this case, only <**span**> within <**p**> will be affected.   
+##### Limit the application of class. In this case, only <**span**> within <**p**> will be affected.   
 ```
 p.tip span {
   font-weight:bold;
@@ -12,11 +8,12 @@ p.tip span {
 }
 ```
 
-##Apply CSS
-1. External: refer in head tag: <**link rel="stylesheet" type="text/css" href="mystyle.css"**>;  
+## Apply CSS
+1. External (preferred): refer in head tag: <**link rel="stylesheet" type="text/css" href="mystyle.css"**>;  
 2. Internal: use <**style**>;  
 3. Inline: <**h1 style="color:blue;"**>;  
-4. Multiple style sheets & override priority: Use the last read value.    
+
+There are multiple style sheets & override priority: Use the last read value.    
 !important(pink) > inline style(white) > id(orange) > external(css)> class on bottom(blue) > class on top(pink)  
 PS: external reference has lower priority than !impotant and inline, but could be higher than others depending on where it is.  
 ```
@@ -53,7 +50,13 @@ li a:hover {
 }
 ```
 
-##Background Image
+## Color
+1. Default named color, such as red, gold, black. Check all of them here: http://colours.neilorangepeel.com/
+2. Hexadecimal: #000000, RGB color. Red #FF0000, green #00FF00, blue #0000FF
+
+
+
+## Background Image
 ```
 body {
   background-image: url("gradient_bg.png");
