@@ -114,8 +114,38 @@ form is a block-level element that will incur a new line.
 4. button: if button element is the last thing in the form, it will submit the form  
 
 
-#####<**label**>  
+###<**label**>  
 Set the label target using: for="id"  
+
+###<**input**>
+1. type: text, radio, color, radio, email, etc.
+2. placeholder
+3. name/value: displayed in the url querying string
+4. required
+
+```
+ 	<h1>Login</h1>
+ 	<!-- message sent to "https://www.wikipedia.org/?username=dfgrty&password=34534535" -->
+ 	<form action="http://www.wikipedia.org">
+ 		<label for="username">Username:</label>
+	 	<input id="username" name="username" type="email" placeholder="username" required>
+		<label for="password">Password:</label>
+		<input id="password" name="password" type="password" placeholder="password">
+		<button>Submit</button>
+	</form>
+```
+```
+	<form>
+		<label for="A">Option A</label>
+		<input id="A" type="radio" value="A" name="options">
+		<label for="B">Option B</label>
+		<input id="B" type="radio" value="B" name="options">
+		<button>Go</button>
+	</form>
+```
+
+###<**select**>
+1. 
 
 ###<**pre**> to maintain format
 ```
