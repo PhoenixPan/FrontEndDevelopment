@@ -110,7 +110,9 @@ Ways of grouping things together. The scope of div is larger than span. div is a
 form is a block-level element that will incur a new line.   
 1. Action: where the form send data to  
 2. Method: what HTTP method (get/post). If no action, goes to the same page which equals to refresh   
-3. element attributes: name: element name in querying string  
+3. element name: element name in querying string  
+4. button: if button element is the last thing in the form, it will submit the form  
+
 
 #####<**label**>  
 for="id"  
