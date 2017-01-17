@@ -115,7 +115,7 @@ form is a block-level element that will incur a new line.
 
 
 #####<**label**>  
-for="id"  
+Set the label target using: for="id"  
 
 ###<**pre**> to maintain format
 ```
