@@ -34,17 +34,17 @@ PS: external reference has lower priority than !impotant and inline, but could b
 ```
 
 ```
-// medium priority
+/*medium priority*/
 ul.topnav li a:hover {           
   background:silver;
 }
 
-// low priority
+/*low priority*/
 li a:hover {           
   background:silver;
 }
 
-// high priority
+/*high priority*/
 #dropdown-content a:hover {
   background:blue;
 }
@@ -68,7 +68,10 @@ body {
   background-repeat: repeat-x;
   background-repeat: repeat-y;
   background-repeat: no-repeat;
-    
+  
+  /*Stretch the image to fit the screen*/
+  background-size: cover;
+  
   background-position: right top;
   background-attachment: fixed; /*image will not move as you scroll*/
   
@@ -77,7 +80,22 @@ body {
 }
 ```
 
-##Border  
+##Border 
+Mainly consists of three attributes: width, color, and style:  
+```
+h1 {
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+```
+Or shorthand:  
+```
+h1 {
+    border: 5px solid red;
+}
+```
+
 Border actually consist of four triangles or trapezoid facing a center point. To generate a tringle:  
 ```
 .trinangle {
@@ -92,8 +110,20 @@ Border actually consist of four triangles or trapezoid facing a center point. To
 }
 ```
 
+Ways to set width
 ```
-// Styles
+border-width: medium;
+border-width: 2px;
+border-width: 1px 2px 3px 4px;
+```
+
+Round cornor
+```
+border-radius:5px;
+```
+
+All border styles
+```
 border-style: dotted;
 border-style: dashed;
 border-style: solid;
@@ -111,21 +141,8 @@ border-right-style: solid;
 border-bottom-style: dotted;
 border-left-style: solid;
 }
-// Width
-border-width: medium;
-border-width: 2px;
-border-width: 1px 2px 3px 4px;
-
-// Color
-border-color:red;
-
-// Shorthand property in order:width style(required) color
-border: 5px solid red;
-border-left: 5px solid red;
-
-// Round cornor
-border-radius:5px;
 ```
+
 
 ##Margin
 ```
