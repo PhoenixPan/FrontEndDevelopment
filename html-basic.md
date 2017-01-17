@@ -113,9 +113,38 @@ form is a block-level element that will incur a new line.
 3. element name: element name in querying string  
 4. button: if button element is the last thing in the form, it will submit the form  
 
+```
+<form>
+  <input type="radio" name="gender" value="male"> Male
+  <input type="radio" name="gender" value="female"> Female
+</form>
+
+<form action="action_page.php">
+  <select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="ford">Ford</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+
+<form action="action_page.php">
+  <textarea name="note"></textarea>
+  <input type="submit">
+</form>
+
+
+<form action="action_page.php">
+  Quantity (between 1 and 5):
+  <input type="number" name="quantity" min="1" max="5"></input>
+  <input type="submit">
+</form>
+```
 
 ###<**label**>  
 Set the label target using: for="id"  
+
 
 ###<**input**>
 1. type: text, radio, color, radio, email, etc.
@@ -123,6 +152,12 @@ Set the label target using: for="id"
 3. name/value: displayed in the url querying string
 4. required
 
+Password
+```
+<input type="password" pattern=".{5,10}" title="Password has to be 5 to 10 characters" required>
+```
+
+Other Examples
 ```
  	<h1>Login</h1>
  	<!-- message sent to "https://www.wikipedia.org/?username=dfgrty&password=34534535" -->
@@ -145,7 +180,18 @@ Set the label target using: for="id"
 ```
 
 ###<**select**>
-1. 
+1. option
+
+```
+	<form>
+		<select name="color">
+			<option value="Yellow">Red</option>
+			<option value="Green">Yellow</option>
+			<option value="Red">Green</option>
+		</select>
+		<button>Go</button>
+	</form>
+```
 
 ###<**pre**> to maintain format
 ```
@@ -182,36 +228,6 @@ Display multiple htmls in the same page.
 ###<**list**>  
 1. Change labels: <**ol type="A"**>;  
 2. Change marks: style="list-style-type:square";  
-
-###<**form**>  
-```
-<form>
-  <input type="radio" name="gender" value="male"> Male
-  <input type="radio" name="gender" value="female"> Female
-</form>
-
-<form action="action_page.php">
-  <select name="cars">
-    <option value="volvo">Volvo</option>
-    <option value="ford">Ford</option>
-    <option value="fiat">Fiat</option>
-    <option value="audi">Audi</option>
-  </select>
-  <input type="submit">
-</form>
-
-<form action="action_page.php">
-  <textarea name="note"></textarea>
-  <input type="submit">
-</form>
-
-
-<form action="action_page.php">
-  Quantity (between 1 and 5):
-  <input type="number" name="quantity" min="1" max="5"></input>
-  <input type="submit">
-</form>
-```
 
 ###Depreciated tags (replace with style):
 ```
