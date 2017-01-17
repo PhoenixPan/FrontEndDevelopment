@@ -57,19 +57,22 @@ li a:hover {
 4. RGBA: color: rgba(0,0,0,0); The last channel is used to set transparency level from 0 to 1
 
 
-## Background Image
+## Background
+### Image
 ```
 body {
   background-image: url("gradient_bg.png");
     
-  // Rules for repeating image  
+  /*Rules for repeating image*/
+  background-repeat: repeat; /*default*/
   background-repeat: repeat-x;
+  background-repeat: repeat-y;
   background-repeat: no-repeat;
     
   background-position: right top;
-  background-attachment: fixed; // image will not move as you scroll
+  background-attachment: fixed; /*image will not move as you scroll*/
   
-  // Shorthand property in order: color, image, repeat, attachment, position
+  /*Shorthand property in order: color, image, repeat, attachment, position*/
   background: pink url("img_tree.png") no-repeat fixed right top; 
 }
 ```
