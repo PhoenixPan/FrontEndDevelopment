@@ -1,10 +1,16 @@
-##Basic
+##Selector
+
 ```
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
-  .red-text {
-    color: red;
+
+  /*ID selector*/
+  #for-id-selector {
+    background-color:green;
+  }
+  
+  /*Class selector*/
+  .for-class-selector {
+    background-color: red;
   }
 
   h2 {
@@ -29,50 +35,11 @@
   
   .silver-background {
     background-color:silver;
-  }
-  
-  #cat-photo-form {
-    background-color:green;
-  }
-  
+  }  
 </style>
 
-<h2 class="red-text">CatPhotoApp</h2>
-
-<!--<a href="#"> creates a dead link-->
-<p> View more 
-  <a href="http://www.freecatphotoapp.com">cat photos</a>
-</p>
-
-<a href = "#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back. "></a>
-
-<p class="red-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-
-<div>
-  <p>Things cats love:</p>
-  <ul>
-    <li>cat nip</li>
-    <li>laser pointers</li>
-    <li>lasagna</li>
-  </ul>
-  <p>Top 3 things cats hate:</p>
-  <ol>
-    <li>flea treatment</li>
-    <li>thunder</li>
-    <li>other cats</li>
-  </ol>
-</div>
-
-<form id = "cat-photo-form" action="/submit-cat-photo">
-  <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-  <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
-  <label><input type="checkbox" name="personality" checked> Loving</label>
-  <label><input type="checkbox" name="personality"> Lazy</label>
-  <label><input type="checkbox" name="personality"> Energetic</label>
-  <input type="text" placeholder="cat photo URL" required>
-  <button type="submit">Submit</button>
-</form>
-
+<p id="for-id-selector">ID selector: Green</p>
+<p class="for-class-selector">ID selector: Red</p>
 ```
 
 1. Change radius:  
