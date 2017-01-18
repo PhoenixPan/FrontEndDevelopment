@@ -14,8 +14,8 @@ p.tip span {
 3. Inline: <**h1 style="color:blue;"**>;  
 
 ## priority
-There are multiple style sheets & override priority: Use the last read value.  
-1. child setting > parent setting
+There are multiple style sheets & override priority.  
+1. The one that is more specific wins: child element > parent element
 ```
 /*Priority from low to high*/
 body {
