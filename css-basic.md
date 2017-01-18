@@ -8,13 +8,37 @@ p.tip span {
 }
 ```
 
-## Apply CSS
+## Ways to apply CSS
 1. External (preferred): refer in head tag: <**link rel="stylesheet" type="text/css" href="mystyle.css"**>;  
 2. Internal: use <**style**>;  
 3. Inline: <**h1 style="color:blue;"**>;  
 
-There are multiple style sheets & override priority: Use the last read value.    
-!important(pink) > inline style(white) > id(orange) > external(css)> class on bottom(blue) > class on top(pink)  
+## priority
+There are multiple style sheets & override priority: Use the last read value.  
+1. child setting > parent setting
+```
+/*Priority from low to high*/
+body {
+  color: red
+}
+
+#proirity_test {
+	border: 1px solid #0040FF;
+	color: purple;
+}
+
+#proirity_test ul {
+	border: 1px solid #6040FF;
+	color: blue;
+}
+
+#proirity_test ul li:nth-of-type(3) {
+	border: 1px solid #004022;
+	color: green;
+}
+```
+
+2. !important(pink) > inline style(white) > id(orange) > external(css)> class on bottom(blue) > class on top(pink)  
 PS: external reference has lower priority than !impotant and inline, but could be higher than others depending on where it is.  
 ```
 <style>
