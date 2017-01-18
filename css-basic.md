@@ -38,7 +38,7 @@ body {
 }
 ```
 
-2. !important(pink) > inline style(white) > id(orange) > external(css)> class on bottom(blue) > class on top(pink)  
+2. !important(pink) > inline style(white) > id(orange) > external(css)> class on bottom(blue) > class on top(green)  
 PS: external reference has lower priority than !impotant and inline, but could be higher than others depending on where it is.  
 ```
 <style>
@@ -48,13 +48,18 @@ PS: external reference has lower priority than !impotant and inline, but could b
   .pink-text {
     color: pink !important;
   }
+  
+  .green-text {
+    color: blue;
+  }
+  
   .blue-text {
     color: blue;
   }
   
 </style>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
-<h1 id="orange-text" class="pink-text blue-text" style = "color:white">Hello World!</h1>
+<h1 id="orange-text" class="pink-text green-text blue-text" style = "color:white">Hello World!</h1>
 ```
 
 ```
