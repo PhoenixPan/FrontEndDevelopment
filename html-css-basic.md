@@ -18,31 +18,30 @@
     background-color: red;
   }
 
-  /*Star selector: all elements*/
-  * {
-   margin: 0;
-   padding: 0;
+  /*Star: all elements*/
+  #id-selector * {
+    margin: 0;
+    padding: 0;
   }
 
+  /*X + Y: only the Ys immediately follow X*/ 
+  /*X Y: all Y within X*/
+  /*X > Y: only direct descendant Y of X*
+  
   /*ID + Class selector*/
   #id-selector.class-selector {
     background-color: yellow;
   }
 
-  .thick-green-border {
-    border-color: green;
-    border-width: 10px;
-    border-style: solid;
-    border-radius: 50%;
-  }
 </style>
 
 <p id="id-selector">ID selector: Green</p>
 <p class="class-selector">ID selector: Red</p>
 
-/*Multiple classes*/
+/*Multiple classes*/ 
 <p class="class1 class2">ID selector: Red</p>
 ```
+The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048  
 
 ## Tricks
 1. Change radius:  
