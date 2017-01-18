@@ -1,25 +1,21 @@
-##Selector
+## Selector
 
 ```
 <style>
 
   /*ID selector*/
-  #for-id-selector {
+  #id-selector {
     background-color:green;
   }
   
   /*Class selector*/
-  .for-class-selector {
+  .class-selector {
     background-color: red;
   }
 
-  h2 {
-    font-family: Lobster, Monospace;
-  }
-
-  p {
-    font-size: 16px;
-    font-family: Monospace;
+  /*ID + Class selector*/
+  #id-selector.class-selector {
+    background-color: yellow;
   }
 
   .thick-green-border {
@@ -28,20 +24,16 @@
     border-style: solid;
     border-radius: 50%;
   }
-
-  .smaller-image {
-    width: 100px;
-  }
-  
-  .silver-background {
-    background-color:silver;
-  }  
 </style>
 
-<p id="for-id-selector">ID selector: Green</p>
-<p class="for-class-selector">ID selector: Red</p>
+<p id="id-selector">ID selector: Green</p>
+<p class="class-selector">ID selector: Red</p>
+
+/*Multiple classes*/
+<p class="class1 class2">ID selector: Red</p>
 ```
 
+## Tricks
 1. Change radius:  
 ```
 border-radius: 50%; // Round
