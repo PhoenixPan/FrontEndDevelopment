@@ -29,10 +29,15 @@
     padding: 0;
   }
 
-  /*nth element*/
+  /*X:nthof-type(n)*/
   div:nth-of-type(3) p {
     font-size:25px;
   }
+  
+  /*X:first-child*/
+  /*X:last-child*/
+  /*X:only-child*/
+  /*X:nth-child(n)*/
   
   /*X + Y: only the Ys immediately follow X*/ 
   /*X Y: all Y within X*/
