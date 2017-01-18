@@ -1,12 +1,12 @@
 # Concepts
 1. The hierarchical structure of HTML is called the DOM (document object model);  
 
-#Tag  
+# Tag  
 All elements:  
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element  
 http://www.w3school.com.cn/tags/index.asp  
 
-###Anchor (hyper link)    
+### Anchor (hyper link)    
 Target  
 **_self**: default. Opens the linked document in the same frame as it was clicked;  
 **_blank**: Opens the linked document in a new window or tag;  
@@ -42,7 +42,7 @@ Another mailto link:
 </p>
 ```
 
-###Text  
+### Text  
 1. <**b**> and <**i**> are presentationl elements that convey no extra importance;  
 2. <**strong**> and <**em**> are phrase elements that strength SEO, while <**strong**> is stronger than <**em**>;  
 3. <**mark**> to highlight;  
@@ -57,7 +57,7 @@ Another mailto link:
 ```
 
 
-###Image  
+### Image  
 Background (gif and jpg only).   
 ```
 <body background="/i/eg_background.jpg">
@@ -82,7 +82,7 @@ href ="/example/html/sun.html"/>
 
 </map>
 ```
-###<**head**> - Container of metadata
+### <**head**> - Container of metadata
 Title: define the title in browser tag and in search engine;  
 Base: provides default link and target;  
 Link: links to outside resources, such as style;  
@@ -98,7 +98,7 @@ Meta: used in many services and serarch engine;
 </head>
 ```
 
-###<**div**> and <**span**>  
+### <**div**> and <**span**>  
 Ways of grouping things together. The scope of div is larger than span. div is a block-level element that will incur a new line.    
 ```
 <div>
@@ -106,7 +106,7 @@ Ways of grouping things together. The scope of div is larger than span. div is a
 </div>
 ```
 
-###<**form**>
+### <**form**>
 form is a block-level element that will incur a new line.   
 1. Action: where the form send data to  
 2. Method: what HTTP method (get/post). If no action, goes to the same page which equals to refresh   
@@ -142,11 +142,11 @@ form is a block-level element that will incur a new line.
 </form>
 ```
 
-###<**label**>  
+### <**label**>  
 Set the label target using: for="id"  
 
 
-###<**input**>
+### <**input**>
 1. type: text, radio, color, radio, email, etc.
 2. placeholder
 3. name/value: displayed in the url querying string
@@ -179,7 +179,7 @@ Other Examples
 	</form>
 ```
 
-###<**select**>
+### <**select**>
 1. option
 
 ```
@@ -193,7 +193,7 @@ Other Examples
 	</form>
 ```
 
-###<**pre**> to maintain format
+### <**pre**> to maintain format
 ```
 <p>
 <pre>
@@ -208,7 +208,7 @@ Other Examples
 </p>
 ```
 
-###Frameset  
+### Frameset  
 Display multiple htmls in the same page.  
 ```
 <html>
@@ -225,11 +225,11 @@ Display multiple htmls in the same page.
 </html>
 ```
 
-###<**list**>  
+### <**list**>  
 1. Change labels: <**ol type="A"**>;  
 2. Change marks: style="list-style-type:square";  
 
-###Depreciated tags (replace with style):
+### Depreciated tags (replace with style):
 ```
 <center>
 <font> and <basefont> (style="font-family:verdana")
@@ -265,7 +265,7 @@ XHTML does not require this line as everything will be in full standards mode.
 ```
 
 
-#Attributes  
+# Attributes  
 1. alignment: style="text-align:center"  
 2. background: style="background-color:yellow"  
 3. quotation: use either " or '. Use ' when " is in text: name='Bill "HelloWorld" Gates'  
@@ -285,7 +285,7 @@ Action:
 </form>
 ```
 
-#####Depreciated(replace with style):
+##### Depreciated(replace with style):
 ```
 align
 bgcolor
