@@ -18,12 +18,22 @@
     background-color: red;
   }
 
+  /*Attribute-based*/
+  input[type="text"] {
+    background: grey;
+  }
+  
   /*Star: all elements*/
   #id-selector * {
     margin: 0;
     padding: 0;
   }
 
+  /*nth element*/
+  div:nth-of-type(3) p {
+    font-size:25px;
+  }
+  
   /*X + Y: only the Ys immediately follow X*/ 
   /*X Y: all Y within X*/
   /*X > Y: only direct descendant Y of X*
