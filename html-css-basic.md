@@ -3,6 +3,11 @@
 ```
 <style>
 
+  /*Element selector*/
+  h1 {
+    background-color:blue;
+  }
+  
   /*ID selector*/
   #id-selector {
     background-color:green;
@@ -11,6 +16,12 @@
   /*Class selector*/
   .class-selector {
     background-color: red;
+  }
+
+  /*Star selector: all elements*/
+  * {
+   margin: 0;
+   padding: 0;
   }
 
   /*ID + Class selector*/
