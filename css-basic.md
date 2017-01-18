@@ -79,6 +79,8 @@ li a:hover {
 }
 ```
 
+Specificity: https://developer.mozilla.org/en/docs/Web/CSS/Specificity
+
 ## Color
 1. Default: color: red; such as red, gold, black. Check all of them here: http://colours.neilorangepeel.com/
 2. Hexadecimal: color: #000000; The first two digits stand for red #FF0000, the next two for green #00FF00, the last two for blue #0000FF
@@ -202,25 +204,31 @@ border-left-style: solid;
     padding: 0;
   }
 
-  /*X:nthof-type(n)*/
-  div:nth-of-type(3) p {
-    font-size:25px;
-  }
-  
-  /*X:first-child*/
-  /*X:last-child*/
-  /*X:only-child*/
-  /*X:nth-child(n)*/
-  
   /*X + Y: only the Ys immediately follow X*/ 
   /*X Y: all Y within X*/
   /*X > Y: only direct descendant Y of X*
   
-  /*ID + Class selector*/
-  #id-selector.class-selector {
-    background-color: yellow;
+  /*X:nth-of-type(n)*/
+  div:nth-of-type(3) p {
+    font-size:25px;
   }
-
+  /*X:nth-last-of-type(n)*/
+  /*X:only-of-type*/
+  /*X:first-of-type*/
+  
+  /*X:first-child*/
+  /*X:last-child*/
+  /*X:nth-last-child(n)*/
+  /*X:only-child*/
+  /*X:nth-child(n)*/
+  
+  /*before and after: https://css-tricks.com/almanac/selectors/a/after-and-before/*/
+  
+  /*X:not(selector): except*/
+  div:not(#div-i-dont-want) {
+    color: blue;
+  }
+  
 </style>
 
 <p id="id-selector">ID selector: Green</p>
