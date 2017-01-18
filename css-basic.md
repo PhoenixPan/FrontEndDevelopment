@@ -204,6 +204,9 @@ border-left-style: solid;
     padding: 0;
   }
 
+  /*input:checked*/
+  /*a:visited*/
+
   /*X + Y: only the Ys immediately follow X*/ 
   /*X Y: all Y within X*/
   /*X > Y: only direct descendant Y of X*
