@@ -244,7 +244,7 @@ margin-left
 // Postfix
 auto    // margin:auto; align center
 length: px, pt, cm, etc.
-%
+%       // % of parent element 
 inherit: inherit from the parent
 ```
 1. Top and bottom margins sometimes collapse into one single margin, which is the larger value of the two.  
