@@ -286,7 +286,7 @@ length
 2. Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin  
 3. Internet Explorer 8 and earlier versions, include padding and border in the width property. To fix this problem, add a <!DOCTYPE html> to the HTML page.  
 
-##Outline
+## Outline
 ![outline](https://cloud.githubusercontent.com/assets/14355257/18029801/67e9a206-6c70-11e6-9c42-01c07208a1e3.jpg)  
 1. The outline is NOT a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.  
 2. Declare the outline-style property if you'll apply the outline-color property, no style, no color.  
@@ -307,10 +307,10 @@ outline: 5px dotted red
 text-align: justify;        // makes words spread and have the same width in each line
 // center, left, right  
 
-text-decoration:none        // removes hyper link underline
+text-decoration: none        // removes hyper link underline
 // overline, line-through, underline  
 
-text-transform:uppercase    // specifies upper or lower case 
+text-transform: uppercase    // specifies upper or lower case 
 // uppercase, lowercase, capitalize  
 
 text-indent: 50px;
@@ -318,10 +318,10 @@ letter-spacing: 3px;       // specifies space between characters in text
 word-spacing: 10px;        // specifies space between words in text
 line-height: 2;            // specifies space between lines
 direction:rtl;             // changes text direction  
-white-space:nonrap;        // specifies how white-space inside an element is handled. No new lines  
+white-space: nonrap;        // specifies how white-space inside an element is handled. No new lines  
 vertical-align
 unicode-bidi
-text-shadow:text-shadow:1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;  // multiple: horizental, vertical, blur, color
+text-shadow: text-shadow:1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;  // multiple: horizental, vertical, blur, color
 ```
 1. For <**div**>, use: box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 white;  
 ```
@@ -339,9 +339,8 @@ font:italic bold small-caps 12px/30px Georgia, serif; // style, weight, variant,
 1. Start with the font you want, and end with a generic family;  
 2. If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman";  
 3. "italic" is a special version of font, whereas "oblique" just inclines the font a bit. Since not all fonts have italic version, we use "oblique" to make the font italic when italic version is absent;  
-4. If font-size is not specified, the default size is 16px;
-5. 1em is equal to the current font size, 1em=16px;  
-6. 
+4. If font-size is not specified, the default size is 16px, which is also the default of 1em;
+5. 1em is equal to the font size of the parent element;  
 
 ## List  
 ```
