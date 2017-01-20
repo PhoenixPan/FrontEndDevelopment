@@ -230,17 +230,18 @@ The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-
 1. Total element width = width + left padding + right padding + left border + right border + left margin + right margin  
 2. Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin  
 3. Internet Explorer 8 and earlier versions, include padding and border in the width property. To fix this problem, add a <!DOCTYPE html> to the HTML page.  
+4. Every element is a box!  
 
 ## Margin
+1. Top and bottom margins sometimes collapse into one single margin, which is the larger value of the two.  
+2. Left and right margin won't collapse.   
+3. margin:auto: make it center, for image, also make it a block element.  
+
 ```
 // Prefix
 margin:50px 25px 50px 25px;  // top, right, bottom, left
 margin:50px 25px 50px;       // top, left and right, bottom
 margin:50px 25px;            // top and bottom, left and right
-margin-top
-margin-right
-margin-bottom
-margin-left
 
 // Postfix
 auto    // margin:auto; align center
@@ -248,10 +249,6 @@ length: px, pt, cm, etc.
 %       // % of parent element 
 inherit: inherit from the parent
 ```
-1. Top and bottom margins sometimes collapse into one single margin, which is the larger value of the two.  
-2. Left and right margin won't collapse.   
-3. margin:auto: make it center, for image, also make it a block element.  
-
 
 ## Padding
 ```
@@ -259,10 +256,6 @@ inherit: inherit from the parent
 padding:50px 25px 50px 25px;  // top, right, bottom, left
 padding:50px 25px 50px;       // top, left and right, bottom
 padding:50px 25px;            // top and bottom, left and right
-padding-top
-padding-right
-padding-bottom
-padding-left
 
 // Postfix
 length
@@ -336,11 +329,12 @@ font:italic bold small-caps 12px/30px Georgia, serif; // style, weight, variant,
 
 ```
 ## Font
-1. Start with the font you want, and end with a generic family;  
-2. If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman";  
-3. "italic" is a special version of font, whereas "oblique" just inclines the font a bit. Since not all fonts have italic version, we use "oblique" to make the font italic when italic version is absent;  
-4. If font-size is not specified, the default size is 16px, which is also the default of 1em;
-5. 1em is equal to the font size of the parent element;  
+1. Start with the font you want, and end with a generic family
+2. If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman"
+3. "italic" is a special version of font, whereas "oblique" just inclines the font a bit. Since not all fonts have italic version, we use "oblique" to make the font italic when italic version is absent
+4. If font-size is not specified, the default size is 16px, which is also the default of 1em
+5. 1em is equal to the font size of the parent element
+6. Google fonts
 
 ## List  
 ```
@@ -396,9 +390,9 @@ tr:nth-child(odd) {background-color: white}
 4. "display:none" does not take up any space, whereas "visibility:hidden" does;  
 
 
-##Position  
-#####static: default value. Not affected by top, bottom, left and right properties;    
-#####relative: relative to its normal position. Add gap to sides defined and wrap the content;  
+## Position  
+##### static: default value. Not affected by top, bottom, left and right properties;    
+##### relative: relative to its normal position. Add gap to sides defined and wrap the content;  
 ```
 div.relative {
   position: relative;
@@ -838,7 +832,7 @@ img {
 
 
 
-##Image Sprites
+## Image Sprites
 Avoid using many images and save bandwidth.   
 Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_sprites_nav  
   
