@@ -264,7 +264,7 @@ length
 inherit
 ```
 
-## Height/Width (only the content area)
+## Height / Width (only the content area)
 ```
 // Prefix
 height
