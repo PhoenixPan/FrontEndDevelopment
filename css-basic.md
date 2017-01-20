@@ -73,6 +73,7 @@ Specificity: https://developer.mozilla.org/en/docs/Web/CSS/Specificity
 
 ## Background
 ### Image
+There will be default margin between images, use float to remove them.  
 ```
 body {
   background-image: url("gradient_bg.png");
