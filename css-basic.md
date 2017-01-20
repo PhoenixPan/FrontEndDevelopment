@@ -224,6 +224,11 @@ border-left-style: solid;
 ```
 The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048  
 
+## Box model: Positioning of CSS
+![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)    
+1. Total element width = width + left padding + right padding + left border + right border + left margin + right margin  
+2. Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin  
+3. Internet Explorer 8 and earlier versions, include padding and border in the width property. To fix this problem, add a <!DOCTYPE html> to the HTML page.  
 
 ## Margin
 ```
@@ -279,12 +284,6 @@ auto
 length
 %
 ```
-
-## Box model
-![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)  
-1. Total element width = width + left padding + right padding + left border + right border + left margin + right margin  
-2. Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin  
-3. Internet Explorer 8 and earlier versions, include padding and border in the width property. To fix this problem, add a <!DOCTYPE html> to the HTML page.  
 
 ## Outline
 ![outline](https://cloud.githubusercontent.com/assets/14355257/18029801/67e9a206-6c70-11e6-9c42-01c07208a1e3.jpg)  
