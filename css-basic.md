@@ -62,23 +62,6 @@ PS: external reference has lower priority than !impotant and inline, but could b
 <h1 id="orange-text" class="pink-text green-text blue-text" style = "color:white">Hello World!</h1>
 ```
 
-```
-/*medium priority*/
-ul.topnav li a:hover {           
-  background:silver;
-}
-
-/*low priority*/
-li a:hover {           
-  background:silver;
-}
-
-/*high priority*/
-#dropdown-content a:hover {
-  background:blue;
-}
-```
-
 Specificity: https://developer.mozilla.org/en/docs/Web/CSS/Specificity
 
 ## Color
@@ -111,7 +94,7 @@ body {
 }
 ```
 
-##Border 
+## Border 
 Mainly consists of three attributes: width, color, and style:  
 ```
 h1 {
@@ -126,8 +109,7 @@ h1 {
     border: 5px solid red;
 }
 ```
-
-Border actually consist of four triangles or trapezoid facing a center point. To generate a tringle:  
+Border actually consists of four triangles or trapezoid facing a center point. To generate a tringle:  
 ```
 .trinangle {
     content: "";
@@ -243,7 +225,7 @@ border-left-style: solid;
 The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048  
 
 
-##Margin
+## Margin
 ```
 // Prefix
 margin:50px 25px 50px 25px;  // top, right, bottom, left
@@ -265,7 +247,7 @@ inherit: inherit from the parent
 3. margin:auto: make it center, for image, also make it a block element.  
 
 
-##Padding
+## Padding
 ```
 // Prefix
 padding:50px 25px 50px 25px;  // top, right, bottom, left
@@ -282,7 +264,7 @@ length
 inherit
 ```
 
-##Height/Width (only the content area)
+## Height/Width (only the content area)
 ```
 // Prefix
 height
@@ -298,7 +280,7 @@ length
 %
 ```
 
-##Box model
+## Box model
 ![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)  
 1. Total element width = width + left padding + right padding + left border + right border + left margin + right margin  
 2. Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin  
@@ -320,7 +302,7 @@ outline-width
 outline: 5px dotted red
 ```
 
-##Text  
+## Text  
 ```
 text-align: justify;        // makes words spread and have the same width in each line
 // center, left, right  
@@ -353,7 +335,7 @@ font-family: "Times New Roman", Times, serif;\\
 font:italic bold small-caps 12px/30px Georgia, serif; // style, weight, variant, font-size/line space, font-family
 
 ```
-##Font
+## Font
 1. Start with the font you want, and end with a generic family;  
 2. If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman";  
 3. "italic" is a special version of font, whereas "oblique" just inclines the font a bit. Since not all fonts have italic version, we use "oblique" to make the font italic when italic version is absent;  
@@ -361,7 +343,7 @@ font:italic bold small-caps 12px/30px Georgia, serif; // style, weight, variant,
 5. 1em is equal to the current font size, 1em=16px;  
 6. 
 
-##List  
+## List  
 ```
 list-style-type:none  // circle, square, lower-roman, lower-alpha. more: http://www.w3schools.com/cssref/pr_list-style-type.asp
 list-style-image: url('sqpurple.gif');
@@ -375,7 +357,7 @@ list-style: square inside url("sqpurple.gif");
 ul li:last-child {border-bottom: none;}
 ```
 
-##Table  
+## Table  
 ```
 // Collapse to single border(only in table)
 table {
@@ -408,7 +390,7 @@ tr:nth-child(odd) {background-color: white}
 </div>
 ```
 
-##Display  
+## Display  
 1. display:block;  A block-level element always starts on a new line and takes up the full width available;  
 2. display:inline; An inline element does not start on a new line and only takes up as much width as necessary;  
 3. display:none;   commonly used with JavaScript to hide and show elements;  
@@ -430,7 +412,7 @@ div.relative {
   position: relative;  
 }
 ```
-#####fixed: it always stays in the same place even if the page is scrolled regardless of where you put the statement;  
+##### fixed: it always stays in the same place even if the page is scrolled regardless of where you put the statement;  
 ```
 div.fixed {
   position: fixed;
@@ -443,27 +425,27 @@ div.fixed {
 <div>Fixed</div>
 <p>Down</p>
 ```
-#####absolute: relative to its parent element(except static).However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
+##### absolute: relative to its parent element(except static).However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
 
 *Absolute positioned elements are removed from the normal flow, and can overlap elements.  
   
-#####Overlapping: an overlapping element has to be positioned(except static). An element with greater stack order is always in front of an element with a lower stack order. If two elements have the same stack, the one declared later will be displayed on the top;  
+##### Overlapping: an overlapping element has to be positioned(except static). An element with greater stack order is always in front of an element with a lower stack order. If two elements have the same stack, the one declared later will be displayed on the top;  
 ```
 z-index: -1;  // set the stack order of an element
 ```
-#####Chip: can chip only absolutely positioned element
+##### Chip: can chip only absolutely positioned element
 ```
 img {
     position: absolute;
     clip: rect(0px,60px,200px,0px);
 }
 ```
-#####Cursor: change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+##### Cursor: change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
 ```
 <span style="cursor:help">help</span><br>
 ```
 
-##Overflow  
+## Overflow  
 ```
 overflow: visiable;   // default, won't clip, let the content leaks out
 overflow: hidden;     // hide additional content(no scroll bar)
@@ -473,7 +455,7 @@ overflow-x: hidden;   // add a scrollbar horizentally, white-space: nowrap;
 overflow-y: scroll;   // add a scrollbar vertically
 ```
 
-##Float  
+## Float  
 Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_layout_clearfix  
 ```
 // float:whether or not an element should float
@@ -558,7 +540,7 @@ ul.topnav li a:hover {
 }
 ```
 
-##Align  
+## Align  
 To center an element or image  
 ```
 margin:auto;
@@ -589,7 +571,7 @@ or using transform: http://www.w3schools.com/css/tryit.asp?filename=trycss_align
 }
 ```
 
-##Use combinators to target an element  
+## Use combinators to target an element  
   
 Descendant Selector: select all descendants  
 ```
@@ -800,7 +782,7 @@ q:lang(cn) {
 input:focus {background-color: yellow;}
 ```
 
-##Pseudo elements  
+## Pseudo elements  
 All references: http://www.w3schools.com/css/css_pseudo_elements.asp  
   
 1. p::after:	Insert content after every p element  
@@ -809,7 +791,7 @@ All references: http://www.w3schools.com/css/css_pseudo_elements.asp
 4. p::first-line:	Selects the first line of every p element  
 5. p::selection:	Selects the portion of an element that is selected by a user  
 
-##Opacity  
+## Opacity  
 Can be used on many element, not only image  
 ```
 // ways to apply opacity
