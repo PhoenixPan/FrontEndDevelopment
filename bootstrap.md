@@ -18,7 +18,8 @@ At the top to automatically resize your html page. Add "container-fluid" class t
 3. Default new button design: class "btn" with in button element  
 4. Stretch the button to the max: "btn-block"  
 5. Change color for buttons: "btn-primary" "btn-info" "btn-danger"  
-6. Grid: Three buttons in a row:    
+6. Grid: Three buttons in a row:   
+
   ```
     <div class="row">
       <div class="col-xs-4"><button class="btn btn-block btn-primary">Like</button></div>
@@ -32,10 +33,12 @@ At the top to automatically resize your html page. Add "container-fluid" class t
   ```
 8. Font Awesome icons
 Add on the top: 
+
   ```
   <_link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/_>
   ```
 In line: a button with "like" icon  
+
   ```
   <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"></i>Like</button>
   ```
@@ -45,6 +48,7 @@ In line: a button with "like" icon
 2. Each row has 12 units
 3. .col-xs/sm/md/lg: to different size of screen, phone -> tablets -> desktops(s/l)
   ```
+  
    	<div class="container">
  		<div class="row">
  			<div class="col-lg-3 col-md-6 test">Column 1</div>
