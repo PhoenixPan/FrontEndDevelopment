@@ -39,6 +39,9 @@ In line: a button with "like" icon
   ```
   <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"></i>Like</button>
   ```
+### container
+1. container: responsive fixed width
+2. container-fluid: spanning the entire width of your viewport
 
 ### form-group
 1. .form-group: Wrap labels and controls in .form-group (in div) for an automatic spacing optimization
