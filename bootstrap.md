@@ -51,12 +51,13 @@ In line: a button with "like" icon
     If you want the same scale from large to medium, you only need to specify "col-md".  
     
   ```
+    <!--In this case: lg:3, md:6, sm:6, xs 12--!>
    	<div class="container">
  		<div class="row">
- 			<div class="col-lg-3 col-md-6 test">Column 1</div>
- 			<div class="col-lg-3 col-md-6 test">Column 2</div>
- 			<div class="col-lg-3 col-md-6 test">Column 3</div>
- 			<div class="col-lg-3 col-md-6 test">Column 4</div>
+ 			<div class="col-lg-3 col-sm-6 test">Column 1</div>
+ 			<div class="col-lg-3 col-sm-6 test">Column 2</div>
+ 			<div class="col-lg-3 col-sm-6 test">Column 3</div>
+ 			<div class="col-lg-3 col-sm-6 test">Column 4</div>
  		</div>
  	</div>
   ```
