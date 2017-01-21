@@ -3,7 +3,11 @@
 ## How to "install"
 Add a style link into the html file from either web or local sources.  
 ```
+/*From web source*/
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+/*From local file*/
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 ```
 
 ## What's next
