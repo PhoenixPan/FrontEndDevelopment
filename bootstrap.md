@@ -1,5 +1,13 @@
-##Bootstrap
-Add <__link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/__> at the top to automatically resize your html page. Add "container-fluid" class to the all the elements that you want to organize (perhaps through a division).  
+# Bootstrap
+
+## How to "install"
+Add a style link into the html file from either web or local sources.  
+```
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+```
+
+## What's next
+at the top to automatically resize your html page. Add "container-fluid" class to the all the elements that you want to organize (perhaps through a division). 
   
 1. Auto picture fit: class="img-responsive" in image  
 2. Center text class: class "text-center"
