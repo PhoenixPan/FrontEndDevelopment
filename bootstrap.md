@@ -46,9 +46,9 @@ In line: a button with "like" icon
 ## Grid System
 1. Grid needs to be within a container
 2. Each row has 12 units
-3. .col-xs/sm/md/lg: to different size of screen, phone -> tablets -> desktops(s/l)
+3. .col-xs/sm/md/lg: to different size of screen, phone -> tablets -> desktops(s/l). 
+    It will change once it hits "sm" size, unless you specify "col-sm-6" as well.  
   ```
-  
    	<div class="container">
  		<div class="row">
  			<div class="col-lg-3 col-md-6 test">Column 1</div>
@@ -58,12 +58,7 @@ In line: a button with "like" icon
  		</div>
  	</div>
   ```
-4. I'm going to include a fenced code block as part of this bullet:
 
-    ```
-    Code
-    More Code
-    ```
 
 ### container
 1. container: responsive fixed width
