@@ -46,8 +46,9 @@ In line: a button with "like" icon
 ## Grid System
 1. Grid needs to be within a container
 2. Each row has 12 units
-3. .col-xs/sm/md/lg: to different size of screen, phone -> tablets -> desktops(s/l). 
+3. .col-xs/sm/md/lg: to different size of screen, phone -> tablets -> desktops(s/l).  
     It will change once it hits "sm" size, unless you specify "col-sm-6" as well.  
+    If you want the same scale from large to medium, you only need to specify "col-md".  
     
   ```
    	<div class="container">
