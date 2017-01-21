@@ -54,6 +54,12 @@ In line: a button with "like" icon
  		</div>
  	</div>
   ```
+4. I'm going to include a fenced code block as part of this bullet:
+
+    ```
+    Code
+    More Code
+    ```
 
 ### container
 1. container: responsive fixed width
