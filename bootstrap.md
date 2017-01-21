@@ -48,6 +48,7 @@ In line: a button with "like" icon
 2. Each row has 12 units
 3. .col-xs/sm/md/lg: to different size of screen, phone -> tablets -> desktops(s/l). 
     It will change once it hits "sm" size, unless you specify "col-sm-6" as well.  
+    
   ```
    	<div class="container">
  		<div class="row">
