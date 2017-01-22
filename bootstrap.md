@@ -42,8 +42,13 @@ In line: a button with "like" icon
   ```
   <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"></i>Like</button>
   ```
-  
-## Grid System
+  
+## How to override
+1. important!: not recommended, as you may want to override your own code later
+2. add an id to add weight
+  
+
+### Grid System
 1. Grid needs to be within a container
 2. Each row has 12 units
 3. .col-xs/sm/md/lg: to different size of screen, phone -> tablets -> desktops(s/l).  
