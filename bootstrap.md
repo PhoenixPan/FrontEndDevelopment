@@ -44,9 +44,15 @@ In line: a button with "like" icon
   ```
   
 ## How to override
-1. important!: not recommended, as you may want to override your own code later
+1. Placement of bootstrap link above: this order will allow mystyle to override bootstrap, but not if you change the order
+
+  ```
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+  ```
 2. add an id to add weight
-  
+3. important!: not recommended, as you may want to override your own code later
+
 
 ### Grid System
 1. Grid needs to be within a container
