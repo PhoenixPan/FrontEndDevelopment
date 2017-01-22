@@ -42,7 +42,8 @@ In line: a button with "like" icon
   ```
   <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"></i>Like</button>
   ```
-  
+
+
 ## How to override
 1. Placement of bootstrap link above: this order will allow mystyle to override bootstrap, but not if you change the order
 
