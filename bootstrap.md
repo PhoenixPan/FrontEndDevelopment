@@ -61,7 +61,7 @@ In line: a button with "like" icon
  		</div>
  	</div>
   ```
-
+4. If you specified correct column index (3,4,6), you only need one row as Bootstrap will figure out how many blokcs will be in one line.  
 
 ### container
 1. container: responsive fixed width
