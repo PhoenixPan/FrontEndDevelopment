@@ -60,42 +60,42 @@ Another mailto link:
 ### Image  
 1. Use as background (gif and jpg only).   
   
-```
-<body background="/i/eg_background.jpg">
-```
+	```
+	<body background="/i/eg_background.jpg">
+	```
 2. Use alt to display a text message when the picture is unavailable.  
   
-```
-<img src="boat.gif" alt="This image is not available">
-```
+	```
+	<img src="boat.gif" alt="This image is not available">
+	```
 
 3. Insert image in other elements and align it accordingly (bottom, middle, top).  
   
-```
-<p>Picture <img src="/i/eg_cute.gif" align="bottom"> in text.</p>
-```
+	```
+	<p>Picture <img src="/i/eg_cute.gif" align="bottom"> in text.</p>
+	```
 
 4. Image map: http://www.w3school.com.cn/tiy/t.asp?f=html_areamap  
 
-```
-<img src="/i/eg_planets.jpg" usemap="#planetmap" />
-<map name="planetmap" id="planetmap">
+	```
+	<img src="/i/eg_planets.jpg" usemap="#planetmap" />
+	<map name="planetmap" id="planetmap">
 
-<area
-shape="rect"
-coords="0,0,110,260"
-href ="/example/html/sun.html"/>
+	<area
+	shape="rect"
+	coords="0,0,110,260"
+	href ="/example/html/sun.html"/>
 
-</map>
-```
+	</map>
+	```
 
 5. Use "background-size: cover;" to commend fill an image into the full html size. However since html size ends where lays the last element, the image have to repreat to take over the rest of the window space, which is not ususally want we want. Use these lines to let the html takes the entire window, so the image will cover the entire window, which works fine.   
 
-```
-html {
-	height: 100%;
-}
-```
+	```
+	html {
+		height: 100%;
+	}
+	```
 
 6. background-position: center;
 
