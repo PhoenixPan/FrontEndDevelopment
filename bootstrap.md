@@ -9,6 +9,10 @@ Add a style link into the html file from either web or local sources.
 /*From local file*/
 <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 ```
+In addition, if you want your site looks nice on a mobile device, includ this line above <**title**> in your <**head**>:  
+```
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
 
 ## What's next
 At the top to automatically resize your html page. Add "container-fluid" class to the all the elements that you want to organize (perhaps through a division). 
