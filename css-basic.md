@@ -213,6 +213,10 @@ border-left-style: solid;
   /*X:not(selector): except*/
   div:not(#div-i-dont-want) {
     color: blue;
+    
+  / navbar-nav class inside navbar-inverse class, from which we select all the <a> in <li>
+  .navbar-inverse .navbar-nav>li>a
+  
   }
   
 </style>
