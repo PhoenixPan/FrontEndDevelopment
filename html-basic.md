@@ -64,7 +64,7 @@ Background (gif and jpg only).
 ```
 Use alt to display a text message when the picture is unavailable.  
 ```
-<img src="boat.gif" alt="This is not available">
+<img src="boat.gif" alt="This image is not available">
 ```
 Insert image in other elements and align it accordingly (bottom, middle, top).  
 ```
@@ -82,6 +82,15 @@ href ="/example/html/sun.html"/>
 
 </map>
 ```
+
+Use "background-size: cover;" to commend fill an image into the full html size. However since html size ends where lays the last element, the image have to repreat to take over the rest of the window space, which is not ususally want we want. Use these lines to let the html takes the entire window, so the image will cover the entire window, which works fine.  
+```
+html {
+	height: 100%;
+}
+```
+
+
 ### <**head**> - Container of metadata
 Title: define the title in browser tag and in search engine;  
 Base: provides default link and target;  
