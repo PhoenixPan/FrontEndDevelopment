@@ -21,17 +21,18 @@ If "client" uses functions from "mqttws31", import it later. Otherwise an "class
 <script type="text/javascript" language="javascript" src="client.js"></script>
 ```
 
-## Where To  
-1. JavaScript, both internal and external ones, can be placed within <**head**> or <**body**> or both of them;  
+## How to implement
+1. JavaScript, both internal and external ones, can be placed within <**head**> or <**body**> or both of them;   
 2. Use external .js file <**script src="myScript.js"**><**/script**>   
 2. <**script type="text/javascript"**> is no longer required, as JS is the default scripting language in HTML;    
 3. Advantage of separate file: clean and easy to maintain, cached JavaScript files can speed up page loads.  
 
 ## Output  
-1. Writing into an alert box, using window.alert();  
-2. Writing into the HTML output using document.write(), will delete all existing HTML, should only be used for testing;    
-3. Writing into an HTML element, using innerHTML;  
-4. Writing into the browser console, using console.log();  
+1. window.alert()：writing into an alert box  
+2. document.write(): writing into the HTML output, will delete all existing HTML, should only be used for testing  
+3. innerHTML: writing into an HTML element  
+4. console.log(): writing into the browser console  
+5. clear(): clear the console
 
 ## Syntax  
 1. You can use both single or double quote, same as in HTML;  
