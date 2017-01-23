@@ -66,7 +66,6 @@ NaN == NaN;        // false
 
 ```
 
-
 ##### Operate string with number
 A string will be recognized as a number as long as it's not in PLUS operation and it consisits only numeric values  
 ```
@@ -94,8 +93,6 @@ function test() {
   document.getElementById("text").innerHTML=x;
 }
 ```
-
-
 
 ## Variable
 1. objects and functions are also variables;  
@@ -170,9 +167,17 @@ null == undefined            // true
 ```
 
 ## Function
-1. Accessing a function without () will return the function definition(function itself);  
-2. You can call function within the script;  
-3. 
+1. Accessing a function without () will return the function definition(function itself)
+2. You can call function within the script
+3. Pass multiple arguments
+
+```
+function greet(name1, name2) {
+	console.log("Hello " + name1 + " and " + name2 + "!");
+}
+
+// greet("Johns","David");
+```
 
 ## Object
 1. Values pairs are called properties;  
