@@ -46,6 +46,26 @@ If "client" uses functions from "mqttws31", import it later. Otherwise an "class
 innerHTML = typeof "John";	Returns the type of a variable  
 instanceof:	Returns true if an object is an instance of an object type  
 Exponentiation:	10 ** 2  
+  
+Examples:
+```
+var x = 5;
+x === "5"; // false
+x == "5";  // true
+```
+```
+var x = null;
+x === undefined; // false
+x == undefined;  // true
+```
+```
+true == "1";       // true
+false == 0;        // true
+null == undefined; // true
+NaN == NaN;        // false
+
+```
+
 
 ##### Operate string with number
 A string will be recognized as a number as long as it's not in PLUS operation and it consisits only numeric values  
@@ -225,7 +245,7 @@ document.getElementById("demo").innerHTML = "Hello" +
 Complete reference: http://www.w3schools.com/jsref/jsref_obj_string.asp
 ```
 var num = str.length;  
-var num = str.indexOf("a");  
+var num = str.indexOf("yes");  
 var num = str.lastIndexOf("a");  
 var num = str.search("a");        // equal to indexOf() but more powerful wth regexp
   
