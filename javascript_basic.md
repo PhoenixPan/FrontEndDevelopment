@@ -112,19 +112,33 @@ var person = null;
 ```
 
 ##### scope  
-We have local(variable declared within function and function arguments) and global scope. However, variable assigned within a function that has not been declared is global:  
-```
-document.getElementById("demo").innerHTML = "I can display " + carName;
+1. We have local(variable declared within function and function arguments) and global scope. However, variable assigned within a function that has not been declared is global:  
 
-function myFunction() {
-    carName = "Volvo";        // global
-    // var carName = "Volvo"; // local
-}
-```
-The global scope is the window object, all global variables belong to it. 
-```
-window.carName;
-```
+	```
+	document.getElementById("demo").innerHTML = "I can display " + carName;
+
+	function myFunction() {
+	    carName = "Volvo";        // global
+	    // var carName = "Volvo"; // local
+	}
+	```
+2. The global scope is the window object, all global variables belong to it. 
+
+	```
+	window.carName;
+	```
+3. Define a same-name local variable will temporarily override global variable
+
+	```
+	var text = "X";
+
+	function test() {
+		var text = "Y";
+		console.log(text);  // give Y
+	}
+	console.log(text); // give X
+	```
+
 ##### Lifetime
 Local variables are deleted when the function is completed.  
 Global variables are deleted when you close the page.  
@@ -191,6 +205,14 @@ null == undefined            // true
 	// greet("Johns","David");
 	```
 5. No executions after return, though you can leave your codes there(not good anyway)
+
+##### setInterval
+1. The number returned is the progress number, we could use "clearInterval(n)" to terminate it
+2. Use anonymous function 
+
+```
+setInterval(function(){}, time)
+```
 
 ## Object
 1. Values pairs are called properties;  
