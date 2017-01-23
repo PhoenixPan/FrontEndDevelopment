@@ -39,14 +39,15 @@ If "client" uses functions from "mqttws31", import it later. Otherwise an "class
 
 ## Operations  
 ##### Operations:  
-===:	equal value and equal type  
-!==:	not equal value or not equal type
-?:	ternary operator
-innerHTML = typeof "John";	Returns the type of a variable
-instanceof:	Returns true if an object is an instance of an object type
-Exponentiation:	10 ** 2
+===:	equal value and equal type   
+!==:	not equal value or not equal type  
+?:	ternary operator  
+innerHTML = typeof "John";	Returns the type of a variable  
+instanceof:	Returns true if an object is an instance of an object type  
+Exponentiation:	10 ** 2  
+
 ##### Operate string with number
-A string will be recognized as a number as long as it's not in PLUS operation and it consisits only numeric values
+A string will be recognized as a number as long as it's not in PLUS operation and it consisits only numeric values  
 ```
 //Same as Java
 "a" + 1 + 2 // a12
@@ -76,14 +77,23 @@ function test() {
 
 
 ## Variable
-1. var num; will give "undefined" value and type; 
-2. objects and functions are also variables;  
-3. You can re-declare a variable. If you don't assign a new value, it will keep the old one:  
+1. objects and functions are also variables;  
+2. You can re-declare a variable. If you don't assign a new value, it will keep the old one:  
+
+##### undefined
+declared but not initialized variables will give "undefined" value and type: var num; 
 ```
 var carName = "Volvo";
 var carName;  // still "Vovlo"
 ```
-##### Scope  
+
+##### null
+null is explicit empty. The value of person is null, but typeof person is object, which is considered a bug.
+```
+var person = null;
+```
+
+##### scope  
 We have local(variable declared within function and function arguments) and global scope. However, variable assigned within a function that has not been declared is global:  
 ```
 document.getElementById("demo").innerHTML = "I can display " + carName;
@@ -129,11 +139,6 @@ undefined
 NaN  
 number  
   
-##### null
-The value of person is null, but typeof person is object, which is considered a bug.
-```
-var person = null;
-```
 ##### empty an var / object  
 Both null and undefined can be used to empty an var or object  
 ```
