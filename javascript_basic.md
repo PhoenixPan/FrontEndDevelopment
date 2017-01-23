@@ -159,30 +159,33 @@ null == undefined            // true
 2. JavaScript objects cannot be compared, (x == y) is always false ;  
 3. JavaScript treats primitive values as objects when executing methods and properties;  
 4. Change properties in two ways:  
-```
-objectName["propertyName"]
-objectName.propertyName
-```
-5. Methods are build-in functions:  
-```
-var person = {
-    firstName: "John",
-    lastName : "Doe",
-    id       : 5566,
-    fullName : function() {
-       return this.firstName + " " + this.lastName;
-    }
-};
-person.fullName();
-```
-6. primitive objects
-```
-var x = 500;             
-var y = new Number(500);
 
-// (x == y) is true because x and y have equal values
-// (x === y) is false because x and y have different types
-```
+  ```
+  objectName["propertyName"]
+  objectName.propertyName
+  ```
+5. Methods are build-in functions:  
+
+  ```
+  var person = {
+      firstName: "John",
+      lastName : "Doe",
+      id       : 5566,
+      fullName : function() {
+         return this.firstName + " " + this.lastName;
+      }
+  };
+  person.fullName();
+  ```
+6. primitive objects
+
+  ```
+  var x = 500;             
+  var y = new Number(500);
+
+  // (x == y) is true because x and y have equal values
+  // (x === y) is false because x and y have different types
+  ```
 
 ## HTML events
 onchange:	An HTML element has been changed  
@@ -198,9 +201,6 @@ More on: http://www.w3schools.com/jsref/dom_obj_event.asp
 ```
 var y = "We are the so-called \"Vikings\" from the north."
 ```
-\':	single quote  
-\":double quote    
-**\****\**:	backslash  
 \n seems to work as new line, but it only renders one space in html. Use "<br>" to be effective.  
 \r:	carriage return   
 \t:	tab  
@@ -268,15 +268,15 @@ Complete reference: http://www.w3schools.com/jsref/jsref_obj_number.asp
 3. The maximum number of decimals is 17, but the floating point is not always accurate: var x = 0.2 + 0.1; // x = 0.30000000000000004;   
 4. To ensure an accurate decimal, to multiply and divide: var x = (0.2 * 10 + 0.1 * 10) / 10;  
 5. If a number goes outside of the largest possible value, it becomes "Infinity": while (num != -Infinity);   
-6. Divide by 0 will also give Infinity: var y = -2 / 0; // y = -Infinity;  
+6. Divide by 0 will also give Infinity: var y = -2 / 0; (// y = -Infinity;)  
 7. Infinity is a number type;  
 
-##### Scientific notation
+### Scientific notation
 ```
 var y = 123e5;      // 12300000
 var z = 123e-5;     // 0.00123
 ```
-##### NaN - Not a Number
+### NaN - Not a Number
 Type is number. 
 ```
 // operate with non-numeric string
@@ -293,12 +293,12 @@ var z = x + y;
 // operate two non-numeric values
 "Hello" - "Dolly" // NaN
 
-// NaN5: operate a string with a NaN
+// Difference: operate a string with a NaN
 var x = NaN, var y = "5";
-var z = x + y;    
+var z = x + y;  // z = NAN5
 ```
 
-## Number methods
+### Number methods
 ```
 // Return a STRING
 (1 + 1).toString();
@@ -317,7 +317,7 @@ innerHTML = parseInt("10.33 10")  // 10
 innerHTML = parseInt("year 10")   // NaN
 innerHTML = parseFloat("10.33")   // 10.33
 ```
-##### Number properties  
+### Number properties  
 Number.MAX_VALUE:	Returns the largest number possible in JavaScript  
 Number.MIN_VALUE:	Returns the smallest number possible in JavaScript  
 Number.NEGATIVE_INFINITY:	Represents negative infinity (returned on overflow)  
