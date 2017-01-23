@@ -1,10 +1,10 @@
-#JavaScript
+# JavaScript
 
-##Basic
+## Basic
 1. JavaScript uses Unicode;  
 2. JavaScript use camelCase;  
 
-##Convention  
+## Convention  
 1. Unlike HTML and CSS, we encourage space around operations(= + - * / );  
 2. Declare all variables at the beginning of a script;  
 3. 
@@ -21,24 +21,24 @@ If "client" uses functions from "mqttws31", import it later. Otherwise an "class
 <script type="text/javascript" language="javascript" src="client.js"></script>
 ```
 
-##Where To  
+## Where To  
 1. JavaScript, both internal and external ones, can be placed within <**head**> or <**body**> or both of them;  
 2. Use external .js file <**script src="myScript.js"**><**/script**>   
 2. <**script type="text/javascript"**> is no longer required, as JS is the default scripting language in HTML;    
 3. Advantage of separate file: clean and easy to maintain, cached JavaScript files can speed up page loads.  
 
-##Output  
+## Output  
 1. Writing into an alert box, using window.alert();  
 2. Writing into the HTML output using document.write(), will delete all existing HTML, should only be used for testing;    
 3. Writing into an HTML element, using innerHTML;  
 4. Writing into the browser console, using console.log();  
 
-##Syntax  
+## Syntax  
 1. You can use both single or double quote, same as in HTML;  
 2. Ending 0s will be omitted: 10.50 ---display--> 10.5;  
 
-##Operations  
-#####Operations:  
+## Operations  
+##### Operations:  
 ===:	equal value and equal type  
 !==:	not equal value or not equal type
 ?:	ternary operator
@@ -75,7 +75,7 @@ function test() {
 
 
 
-##Variable
+## Variable
 1. var num; will give "undefined" value and type; 
 2. objects and functions are also variables;  
 3. You can re-declare a variable. If you don't assign a new value, it will keep the old one:  
@@ -188,7 +188,7 @@ onload:	The browser has finished loading the page
 More on: http://www.w3schools.com/jsref/dom_obj_event.asp  
 
 ## String 
-#####Escape
+##### Escape
 ```
 var y = "We are the so-called \"Vikings\" from the north."
 ```
