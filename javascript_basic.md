@@ -210,9 +210,20 @@ null == undefined            // true
 1. The number returned is the progress number, we could use "clearInterval(n)" to terminate it
 2. Use anonymous function 
 
-```
-setInterval(function(){}, time)
-```
+	```
+	setInterval(function(){}, time)
+	```
+3. Example: increment. If you pass the i into the function, it will forever be 2, as you always pass 1 into it
+	```
+	var i = 1;
+
+	setInterval(increment, 1000);
+
+	function increment(){
+		console.log(i);
+	    i = i % 360 + 1;
+	}
+	```
 
 ## Object
 1. Values pairs are called properties;  
