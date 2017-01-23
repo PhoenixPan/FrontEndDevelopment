@@ -167,17 +167,29 @@ null == undefined            // true
 ```
 
 ## Function
-1. Accessing a function without () will return the function definition(function itself)
-2. You can call function within the script
-3. Pass multiple arguments
+1. Two ways to define functions
+	```
+	// function declaration
+	function myFunction(str) {
+		return null;
+	}
+	
+	// function express
+	var myFunction = function() {
+		return null;
+	}
+	```
+2. Accessing a function without () will return the function definition(function itself)
+3. You can call function within the script
+4. Pass multiple argument
 
-```
-function greet(name1, name2) {
-	console.log("Hello " + name1 + " and " + name2 + "!");
-}
+	```
+	function greet(name1, name2) {
+		console.log("Hello " + name1 + " and " + name2 + "!");
+	}
 
-// greet("Johns","David");
-```
+	// greet("Johns","David");
+	```
 
 ## Object
 1. Values pairs are called properties;  
