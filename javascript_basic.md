@@ -190,6 +190,7 @@ null == undefined            // true
 
 	// greet("Johns","David");
 	```
+5. No executions after return, though you can leave your codes there(not good anyway)
 
 ## Object
 1. Values pairs are called properties;  
@@ -384,6 +385,10 @@ var n = str.search(/mypattern/i);
 i:	Perform case-insensitive matching
 g:	Perform a global match (find all matches rather than stopping after the first match)
 m:	Perform multiline matching
+
+```
+str.replace(/"target"/flag, "newchar");
+```
 
 ## Mistakes
 true, because x is now 10, and 10 is true
