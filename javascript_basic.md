@@ -224,6 +224,18 @@ null == undefined            // true
 	    i = i % 360 + 1;
 	}
 	```
+## Array 
+1. It is allowed to skip some index: array[1000] = "Test"; what's in between will be "undefined".
+2. Most useful methods
+```
+array.push("newElement);
+var lastElement = array.pop();
+
+// to add/remove element from the beginning, use unshift()/shift()
+
+array.indexOf("where");
+var newArray = array.slice(1,3);
+```
 
 ## Object
 1. Values pairs are called properties;  
