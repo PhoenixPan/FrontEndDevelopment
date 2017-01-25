@@ -237,6 +237,20 @@ array.indexOf("where");
 var newArray = array.slice(1,3);
 ```
 
+## forEach
+```
+array.forEach(functionForEveryElement);
+
+// Example
+colorArray.forEach(printColors);
+
+// Example: anonmyous function
+colorArray.forEach(function(color) {
+  console.log(color);
+});
+```
+
+
 ## Object
 1. Values pairs are called properties;  
 2. JavaScript objects cannot be compared, (x == y) is always false ;  
