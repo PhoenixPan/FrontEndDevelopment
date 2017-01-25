@@ -258,7 +258,6 @@ colorArray.forEach(function(color) {
 });
 ```
 
-
 ## Object
 1. Values pairs are called properties;  
 2. JavaScript objects cannot be compared, (x == y) is always false ;  
@@ -266,7 +265,7 @@ colorArray.forEach(function(color) {
 4. Change properties in two ways:  
 
   ```
-  objectName["propertyName"]
+  objectName["propertyName"] // not valid if the name starts with a number
   objectName.propertyName
   ```
 5. Methods are build-in functions:  
