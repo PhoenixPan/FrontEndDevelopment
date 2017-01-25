@@ -235,6 +235,14 @@ var lastElement = array.pop();
 
 array.indexOf("where");
 var newArray = array.slice(1,3);
+
+// Splice: remove
+var removed = array.splice(index, numberOfElementsToRemove,( newItemsToBeAdded));
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 1, "Lemon", "Kiwi");
+// Banana,Orange,Lemon,Kiwi,Mango
+
 ```
 
 ## forEach
