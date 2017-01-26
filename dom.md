@@ -33,3 +33,12 @@
 	document.removeChild(element)  
 	```
 
+
+## Good practice
+1. Instead of manipulating sytles directly, we could put the new style in a CSS class and add the class to the element using JS
+
+```
+tag.classList.add();
+tag.classList.remove();
+tag.classList.toggle();  // turn on/off a class depends on the current status
+```
