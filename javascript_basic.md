@@ -479,3 +479,17 @@ obj.employees[1].firstName + " " + obj.employees[1].lastName;
 </script>
 
 ```
+
+## DOM
+
+### Finding HTML Elements  
+document.querySelector("h1");
+
+document.getElementById(id)  
+document.getElementsByTagName(name)  
+document.getElementsByClassName(name)  
+
+### Adding and Deleting Elements  
+document.createElement(element)  
+document.removeChild(element)  
+
