@@ -33,7 +33,7 @@
 	document.removeChild(element)  
 	```
 
-## Change style
+## Manipulate style
 1. Simple way:
 
 	```
@@ -49,7 +49,7 @@
 	tag.classList.toggle();  // turn on/off a class depends on the current status
 	```
 	
-## Change text
+## Manipulate text
 1. textContent: obtain the plain text from this element  
 
 	```
@@ -59,3 +59,10 @@
 	```
 	element.innerHTML = "I <strong>like</strong> it";  // display "I like it"
 	```
+
+## Manipulate attributes
+
+```
+element.getAttribute("href");
+element.setAttribute("href", "http://www.mysite.com");
+```
