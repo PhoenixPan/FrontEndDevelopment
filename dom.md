@@ -1,4 +1,6 @@
 ##Finding HTML Elements  
+document.querySelector("h1");
+
 document.getElementById(id)  
 document.getElementsByTagName(name)  
 document.getElementsByClassName(name)  
