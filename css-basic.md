@@ -190,9 +190,9 @@ border-left-style: solid;
   /*input:checked*/
   /*a:visited*/
 
-  /*X + Y: only the Ys immediately follow X*/ 
+  /*X + Y: only the Ys immediately follow X
   /*X Y: all Y within X*/
-  /*X > Y: only direct descendant Y of X*
+  /*X > Y: only direct descendant Y of X (the first child of the parent)
   
   /*X:nth-of-type(n)*/
   div:nth-of-type(3) p {
