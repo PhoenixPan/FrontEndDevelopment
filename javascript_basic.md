@@ -483,16 +483,35 @@ obj.employees[1].firstName + " " + obj.employees[1].lastName;
 ## DOM
 
 ### Finding HTML Elements  
-1. querySelector: Select the FIRST element that fits. It only works when your DOM is ready. If it returns null, try to place all JS script at bottom of the page.
-```
-document.querySelector("h1");
-```
 
-document.getElementById(id)  
-document.getElementsByTagName(name)  
-document.getElementsByClassName(name)  
+1. Direct reference:
 
-### Adding and Deleting Elements  
-document.createElement(element)  
-document.removeChild(element)  
+	```
+	document.URL
+	document.body
+	document.head
+	document.links // all anchor tags
+	```
+
+2. document.querySelector: Select the FIRST element that fits. It only works when your DOM is ready. If it returns null, try to place all JS script at bottom of the page.
+
+	```
+	document.querySelector("h1");
+	document.querySelectorAll("h1");  // select all elements that fit
+	```
+
+3. document.getElement: get element by difference references
+
+	```
+	document.getElementById(id)  
+	document.getElementsByTagName(name)  
+	document.getElementsByClassName(name)  
+	```
+
+4. Adding and Deleting Elements  
+
+	```
+	document.createElement(element)  
+	document.removeChild(element)  
+	```
 
