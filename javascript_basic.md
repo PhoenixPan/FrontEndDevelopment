@@ -483,7 +483,10 @@ obj.employees[1].firstName + " " + obj.employees[1].lastName;
 ## DOM
 
 ### Finding HTML Elements  
+1. querySelector: Select the FIRST element that fits. It only works when your DOM is ready. If it returns null, try to place all JS script at bottom of the page.
+```
 document.querySelector("h1");
+```
 
 document.getElementById(id)  
 document.getElementsByTagName(name)  
