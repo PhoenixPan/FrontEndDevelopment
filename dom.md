@@ -33,12 +33,29 @@
 	document.removeChild(element)  
 	```
 
+## Change style
+1. Simple way:
 
-## Good practice
-1. Instead of manipulating sytles directly using "element.style.color", we could put the new style in a CSS class and add the class to the element using JS
+	```
+	element.style.color = "red";
+	element.style.border = "1px solid blue";
+	```
+
+2. More decent way: Instead of manipulating sytles directly using "element.style.color", we could put the new style in a CSS class and add the class to the element using JS
 
 	```
 	tag.classList.add();
 	tag.classList.remove();
 	tag.classList.toggle();  // turn on/off a class depends on the current status
+	```
+	
+## Change text
+1. textContent: obtain the plain text from this element  
+
+	```
+	element.textContent = "new text";
+	```
+2. innerHTML: obtain the text as well as the tags inside it
+	```
+	element.innerHTML = "I <strong>like</strong> it";
 	```
