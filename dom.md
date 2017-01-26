@@ -53,9 +53,9 @@
 1. textContent: obtain the plain text from this element  
 
 	```
-	element.textContent = "new text";
+	element.textContent = "I <strong>like</strong> it"; // display "I <strong>like</strong> it"
 	```
 2. innerHTML: obtain the text as well as the tags inside it
 	```
-	element.innerHTML = "I <strong>like</strong> it";
+	element.innerHTML = "I <strong>like</strong> it";  // display "I like it"
 	```
