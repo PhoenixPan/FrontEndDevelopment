@@ -8,23 +8,6 @@
 ## priority
 There are multiple style sheets & override priority.  
 
-1. Direct reference:
-
-	```
-	document.URL
-	document.body
-	document.head
-	document.links // all anchor tags
-	```
-
-2. document.querySelector: Use CSS style selector to perform all functions that "getElement" has. It only works when your DOM is ready. If it returns null, try to place all JS script at bottom of the page.
-
-	```
-	document.querySelector("h1");     // select the first element that fits.
-	document.querySelectorAll("h1");  // select all elements that fit
-	```
-blablabla
-
 1. The one that is more specific wins: child element > parent element
 
 	```
@@ -81,8 +64,7 @@ blablabla
 4. RGBA: color: rgba(0,0,0,0); The last channel is used to set transparency level from 0 to 1
 
 
-## Background
-### Image
+## Background Image
 There will be default margin between images, use float to remove them.  
 ```
 body {
@@ -168,84 +150,86 @@ border-left-style: solid;
 
 ## Selector
 
-```
-<style>
+1. The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048  
 
-  /*Element selector*/
-  h1 {
-    background-color:blue;
-  }
-  
-  /*ID selector*/
-  #id-selector {
-    background-color:green;
-  }
-  
-  /*Class selector*/
-  .class-selector {
-    background-color: red;
-  }
+	```
+	<style>
 
-  /*Attribute-based*/
-  input[type="text"] {
-    background: grey;
-  }
-  
-  /*Star: all elements*/
-  #id-selector * {
-    margin: 0;
-    padding: 0;
-  }
+	  /*Element selector*/
+	  h1 {
+	    background-color:blue;
+	  }
 
-  /*input:checked*/
-  /*a:visited*/
+	  /*ID selector*/
+	  #id-selector {
+	    background-color:green;
+	  }
 
-  /*X + Y: only the Ys immediately follow X
-  /*X Y: all Y within X*/
-  /*X > Y: only direct descendant Y of X (the first child of the parent)
-  
-  /*X:nth-of-type(n)*/
-  div:nth-of-type(3) p {
-    font-size:25px;
-  }
-  /*X:nth-last-of-type(n)*/
-  /*X:only-of-type*/
-  /*X:first-of-type*/
-  
-  /*X:first-child*/
-  /*X:last-child*/
-  /*X:nth-last-child(n)*/
-  /*X:only-child*/
-  /*X:nth-child(n)*/
-  
-  /*before and after: https://css-tricks.com/almanac/selectors/a/after-and-before/*/
-  
-  /*X:not(selector): except*/
-  div:not(#div-i-dont-want) {
-    color: blue;
-    
-  / navbar-nav class inside navbar-inverse class, from which we select all the <a> in <li>
-  .navbar-inverse .navbar-nav>li>a
-  
-  }
-  
-</style>
+	  /*Class selector*/
+	  .class-selector {
+	    background-color: red;
+	  }
 
-<p id="id-selector">ID selector: Green</p>
-<p class="class-selector">ID selector: Red</p>
+	  /*Attribute-based*/
+	  input[type="text"] {
+	    background: grey;
+	  }
 
-/*Multiple classes*/ 
-<p class="class1 class2">ID selector: Red</p>
-```
-The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048  
+	  /*Star: all elements*/
+	  #id-selector * {
+	    margin: 0;
+	    padding: 0;
+	  }
 
-### Limit the application of class. In this case, only <**span**> within <**p**> will be affected.   
-```
-p.tip span {
-  font-weight:bold;
-  color:#ff9955;
-}
-```
+	  /*input:checked*/
+	  /*a:visited*/
+
+	  /*X + Y: only the Ys immediately follow X
+	  /*X Y: all Y within X*/
+	  /*X > Y: only direct descendant Y of X (the first child of the parent)
+
+	  /*X:nth-of-type(n)*/
+	  div:nth-of-type(3) p {
+	    font-size:25px;
+	  }
+	  /*X:nth-last-of-type(n)*/
+	  /*X:only-of-type*/
+	  /*X:first-of-type*/
+
+	  /*X:first-child*/
+	  /*X:last-child*/
+	  /*X:nth-last-child(n)*/
+	  /*X:only-child*/
+	  /*X:nth-child(n)*/
+
+	  /*before and after: https://css-tricks.com/almanac/selectors/a/after-and-before/*/
+
+	  /*X:not(selector): except*/
+	  div:not(#div-i-dont-want) {
+	    color: blue;
+
+	  / navbar-nav class inside navbar-inverse class, from which we select all the <a> in <li>
+	  .navbar-inverse .navbar-nav>li>a
+
+	  }
+
+	</style>
+
+	<p id="id-selector">ID selector: Green</p>
+	<p class="class-selector">ID selector: Red</p>
+
+	/*Multiple classes*/ 
+	<p class="class1 class2">ID selector: Red</p>
+	```
+
+2. Limit the application of class. In this case, only <**span**> within <**p**> will be affected.
+
+	```
+	p.tip span {
+	  font-weight:bold;
+	  color:#ff9955;
+	}
+	```
 
 ## Box model: Positioning of CSS
 ![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)    
