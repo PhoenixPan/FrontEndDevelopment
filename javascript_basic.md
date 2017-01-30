@@ -1,8 +1,9 @@
 # JavaScript
 
 ## Basic
-1. JavaScript uses Unicode;  
-2. JavaScript use camelCase;  
+1. JavaScript uses Unicode
+2. Load js at the end of the body to make sure its success. You can also use jQuery.
+
 
 ## Convention  
 1. Unlike HTML and CSS, we encourage space around operations(= + - * / );  
