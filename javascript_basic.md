@@ -8,7 +8,6 @@
 ## Convention  
 1. Unlike HTML and CSS, we encourage space around operations(= + - * / );  
 2. Declare all variables at the beginning of a script;  
-3. 
 
 ## Best practice 
 1. Avoid global variable and always declare local variable, otherwise it will become global variables;  
@@ -225,6 +224,7 @@ null == undefined            // true
 	    i = i % 360 + 1;
 	}
 	```
+
 ## Array 
 1. It is allowed to skip some index: array[1000] = "Test"; what's in between will be "undefined".
 2. Most useful methods
