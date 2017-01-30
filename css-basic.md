@@ -233,8 +233,9 @@ The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-
 ![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)    
 1. Total element width = width + left padding + right padding + left border + right border + left margin + right margin  
 2. Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin  
-3. Internet Explorer 8 and earlier versions, include padding and border in the width property. To fix this problem, add a <!DOCTYPE html> to the HTML page.  
-4. Every element is a box!  
+3. Internet Explorer 8 and earlier versions, include padding and border in the width property. To fix this problem, add a <!DOCTYPE html> to the HTML page  
+4. When you set margin or padding top/bottom in percentage, they refer to the **width** of their parent element instead of height
+5. Every element is a box!  
 
 ## Margin
 1. Top and bottom margins sometimes collapse into one single margin, which is the larger value of the two.  
