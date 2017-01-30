@@ -75,3 +75,85 @@ element.setAttribute("href", "http://www.mysite.com");
 	```
 2. Trigger an input without clicking:eventType = "change"
 
+
+
+
+#### Example: Score board
+HTML
+```
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Title</title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+	<h1><span id="scoreWindow1">0</span> to <span id="scoreWindow2">0</span></h1>
+	<p>Playing to: <span id="endpoint">5</span></p>
+	<input id="max" type="number" name="endpoint" value="5">
+	<button id="player1">Player One</button>
+	<button id="player2">Player Two</button>
+	<button id="reset">Reset</button>
+
+	<script type="text/javascript" src="myscript.js" ></script>
+</body>
+</html>
+```
+JS
+```
+var player1 = document.querySelector("#player1");
+var player2 = document.querySelector("#player2");
+var scoreWindow1 = document.querySelector("#scoreWindow1");
+var scoreWindow2 = document.querySelector("#scoreWindow2");
+var score1 = 0;
+var score2 = 0;
+var endpoint = document.querySelector("#endpoint");
+var max = 5;
+var reset = document.querySelector("#reset");
+
+document.getElementById("max").addEventListener("change", function() {
+	max = this.value;
+	endpoint.textContent = max;
+	resetScore();
+});
+
+function resetScore() {
+	scoreWindow1.textContent = "0";
+	scoreWindow2.textContent = "0";
+	score1 = 0;
+	score2 = 0;
+	scoreWindow1.classList.remove("pink");
+	scoreWindow2.classList.remove("pink");
+}
+
+reset.addEventListener("click", resetScore);
+
+player1.addEventListener("click", function() {
+	console.log(typeof(max));
+	if (score1 < max && score2 < max) {
+		score1++;
+		scoreWindow1.textContent = score1;
+		if (score1 >= max) {
+			scoreWindow1.classList.add("pink");
+		}
+	}
+});
+
+player2.addEventListener("click", function() {
+	if (score1 < max && score2 < max) {
+		score2++;
+		scoreWindow2.textContent = score2;
+		if (score2 >= max) {
+			scoreWindow2.classList.add("pink");
+		}
+	}
+});
+
+```
+CSS
+```
+.pink {
+	color: pink;
+}
+```
