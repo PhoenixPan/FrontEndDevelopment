@@ -1,13 +1,5 @@
 # CSS Basic
 
-##### Limit the application of class. In this case, only <**span**> within <**p**> will be affected.   
-```
-p.tip span {
-  font-weight:bold;
-  color:#ff9955;
-}
-```
-
 ## Ways to apply CSS
 1. External (preferred): refer in head tag: <**link rel="stylesheet" type="text/css" href="mystyle.css"**>;  
 2. Internal: use <**style**>;  
@@ -15,54 +7,72 @@ p.tip span {
 
 ## priority
 There are multiple style sheets & override priority.  
+
+1. Direct reference:
+
+	```
+	document.URL
+	document.body
+	document.head
+	document.links // all anchor tags
+	```
+
+2. document.querySelector: Use CSS style selector to perform all functions that "getElement" has. It only works when your DOM is ready. If it returns null, try to place all JS script at bottom of the page.
+
+	```
+	document.querySelector("h1");     // select the first element that fits.
+	document.querySelectorAll("h1");  // select all elements that fit
+	```
+blablabla
+
 1. The one that is more specific wins: child element > parent element
-```
-/*Priority from low to high*/
-body {
-  color: red
-}
 
-#proirity_test {
-	border: 1px solid #0040FF;
-	color: purple;
-}
+	```
+	/*Priority from low to high*/
+	body {
+	  color: red
+	}
 
-#proirity_test ul {
-	border: 1px solid #6040FF;
-	color: blue;
-}
+	#proirity_test {
+		border: 1px solid #0040FF;
+		color: purple;
+	}
 
-#proirity_test ul li:nth-of-type(3) {
-	border: 1px solid #004022;
-	color: green;
-}
-```
+	#proirity_test ul {
+		border: 1px solid #6040FF;
+		color: blue;
+	}
 
-2. !important(pink) > inline style(white) > id(orange) > external(css)> class on bottom(blue) > class on top(green)  
-PS: external reference has lower priority than !impotant and inline, but could be higher than others depending on where it is.  
-```
-<style>
-  #orange-text {
-    color: orange;
-  }
-  .pink-text {
-    color: pink !important;
-  }
-  
-  .green-text {
-    color: blue;
-  }
-  
-  .blue-text {
-    color: blue;
-  }
-  
-</style>
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-<h1 id="orange-text" class="pink-text green-text blue-text" style = "color:white">Hello World!</h1>
-```
+	#proirity_test ul li:nth-of-type(3) {
+		border: 1px solid #004022;
+		color: green;
+	}
+	```
 
-Specificity: https://developer.mozilla.org/en/docs/Web/CSS/Specificity
+2. !important(pink) > inline style(white) > id(orange) > external(css)> class on bottom(blue) > class on top(green). PS: external reference has lower priority than !impotant and inline, but could be higher than others depending on where it is. (Specificity: https://developer.mozilla.org/en/docs/Web/CSS/Specificity)
+
+	```
+	<style>
+	  #orange-text {
+	    color: orange;
+	  }
+	  .pink-text {
+	    color: pink !important;
+	  }
+
+	  .green-text {
+	    color: blue;
+	  }
+
+	  .blue-text {
+	    color: blue;
+	  }
+
+	</style>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<h1 id="orange-text" class="pink-text green-text blue-text" style = "color:white">Hello World!</h1>
+	```
+
 
 ## Color
 1. Default: color: red; such as red, gold, black. Check all of them here: http://colours.neilorangepeel.com/
@@ -228,6 +238,14 @@ border-left-style: solid;
 <p class="class1 class2">ID selector: Red</p>
 ```
 The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048  
+
+### Limit the application of class. In this case, only <**span**> within <**p**> will be affected.   
+```
+p.tip span {
+  font-weight:bold;
+  color:#ff9955;
+}
+```
 
 ## Box model: Positioning of CSS
 ![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)    
