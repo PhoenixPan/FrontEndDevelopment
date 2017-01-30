@@ -234,7 +234,7 @@ The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-
 1. Total element width = width + left padding + right padding + left border + right border + left margin + right margin  
 2. Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin  
 3. Internet Explorer 8 and earlier versions, include padding and border in the width property. To fix this problem, add a <!DOCTYPE html> to the HTML page  
-4. When you set margin or padding top/bottom in percentage, they refer to the **width** of their parent element instead of height. The following example makes a 3xn matrix of squares: (See more at: https://segmentfault.com/a/1190000004231995)  
+4. When you set margin or padding top/bottom in percentage, they refer to the **width** of their parent element instead of height. The following example makes a 3xn matrix of squares: (See more at: https://segmentfault.com/a/1190000004231995)
 
 	```
 	.tile {
@@ -247,7 +247,7 @@ The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-
 	}
 	```
 
-5. Every element is a box!  
+5. Every element is a box!
 
 ## Margin
 1. Top and bottom margins sometimes collapse into one single margin, which is the larger value of the two.  
