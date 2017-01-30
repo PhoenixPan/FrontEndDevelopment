@@ -68,7 +68,10 @@ element.setAttribute("href", "http://www.mysite.com");
 ```
 
 ## Events
+1. addEventListener: 
 
-```
-element.addEventListener(eventType, functionToCall);
-```
+	```
+	element.addEventListener(eventType, functionToCall);
+	```
+2. Trigger an input without clicking:eventType = "change"
+
