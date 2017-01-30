@@ -44,9 +44,9 @@
 2. More decent way: Instead of manipulating sytles directly using "element.style.color", we could put the new style in a CSS class and add the class to the element using JS
 
 	```
-	tag.classList.add();
-	tag.classList.remove();
-	tag.classList.toggle();  // turn on/off a class depends on the current status
+	tag.classList.add("myclass");
+	tag.classList.remove("myclass");
+	tag.classList.toggle("myclass");  // turn on/off a class depends on the current status
 	```
 	
 ## Manipulate text
