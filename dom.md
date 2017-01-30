@@ -66,3 +66,9 @@
 element.getAttribute("href");
 element.setAttribute("href", "http://www.mysite.com");
 ```
+
+## Events
+
+```
+element.addEventListener(eventType, functionToCall);
+```
