@@ -1,8 +1,16 @@
 # jQuery
 is a popular javascript library.
 
-## Selector 
-We use $() to select elements in CSS style (similar to querySelector in javascript). 
+1. Selector: We use $() to select elements in CSS style (similar to querySelector in javascript). The selector returns a list even there's only one item;
+2. Manipulate css: $().css("property","value") or $().css(object);
+
+  ```
+  var styles = {
+    backgroundColor: "pink", // It's illegal to use "-" in between, so we use camel case
+    fontSize: "100px"
+  };
+  ```
+3. Next
 
 ```
 <script>
