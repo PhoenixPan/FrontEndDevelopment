@@ -18,3 +18,15 @@ footer, header, hgroup, menu, nav, section {
 http://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_responsive
 ```
 
+
+Why doesn't work with "#navbar-container"?
+```
+#navbar-container button {
+	border: none;
+	background: none;
+	display:inline-block;
+	margin: 0;
+	padding: 5px 10px;
+	font-weight: 400;
+}
+```
