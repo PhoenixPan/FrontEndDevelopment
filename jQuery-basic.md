@@ -1,3 +1,9 @@
+# jQuery
+is a popular javascript library.
+
+## Selector 
+We use $() to select elements in CSS style (similar to querySelector in javascript). 
+
 ```
 <script>
   $(document).ready(function() {
