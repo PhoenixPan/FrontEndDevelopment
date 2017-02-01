@@ -43,7 +43,7 @@ is a popular javascript library.
   ```
 
 4. click() only adds to existing elements while on() adds on future elements.
-5. Event bubbling: click one place may trigger multiple events, if it's not your intention, use this stopPropagation(): 
+5. Event bubbling: click one place may trigger multiple events (usually from parent elements), if it's not your intention, use this stopPropagation(): 
   
   ```
   $(".list").on("click",".delete-button", function(event) {
