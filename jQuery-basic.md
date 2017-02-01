@@ -30,7 +30,12 @@ is a popular javascript library.
   1.If the user presses and holds a key, a keyup/keydown event is triggered once, but keypress events are triggered for each character inserted (really?);  
   2.Note that keydown and keyup provide a code indicating which key is pressed, while keypress indicates which character was entered. For example, a lowercase "a" will be reported as 65 by keydown and keyup, but as 97 by keypress. An uppercase "A" is reported as 65 by all events. Because of this distinction, when catching special keystrokes such as arrow keys, .keydown() or .keyup() is a better choice;  
   3.Reference: http://stackoverflow.com/questions/12827408/whats-the-theory-behind-jquery-keypress-keydown-keyup-black-magic-on-macs  
-3. on():
+3. on():Attach an event handler function for **all** selected elements, similar to addEventListener() in js. 
+
+  ```
+  $("h1").on("click", function(){});
+  $("h1").on("keypress", function(){});
+  ```
 
 
 
