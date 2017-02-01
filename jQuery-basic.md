@@ -35,10 +35,24 @@ is a popular javascript library.
   ```
   $("h1").on("click", function(){});
   $("h1").on("keypress", function(){});
+  
+  // To use on() on dynamically generated elements, it has to be put on the parent element:
+  $(".parent").on("click",".son", function() {
+	  $(this).parent().html("");
+  });
   ```
 
 4. click() only adds to existing elements while on() adds on future elements.
-
+5. Event bubbling: click one place may trigger multiple events, if it's not your intention, use this stopPropagation(): 
+  
+  ```
+  $(".list").on("click",".delete-button", function(event) {
+	  $(this).parent().fadeOut(function() { // fade out and remove
+		  $(this).remove(); 
+	  });
+	  event.stopPropagation();
+  });
+  ```
 
 ```
 <script>
