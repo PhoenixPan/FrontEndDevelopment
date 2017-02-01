@@ -13,10 +13,13 @@ is a popular javascript library.
 3. Next
 
 ## Basic methods
-1. val(): Get the current value of the **first** element in the set of matched elements or set the value of **every** matched element;
+1. val(): Get the current value of the **first** element in the set of matched elements or set the value of **every** matched element. Case: get contents from input or select box;
 2. text(): Get the **combined** (no spaces in between) text contents of each element in the set of matched elements, including their descendants, or set the text contents of **every** matched elements;
 3. html(): Get the HTML contents of the **first** element in the set of matched elements or set the HTML contents of **every** matched element;
-4. 
+4. attr(): Get the value of an attribute for the **first** element in the set of matched elements or set one or more (through an object) attributes for **every** matched element;
+5. addClass(): Adds one or more classes to **each** element in the set of matched elements;
+6. removeClass(): Remove one, multiple, or all classes from **each** element in the set of matched elements;
+7. toggleClass(): Add or remove one or more classes from **each** element in the set of matched elements, depending on their current status;
 
 ```
 <script>
