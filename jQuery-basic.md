@@ -12,6 +12,12 @@ is a popular javascript library.
   ```
 3. Next
 
+## Basic methods
+1. val(): Get the current value of the **first** element in the set of matched elements or set the value of **every** matched element;
+2. text(): Get the **combined** (no spaces in between) text contents of each element in the set of matched elements, including their descendants, or set the text contents of **every** matched elements;
+3. html(): Get the HTML contents of the **first** element in the set of matched elements or set the HTML contents of **every** matched element;
+4. 
+
 ```
 <script>
   $(document).ready(function() {
