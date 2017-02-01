@@ -1,7 +1,7 @@
 # jQuery
 is a popular javascript library.
 
-1. Selector: We use $() to select elements in CSS style (similar to querySelector in javascript). The selector returns a list even there's only one item;
+1. Selector: We use $() to select elements in CSS style (similar to querySelector in javascript). The selector returns a list even there's only one item. Use $(this) to stand for "this" in js;
 2. Manipulate css: $().css("property","value") or $().css(object);
 
   ```
@@ -20,6 +20,15 @@ is a popular javascript library.
 5. addClass(): Adds one or more classes to **each** element in the set of matched elements;
 6. removeClass(): Remove one, multiple, or all classes from **each** element in the set of matched elements;
 7. toggleClass(): Add or remove one or more classes from **each** element in the set of matched elements, depending on their current status;
+
+
+## jQuery events
+1. click()/dlbclick():triggered when click/double-clicked;
+2. keypress():triggered between keydown and keyup (usually);  
+  keyup()/keydown(): triggered when you press down / release the key;
+3. on():
+
+
 
 ```
 <script>
