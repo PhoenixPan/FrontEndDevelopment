@@ -12,7 +12,7 @@ is a popular javascript library.
   ```
 3. Next
 
-## Basic methods
+## Basic Methods
 1. val(): Get the current value of the **first** element in the set of matched elements or set the value of **every** matched element. Case: get contents from input or select box;
 2. text(): Get the **combined** (no spaces in between) text contents of each element in the set of matched elements, including their descendants, or set the text contents of **every** matched elements;
 3. html(): Get the HTML contents of the **first** element in the set of matched elements or set the HTML contents of **every** matched element;
@@ -22,7 +22,7 @@ is a popular javascript library.
 7. toggleClass(): Add or remove one or more classes from **each** element in the set of matched elements, depending on their current status;
 
 
-## jQuery events
+## jQuery Events
 1. click()/dlbclick():triggered when click/double-clicked;
 2. keypress():triggered between keydown and keyup (usually);  
   keyup()/keydown(): triggered when you press down / release the key;  
@@ -37,6 +37,7 @@ is a popular javascript library.
   $("h1").on("keypress", function(){});
   ```
 
+4. click() only adds to existing elements while on() adds on future elements.
 
 
 ```
