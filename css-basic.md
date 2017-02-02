@@ -7,6 +7,28 @@
 4. Use indentation to indicate items with the same parent;
 5. Compress each CSS item in one line for easier read and search (optional);
 
+## New things learned
+1. To prevent user from selecting the text: 
+	
+	```
+	user-select: none;
+	```
+2. Why the height of this element doesn't extend until we add inline-block?
+
+	```
+	.delete-button {
+		background: rgb(235, 80, 80);
+		color: white;
+		display: inline-block;
+		width: 0;
+		margin-right: 10px;
+		opacity: 0;
+		text-align: center;
+		transition: all 0.2s ease;
+	}
+	```
+
+
 ## Ways to apply CSS
 1. External (preferred): refer in head tag: <**link rel="stylesheet" type="text/css" href="mystyle.css"**>;  
 2. Internal: use <**style**>;  
