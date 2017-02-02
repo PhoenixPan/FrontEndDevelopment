@@ -1,5 +1,12 @@
 # CSS Basic
 
+## Good practice:
+1. 
+2. Separation of containers and content: objects should look the same no matter where you put them;
+3. Order items in alphabetic order;
+4. Use indentation to indicate items with the same parent;
+5. Compress each CSS item in one line for easier read and search (optional);
+
 ## Ways to apply CSS
 1. External (preferred): refer in head tag: <**link rel="stylesheet" type="text/css" href="mystyle.css"**>;  
 2. Internal: use <**style**>;  
