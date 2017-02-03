@@ -30,16 +30,29 @@ is a popular javascript library.
   1.If the user presses and holds a key, a keyup/keydown event is triggered once, but keypress events are triggered for each character inserted (really?);  
   2.Note that keydown and keyup provide a code indicating which key is pressed, while keypress indicates which character was entered. For example, a lowercase "a" will be reported as 65 by keydown and keyup, but as 97 by keypress. An uppercase "A" is reported as 65 by all events. Because of this distinction, when catching special keystrokes such as arrow keys, .keydown() or .keyup() is a better choice;  
   3.Reference: http://stackoverflow.com/questions/12827408/whats-the-theory-behind-jquery-keypress-keydown-keyup-black-magic-on-macs  
-3. on():Attach an event handler function for **all** selected elements, similar to addEventListener() in js. 
+3. on():Attach an event handler function for **all** selected elements, similar to addEventListener() in js. It helps keep CSS for dynamically generated elements. A selector string to filter the **descendants** of the selected elements that **trigger** the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.  
 
-  ```
-  $("h1").on("click", function(){});
-  $("h1").on("keypress", function(){});
+  ```	// Code from project Patatap
+  	<body>
+		<canvas id="myCanvas" resize></canvas>
+		<div id="hint-div">
+			<p id="hint"><i class="fa fa-hand-o-down" aria-hidden="true"></i> Press any key to start singing </p>
+		</div>
+		<script src="js/patatap.js"></script>
+	</body>
   
-  // To use on() on dynamically generated elements, it has to be put on the parent element:
-  $(".parent").on("click",".son", function() {
-	  $(this).parent().html("");
-  });
+  	// Only "body" can be used as selectors. Though "#hint-div" is the descendent of "html", it doesn't trigger the keydown even. 		// "body" does.
+	$("html").on("keydown", "body", function() {
+		$("#hint").html("<i class=\"fa fa-thumbs-o-up\" aria-hidden=\"true\"></i> There you go!");
+		$("#hint-div").fadeOut(1500);
+	});
+	
+	// If you want to take effect with "#hint-div", change code to like below and click the div 
+	$("html").on("click", "#hint-div", function() {
+		$("#hint").html("<i class=\"fa fa-thumbs-o-up\" aria-hidden=\"true\"></i> There you go!");
+		$("#hint-div").fadeOut(1500);
+	});
+	
   ```
 
 4. click() only adds to existing elements while on() adds on future elements.
