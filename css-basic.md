@@ -330,6 +330,11 @@ length
 %
 ```
 
+## Position
+1. relative:
+2. absolute:
+3. fixed:
+
 ## Outline
 ![outline](https://cloud.githubusercontent.com/assets/14355257/18029801/67e9a206-6c70-11e6-9c42-01c07208a1e3.jpg)  
 1. The outline is NOT a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.  
