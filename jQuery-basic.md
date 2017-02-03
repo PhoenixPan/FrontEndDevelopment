@@ -32,28 +32,29 @@ is a popular javascript library.
   3.Reference: http://stackoverflow.com/questions/12827408/whats-the-theory-behind-jquery-keypress-keydown-keyup-black-magic-on-macs  
 3. on():Attach an event handler function for **all** selected elements, similar to addEventListener() in js. It helps keep CSS for dynamically generated elements. A selector string to filter the **descendants** of the selected elements that **trigger** the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.  
 
-  ```	// Code from project Patatap
-  	<body>
+	```	
+	// Code from project Patatap
+	<body>
 		<canvas id="myCanvas" resize></canvas>
 		<div id="hint-div">
 			<p id="hint"><i class="fa fa-hand-o-down" aria-hidden="true"></i> Press any key to start singing </p>
 		</div>
 		<script src="js/patatap.js"></script>
 	</body>
-  
-  	// Only "body" can be used as selectors. Though "#hint-div" is the descendent of "html", it doesn't trigger the keydown even. 		// "body" does.
+
+	// Only "body" can be used as selectors. Though "#hint-div" is the descendent of "html", it doesn't trigger the keydown even. 		// "body" does.
 	$("html").on("keydown", "body", function() {
 		$("#hint").html("<i class=\"fa fa-thumbs-o-up\" aria-hidden=\"true\"></i> There you go!");
 		$("#hint-div").fadeOut(1500);
 	});
-	
+
 	// If you want to take effect with "#hint-div", change code to like below and click the div 
 	$("html").on("click", "#hint-div", function() {
 		$("#hint").html("<i class=\"fa fa-thumbs-o-up\" aria-hidden=\"true\"></i> There you go!");
 		$("#hint-div").fadeOut(1500);
 	});
-	
-  ```
+
+	```
 
 4. click() only adds to existing elements while on() adds on future elements.
 5. Event bubbling: click one place may trigger multiple events (usually from parent elements), if it's not your intention, use this stopPropagation(): 
