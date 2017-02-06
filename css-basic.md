@@ -231,8 +231,6 @@ border-left-style: solid;
 	  /*X:only-child*/
 	  /*X:nth-child(n)*/
 
-	  /*before and after: https://css-tricks.com/almanac/selectors/a/after-and-before/*/
-
 	  /*X:not(selector): except*/
 	  div:not(#div-i-dont-want) {
 	    color: blue;
@@ -260,7 +258,20 @@ border-left-style: solid;
 	}
 	```
 
-## Box model: Positioning of CSS
+
+## Pseudo class
+1. before and after: http://www.w3schools.com/cssref/sel_before.asp  
+	
+	insert content before or after the selected elements (and also style it)  
+	```
+	p::before { 
+	    content: "Read this -";
+	    color: red;
+	    font-weight: bold;
+	}
+	```
+
+# Box model: Positioning of CSS
 
 ![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)    
 
