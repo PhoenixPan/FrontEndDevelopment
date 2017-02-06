@@ -30,3 +30,7 @@ Why doesn't work with "#navbar-container"?
 	font-weight: 400;
 }
 ```
+
+2. Cross origin: Cross origin requests are only supported for protocol schemes: run your html on a simple server to get rid of this:    
+
+	howler.min.js:2 XMLHttpRequest cannot load file:///C:/Users/Jiabei/Desktop/Web/partatap/src/sounds/zig-zag.mp3. Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https, chrome-extension-resource.
