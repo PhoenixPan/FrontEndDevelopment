@@ -30,9 +30,9 @@
 
 
 ## Ways to apply CSS
-1. External (preferred): refer in head tag: <**link rel="stylesheet" type="text/css" href="mystyle.css"**>;  
-2. Internal: use <**style**>;  
-3. Inline: <**h1 style="color:blue;"**>;  
+1. External (preferred): refer in head tag: `<link rel="stylesheet" type="text/css" href="mystyle.css">`;  
+2. Internal: use `<style>`;  
+3. Inline: `<h1 style="color:blue;">`;  
 
 ## Priority
 There are multiple style sheets & override priority.  
@@ -427,7 +427,7 @@ To center an element or image
 ```
 margin:auto;
 ```
-Left or right align using position or float. When aligning elements with position and float, always define margin and padding for the <**body**> element. This is to avoid visual differences in different browsers. Absolute positioned elements are removed from the normal flow, and can overlap elements, whereas float cannot;  
+Left or right align using position or float. When aligning elements with position and float, always define margin and padding for the `<body>` element. This is to avoid visual differences in different browsers. Absolute positioned elements are removed from the normal flow, and can overlap elements, whereas float cannot;  
 ```
 body {
     margin: 0;
@@ -550,45 +550,8 @@ tr:nth-child(odd) {background-color: white}
 </div>
 ```
 
-
-## Cursor
-Change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+## Other properties
+##### Cursor: Change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
 ```
 <span style="cursor:help">help</span><br>
-```
-
-
-## Positioning  
-1. Position to right: left:100%;
-2. Hardcode position: If you increase its padding, also increase the value of the top property to ensure that it stays in the middle
-```
-.parent {
-  position:relative;
-  display:inline-block;
-  padding:8px;
-}
-
-.child {
-  position:absolute;
-  z-index: 1;
-  top:4px;        // vertical center 
-  right: 100%; 
-}
-```
-```
-.parent {
-    position: relative;
-    display: inline-block;
-}
-
-.child {
-    width: 120px;
-    border:1px solid black;
-    
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-}
 ```
