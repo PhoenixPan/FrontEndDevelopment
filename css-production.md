@@ -6,6 +6,9 @@
 ### Vertically
 
 
+## Auto adjustment
+1. max-width/max-height: use them to avoid the appearance of the scroll bar;
+
 ## Border
 1. border: 0 / border: none: use border: 0. It's shorter and works fine on old browsers before IE9;   
 
