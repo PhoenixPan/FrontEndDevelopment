@@ -397,9 +397,18 @@ length
 	
 3. display:inline-block; ~= float + clear (http://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block);  
 
-##### Differences among float, diaplay, padding, and overflow:  
-1. float: left; use float to get block elements to slide next to each other 
-2. display: block; Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify padding (and height, width, margins, etc. if you want)  
+##### Relationships among float, diaplay, position:  
+1. If "display" is "none", both "float" and "position" do not apply; 
+2. If "display" is not "none":
+  1.
+  2. 
+  
+https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/css-layout.html
+	
+
+
+1. float: left; use float to get block elements to slide next to each other;
+2. display: block; Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify padding (and height, width, margins, etc. if you want);
 3. padding: 8px; Since block elements take up the full width available, they cannot float next to each other. Therefore, specify some padding to make them look good  
 4. overflow:hidden is added to the ul element to prevent li elements from going outside of the list.  
 
