@@ -34,7 +34,7 @@
 2. Internal: use <**style**>;  
 3. Inline: <**h1 style="color:blue;"**>;  
 
-## priority
+## Priority
 There are multiple style sheets & override priority.  
 
 1. The one that is more specific wins: child element > parent element
@@ -161,6 +161,20 @@ body {
 	border-style: hidden;
 	border-style: dotted dashed solid double;
 	```
+## Outline
+![outline](https://cloud.githubusercontent.com/assets/14355257/18029801/67e9a206-6c70-11e6-9c42-01c07208a1e3.jpg)  
+1. The outline is NOT a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.  
+2. Declare the outline-style property if you'll apply the outline-color property, no style, no color.  
+
+```
+outline-color:invert; /*Opposite to the background color*/	
+outline-offset; /*Specifies the space between an outline and the edge or border of an element*/
+outline-style;
+outline-width;
+
+/*Shorthand property in order: width style(required) color*/
+outline: 5px dotted red
+```
 
 ## Selectors & Pseudo classes
 
@@ -453,24 +467,6 @@ img {
 ##### @media @viewpoint
 https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/
 
-## Outline
-![outline](https://cloud.githubusercontent.com/assets/14355257/18029801/67e9a206-6c70-11e6-9c42-01c07208a1e3.jpg)  
-1. The outline is NOT a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.  
-2. Declare the outline-style property if you'll apply the outline-color property, no style, no color.  
-```
-// Prefix
-outline	
-outline-color:invert // Opposite to the background color	
-outline-offset 	//Specifies the space between an outline and the edge or border of an element
-outline-style
-outline-width
-
-// Shorthand property in order: width style(required) color
-outline: 5px dotted red
-```
-
-
-
 
 ## Text  
 1. text-align: justify; makes words spread and have the same width in each line. Also with: center/left/right;
@@ -594,22 +590,5 @@ Change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
     bottom: 100%;
     left: 50%;
     margin-left: -60px;
-}
-```
-
-
-
-## Image Sprites
-Avoid using many images and save bandwidth.   
-Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_sprites_nav  
-  
-1. <img id="home" src="img_trans.gif"> - Only defines a small transparent image because the src attribute cannot be empty. The displayed image will be the background image we specify in CSS;  
-2. width: 46px; height: 44px; - Defines the size of the image we want to use;  
-3. background: url(img_navsprites.gif) 0 0; - Defines the background image and its position (left 0px, top 0px).  
-```
-#home {
-    width: 46px;
-    height: 44px;
-    background: url(img_navsprites.gif) 0 0;
 }
 ```
