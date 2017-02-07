@@ -313,6 +313,7 @@ inherit: inherit from the parent
 ```
 
 ## Padding
+1. Most elements do not havea default padding, so use a lot of "padding:0" will increase unnecessary burden for loading pages; 
 ```
 // Prefix
 padding:50px 25px 50px 25px;  // top, right, bottom, left
@@ -341,120 +342,17 @@ length
 %
 ```
 
+## Display  
+1. display:block;  A block-level element always starts on a new line and takes up the full width available;  
+2. display:inline; An inline element does not start on a new line and only takes up as much width as necessary;  
+3. display:none; commonly used with JavaScript to hide and show elements. "display:none" does not take up any space, whereas "visibility:hidden" does;  
+
 ## Position
 1. relative:
 2. absolute:
 3. fixed:
 
-## Outline
-![outline](https://cloud.githubusercontent.com/assets/14355257/18029801/67e9a206-6c70-11e6-9c42-01c07208a1e3.jpg)  
-1. The outline is NOT a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.  
-2. Declare the outline-style property if you'll apply the outline-color property, no style, no color.  
-```
-// Prefix
-outline	
-outline-color:invert // Opposite to the background color	
-outline-offset 	//Specifies the space between an outline and the edge or border of an element
-outline-style
-outline-width
 
-// Shorthand property in order: width style(required) color
-outline: 5px dotted red
-```
-
-## Text  
-```
-text-align: justify;        // makes words spread and have the same width in each line
-// center, left, right  
-
-text-decoration: none        // removes hyper link underline
-// overline, line-through, underline  
-
-text-transform: uppercase    // specifies upper or lower case 
-// uppercase, lowercase, capitalize  
-
-text-indent: 50px;
-letter-spacing: 3px;       // specifies space between characters in text
-word-spacing: 10px;        // specifies space between words in text
-line-height: 2;            // specifies space between lines
-direction:rtl;             // changes text direction  
-white-space: nonrap;        // specifies how white-space inside an element is handled. No new lines  
-vertical-align
-unicode-bidi
-text-shadow: text-shadow:1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;  // multiple: horizental, vertical, blur, color
-```
-1. For <**div**>, use: box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 white;  
-```
-font-style: italic       // normal, italic, obelique 
-font-size                // length, em, %
-font-variant: small-caps // small-caps or normal
-font-weight              // normal, bold, bolder, lighter, initial(default value), inherit, 100-900
-font-family: "Times New Roman", Times, serif;\\
-
-// Shorthand property
-font:italic bold small-caps 12px/30px Georgia, serif; // style, weight, variant, font-size/line space, font-family
-
-```
-## Font
-1. Start with the font you want, and end with a generic family
-2. If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman"
-3. "italic" is a special version of font, whereas "oblique" just inclines the font a bit. Since not all fonts have italic version, we use "oblique" to make the font italic when italic version is absent
-4. If font-size is not specified, the default size is 16px, which is also the default of 1em
-5. 1em is equal to the font size of the parent element
-6. Google fonts
-
-## List  
-```
-list-style-type:none  // circle, square, lower-roman, lower-alpha. more: http://www.w3schools.com/cssref/pr_list-style-type.asp
-list-style-image: url('sqpurple.gif');
-list-style-position: inside; // outside, marker is inside or outside of the content flow  
-
-// Shorthand property in order: type, position, image
-list-style: square inside url("sqpurple.gif");
-```
-1. Modify last child, as sometimes it overlaps with the bottom border of the list;  
-```
-ul li:last-child {border-bottom: none;}
-```
-
-## Table  
-```
-// Collapse to single border(only in table)
-table {
-  border-collapse:collapse;
-}
-
-// Height & Width
-table {
-  width:100%;  // unit could be %, em, px, ...
-  height:50px;  
-}
-th, td {
-  width:100%;    // uneven distribution: |      1      |  2  |3|
-  height:50px;
-}
-tr {
-  // no width
-  height:50px; 
-}
-
-// Striped tables
-tr:nth-child(even) {background-color: grey}
-tr:nth-child(odd) {background-color: white}
-
-// Responsive tables: automatically add a scroll bar to the section when the screen is too small
-<div style="overflow-x:auto;">
-<table>
-//... table content ...
-</table>
-</div>
-```
-
-## Display  
-1. display:block;  A block-level element always starts on a new line and takes up the full width available;  
-2. display:inline; An inline element does not start on a new line and only takes up as much width as necessary;  
-3. display:none;   commonly used with JavaScript to hide and show elements;  
-4. "display:none" does not take up any space, whereas "visibility:hidden" does;  
 
 
 ## Position  
@@ -629,6 +527,110 @@ or using transform: http://www.w3schools.com/css/tryit.asp?filename=trycss_align
     padding: 10px 0;
     border: 3px solid green;
 }
+```
+
+## Outline
+![outline](https://cloud.githubusercontent.com/assets/14355257/18029801/67e9a206-6c70-11e6-9c42-01c07208a1e3.jpg)  
+1. The outline is NOT a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.  
+2. Declare the outline-style property if you'll apply the outline-color property, no style, no color.  
+```
+// Prefix
+outline	
+outline-color:invert // Opposite to the background color	
+outline-offset 	//Specifies the space between an outline and the edge or border of an element
+outline-style
+outline-width
+
+// Shorthand property in order: width style(required) color
+outline: 5px dotted red
+```
+
+## Text  
+```
+text-align: justify;        // makes words spread and have the same width in each line
+// center, left, right  
+
+text-decoration: none        // removes hyper link underline
+// overline, line-through, underline  
+
+text-transform: uppercase    // specifies upper or lower case 
+// uppercase, lowercase, capitalize  
+
+text-indent: 50px;
+letter-spacing: 3px;       // specifies space between characters in text
+word-spacing: 10px;        // specifies space between words in text
+line-height: 2;            // specifies space between lines
+direction:rtl;             // changes text direction  
+white-space: nonrap;        // specifies how white-space inside an element is handled. No new lines  
+vertical-align
+unicode-bidi
+text-shadow: text-shadow:1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;  // multiple: horizental, vertical, blur, color
+```
+1. For <**div**>, use: box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 white;  
+```
+font-style: italic       // normal, italic, obelique 
+font-size                // length, em, %
+font-variant: small-caps // small-caps or normal
+font-weight              // normal, bold, bolder, lighter, initial(default value), inherit, 100-900
+font-family: "Times New Roman", Times, serif;\\
+
+// Shorthand property
+font:italic bold small-caps 12px/30px Georgia, serif; // style, weight, variant, font-size/line space, font-family
+
+```
+## Font
+1. Start with the font you want, and end with a generic family
+2. If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman"
+3. "italic" is a special version of font, whereas "oblique" just inclines the font a bit. Since not all fonts have italic version, we use "oblique" to make the font italic when italic version is absent
+4. If font-size is not specified, the default size is 16px, which is also the default of 1em
+5. 1em is equal to the font size of the parent element
+6. Google fonts
+
+## List  
+```
+list-style-type:none  // circle, square, lower-roman, lower-alpha. more: http://www.w3schools.com/cssref/pr_list-style-type.asp
+list-style-image: url('sqpurple.gif');
+list-style-position: inside; // outside, marker is inside or outside of the content flow  
+
+// Shorthand property in order: type, position, image
+list-style: square inside url("sqpurple.gif");
+```
+1. Modify last child, as sometimes it overlaps with the bottom border of the list;  
+```
+ul li:last-child {border-bottom: none;}
+```
+
+## Table  
+```
+// Collapse to single border(only in table)
+table {
+  border-collapse:collapse;
+}
+
+// Height & Width
+table {
+  width:100%;  // unit could be %, em, px, ...
+  height:50px;  
+}
+th, td {
+  width:100%;    // uneven distribution: |      1      |  2  |3|
+  height:50px;
+}
+tr {
+  // no width
+  height:50px; 
+}
+
+// Striped tables
+tr:nth-child(even) {background-color: grey}
+tr:nth-child(odd) {background-color: white}
+
+// Responsive tables: automatically add a scroll bar to the section when the screen is too small
+<div style="overflow-x:auto;">
+<table>
+//... table content ...
+</table>
+</div>
 ```
 
 ## Use combinators to target an element  
