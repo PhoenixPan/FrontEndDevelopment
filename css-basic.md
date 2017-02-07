@@ -450,6 +450,12 @@ outline-width
 outline: 5px dotted red
 ```
 
+
+## @media @viewpoint
+https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/
+
+
+
 ## Text  
 ```
 text-align: justify;        // makes words spread and have the same width in each line
