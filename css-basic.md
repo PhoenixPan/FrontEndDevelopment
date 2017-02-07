@@ -8,11 +8,7 @@
 5. Compress each CSS item in one line for easier read and search (optional);
 
 ## New things learned
-1. To prevent user from selecting the text: 
-	
-	```
-	user-select: none;
-	```
+
 2. Why the height of this element doesn't extend until we add inline-block?
 
 	```
@@ -478,7 +474,11 @@ https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/
 7. direction:rtl; changes text direction for some languages; 
 8. text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; (horizental, vertical, blur, color); 
 9. column-related properties (not very compatible) http://quirksmode.org/css/columns/; 
-
+10. To prevent user from selecting the text: 
+	
+	```
+	user-select: none;
+	```
 line-height: 2;            // specifies space between lines
 vertical-align
 unicode-bidi
