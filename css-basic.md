@@ -275,19 +275,22 @@ border-left-style: solid;
 
 ![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)    
 
-1. Total element width = width + left padding + right padding + left border + right border + left margin + right margin
-2. Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
-3. Internet Explorer 8 and earlier versions, include padding and border in the width property. To fix this problem, add a <!DOCTYPE html> to the HTML page
-4. When you set margin or padding top/bottom in percentage, they refer to the **width** of their parent element instead of height. The following example makes a 3xn matrix of squares: (See more at: https://segmentfault.com/a/1190000004231995)
+1. Internet Explorer 8 and earlier versions include padding and border in the width property. To fix this, add a <!DOCTYPE html> to the HTML page. However, sometimes this is what we want, we can then use "box-sizing:border-box" to achieve this;  
+
+	```
+	box-sizing: border-box // include padding and border
+	box-sizing: content-box // exclude padding and border
+	```
+2. When you set margin or padding top/bottom in percentage, they refer to the **width** of their parent element instead of height. The following example makes a 3xn matrix of squares: (See more at: https://segmentfault.com/a/1190000004231995);  
 
 	```
 	.tile {
-	width: 30%;
-	background-color: blue;
-	margin:1.6%;
-	float: left;
-	padding-top: 30%;
-	border-radius: 10%;
+		width: 30%;
+		background-color: blue;
+		margin:1.6%;
+		float: left;
+		padding-top: 30%;
+		border-radius: 10%;
 	}
 	```
 
