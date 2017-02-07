@@ -384,89 +384,24 @@ overflow-y: scroll;   // add a scrollbar vertically
 ```
 
 ## Float  
-Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_layout_clearfix  
-```
-// float:whether or not an element should float
-float: left;  // left, right, none, initial, inherit
 
-// clear:  specify a clear property for the element after the floating boxes to
-clear: both;  // left, right, both
+1. clear: left; specify a clear property for the element after the floating boxes to offset float;  
+2. clearfix for image overflow. "overflow:auto" extend the border to include all contents. Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_layout_clearfix   
 
-// overflow: extend the border to include all contents
-<div style="overflow: auto"><img class="img2" src="w3css.gif" width="100" height="140">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+	```
+	.clearfix {
+	  overflow: auto;
+	  zoom: 1; // IE6
+	}
+	```
+	
+3. display:inline-block; ~= float + clear (http://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block);  
 
-// display:inline-block; ~= float + clear (http://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block)
-```
-  
-1. float: left; - use floa t to get block elements to slide next to each other  
-2. display: block; - Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify padding (and height, width, margins, etc. if you want)  
-3. padding: 8px; - Since block elements take up the full width available, they cannot float next to each other. Therefore, specify some padding to make them look good  
+##### Differences among float, diaplay, padding, and overflow:  
+1. float: left; use float to get block elements to slide next to each other 
+2. display: block; Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify padding (and height, width, margins, etc. if you want)  
+3. padding: 8px; Since block elements take up the full width available, they cannot float next to each other. Therefore, specify some padding to make them look good  
 4. overflow:hidden is added to the ul element to prevent li elements from going outside of the list.  
-```
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-ul.topnav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #dddddd;
-}
-
-ul.topnav li {
-    float: left;      // all <li> should be on the same row
-}
-
-ul.topnav li a {
-    display: block;   // <a> should extends to the entire <li>
-    padding: 8px;     // padding on <a>, not <li>, otherwise this area is unclickable
-}
-</style>
-</head>
-<body>
-
-<ul class="topnav">
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
-</body>
-</html>
-```
-Fixed bar example:
-```
-body {
-  padding:0;
-  margin:0;
-}
-ul.topnav {
-  list-style-type:none;
-  padding:0;
-  margin:0;
-  overflow:hidden;
-  background: black;
-  position:fixed;
-  top:0;                       // otherwise there will be a gap. Why?
-  width:100%;
-}
-ul.topnav li {
-  float: left;
-}
-ul.topnav li a {
-  text-decoration:none;
-  font-family:"Times New Roman";
-  color:white;
-  display: block;
-  padding:8px;
-}
-ul.topnav li a:hover {
-  background:grey;
-}
-```
 
 ## Align  
 To center an element or image  
