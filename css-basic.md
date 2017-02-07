@@ -351,44 +351,11 @@ length
 3. display:none; commonly used with JavaScript to hide and show elements. "display:none" does not take up any space, whereas "visibility:hidden" does;  
 
 ## Position
-1. relative:
-2. absolute:
-3. fixed:
+1. position:static; default value. Not affected by top/bottom/left/right properties;  
+2. position:relative; make elements relative to their regular position in the flow (through top/bottom/left/right), the rest of the contents will not be affected;
+3. position:fixed; the elements will always be in the same position of the page (fixed navbar); 
+4. position:absolute; similar to fix, but the element position is fixed to the closest ancestor that is relative/absolute/fixed(everything except static?). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
 
-
-
-
-## Position  
-##### static: default value. Not affected by top, bottom, left and right properties;    
-##### relative: relative to its normal position. Add gap to sides defined and wrap the content;  
-```
-div.relative {
-  position: relative;
-  left: 30px;
-  border: 3px solid green;
-}
-
-// Use this as default container
-div.relative {
-  position: relative;  
-}
-```
-##### fixed: it always stays in the same place even if the page is scrolled regardless of where you put the statement;  
-```
-div.fixed {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
-
-// "Up" and "Down" will stay together while "Fixed" on the lower-right cornor
-<p>Up</p>        
-<div>Fixed</div>
-<p>Down</p>
-```
-##### absolute: relative to its parent element(except static).However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
-
-*Absolute positioned elements are removed from the normal flow, and can overlap elements.  
   
 ##### Overlapping: an overlapping element has to be positioned(except static). An element with greater stack order is always in front of an element with a lower stack order. If two elements have the same stack, the one declared later will be displayed on the top;  
 ```
