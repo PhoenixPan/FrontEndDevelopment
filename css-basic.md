@@ -117,73 +117,57 @@ body {
 ```
 
 ## Border 
-Mainly consists of three attributes: width, color, and style:  
-```
-h1 {
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-}
-```
-Or shorthand:  
-```
-h1 {
-    border: 5px solid red;
-}
-```
-Border actually consists of four triangles or trapezoid facing a center point. To generate a tringle:  
-```
-.trinangle {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
+1. Mainly consists of three attributes: width, color, and style:  
 
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-}
-```
+	```
+	h1 {
+	    border-width: 5px;
+	    border-style: solid;
+	    border-color: black transparent transparent transparent;
+	}
+	```
+	Or shorthand:  
+	```
+	h1 {
+	    border: 5px solid red;
+	}
+	```
+2. Border actually consists of four triangles or trapezoid facing a center point. To generate a tringle:  
 
-Ways to set width
-```
-border-width: medium;
-border-width: 2px;
-border-width: 1px 2px 3px 4px;
-```
+	```
+	.trinangle {
+	    content: "";
+	    position: absolute;
+	    top: 100%;
+	    left: 50%;
+	    border-width: 5px;
+	    border-style: solid;
+	    border-color: black transparent transparent transparent;
+	}
+	```
 
-Round cornor
-```
-border-radius:5px;
-```
+3. All border styles:  
 
-All border styles
-```
-border-style: dotted;
-border-style: dashed;
-border-style: solid;
-border-style: double;
-border-style: groove;
-border-style: ridge;
-border-style: inset;
-border-style: outset;
-border-style: none;
-border-style: hidden;
-border-style: dotted dashed solid double;
+	```
+	border-style: dotted;
+	border-style: dashed;
+	border-style: solid;
+	border-style: double;
+	border-style: groove;
+	border-style: ridge;
+	border-style: inset;
+	border-style: outset;
+	border-style: none;
+	border-style: hidden;
+	border-style: dotted dashed solid double;
+	```
 
-border-top-style: dotted;
-border-right-style: solid;
-border-bottom-style: dotted;
-border-left-style: solid;
-```
+## Selectors & Pseudo classes
 
-## Selector
-
+### Selectors
 1. The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048  
 
 	```
-	<style>
-
 	  /*Element selector*/
 	  h1 {
 	    background-color:blue;
@@ -212,10 +196,11 @@ border-left-style: solid;
 
 	  /*input:checked*/
 	  /*a:visited*/
-
-	  /*X + Y: only the Ys immediately follow X
-	  /*X Y: all Y within X*/
-	  /*X > Y: only direct descendant Y of X (the first child of the parent)
+	  
+	  /*X Y: select all descendant Ys within X*/
+	  /*X + Y: only the sibling Y immediately follow X (have the same parent)*/
+	  /*X ~ Y: select all sibling Ys of X (have the same parent)*/
+	  /*X > Y: select only immediate descendant Y of X (the first child of the parent)*/
 
 	  /*X:nth-of-type(n)*/
 	  div:nth-of-type(3) p {
@@ -234,19 +219,10 @@ border-left-style: solid;
 	  /*X:not(selector): except*/
 	  div:not(#div-i-dont-want) {
 	    color: blue;
-
-	  / navbar-nav class inside navbar-inverse class, from which we select all the <a> in <li>
-	  .navbar-inverse .navbar-nav>li>a
-
 	  }
-
-	</style>
-
-	<p id="id-selector">ID selector: Green</p>
-	<p class="class-selector">ID selector: Red</p>
-
-	/*Multiple classes*/ 
-	<p class="class1 class2">ID selector: Red</p>
+	
+	  /* navbar-nav class inside navbar-inverse class, from which we select all the <a> in <li>*/
+	  .navbar-inverse .navbar-nav>li>a {}
 	```
 
 2. Limit the application of class. In this case, only <**span**> within <**p**> will be affected.
@@ -258,8 +234,29 @@ border-left-style: solid;
 	}
 	```
 
+3. Select elements with certain attribute(s):
+	```
+	/*elements with this attribute*/
+	p[attribute]{...;}            
 
-## Pseudo class
+	/*elements with a certain value*/
+	p[attribute="value"]{...;}
+
+	/*elements that contain a certain value*/
+	p[attribute~="value"]{...;}     /*only separate words, "value x" is ok, but ""value-x" and "values" will not work */
+	p[attribute*="value"]{...;}     /*any place*/
+
+	/*elements that start with a certain value
+	p[attribute|="value"]{...;}    /*only single word or with "-", "value" and "value-x", not "value x"*/
+	p[attribute^="value"]{...;}    /*any place*/
+
+	/*elements that end with a certain value, no rules, "-value", "_value", "xvalue" will all be ok*/
+	p[attribute$="value"]{...;}  
+	```
+
+### Pseudo classes
+Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.asp   
+
 1. before and after: http://www.w3schools.com/cssref/sel_before.asp  
 	
 	insert content before or after the selected elements (and also style it)  
@@ -269,6 +266,26 @@ border-left-style: solid;
 	    color: red;
 	    font-weight: bold;
 	}
+	```
+2. Relates to links:  
+  1. a:link {color: red}; unvisited link;  
+  2. a:visited {color: green}; 
+  3. a:hover; MUST come after a:link and a:visited in the CSS definition in order to be effective;  
+  4. a:active; MUST come after a:hover in the CSS definition in order to be effective; 
+3. p:lang(anything): define special rules for different language:  
+	```
+		q:lang(en) {
+		  quotes:"prefix "" postfix";
+		  background:lightblue;
+		}
+
+		q:lang(cn) {
+		  quotes:"1""2";
+		  background:pink;
+		}
+
+		<p>Some text <q lang="en">English</q> Some text.</p>
+		<p>Some text <q lang="cn">Chinese</q> Some text.</p>
 	```
 
 # Box model: Positioning of CSS
@@ -356,33 +373,6 @@ length
 3. position:fixed; the elements will always be in the same position of the page (fixed navbar); 
 4. position:absolute; similar to fix, but the element position is fixed to the closest ancestor that is positioned (any kind except static). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
 
-  
-##### Overlapping: an overlapping element has to be positioned(except static). An element with greater stack order is always in front of an element with a lower stack order. If two elements have the same stack, the one declared later will be displayed on the top;  
-```
-z-index: -1;  // set the stack order of an element
-```
-##### Chip: can chip only absolutely positioned element
-```
-img {
-    position: absolute;
-    clip: rect(0px,60px,200px,0px);
-}
-```
-##### Cursor: change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
-```
-<span style="cursor:help">help</span><br>
-```
-
-## Overflow  
-```
-overflow: visiable;   // default, won't clip, let the content leaks out
-overflow: hidden;     // hide additional content(no scroll bar)
-overflow: scroll;     // add two scrollbars anyway
-overflow: auto;       // add a scrollbar only when necessary
-overflow-x: hidden;   // add a scrollbar horizentally, white-space: nowrap;
-overflow-y: scroll;   // add a scrollbar vertically
-```
-
 ## Float  
 
 1. clear: left; specify a clear property for the element after the floating boxes to offset float;  
@@ -402,6 +392,21 @@ overflow-y: scroll;   // add a scrollbar vertically
 2. display: block; Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify padding (and height, width, margins, etc. if you want)  
 3. padding: 8px; Since block elements take up the full width available, they cannot float next to each other. Therefore, specify some padding to make them look good  
 4. overflow:hidden is added to the ul element to prevent li elements from going outside of the list.  
+
+
+## Overflow  
+```
+overflow: visiable;   // default, won't clip, let the content leaks out
+overflow: hidden;     // hide additional content(no scroll bar)
+overflow: scroll;     // add two scrollbars anyway
+overflow: auto;       // add a scrollbar only when necessary
+overflow-x: hidden;   // add a scrollbar horizentally, white-space: nowrap;
+overflow-y: scroll;   // add a scrollbar vertically
+```
+
+## Flex
+
+Check whether the information about flex is obsolete: https://css-tricks.com/old-flexbox-and-new-flexbox/
 
 ## Align  
 To center an element or image  
@@ -433,6 +438,20 @@ or using transform: http://www.w3schools.com/css/tryit.asp?filename=trycss_align
     border: 3px solid green;
 }
 ```
+## Other properties relate to positioning
+##### Overlapping: an overlapping element has to be positioned(except static). An element with greater stack order is always in front of an element with a lower stack order. If two elements have the same stack, the one declared later will be displayed on the top;  
+```
+z-index: -1;  // set the stack order of an element
+```
+##### Chip: can chip only absolutely positioned element
+```
+img {
+    position: absolute;
+    clip: rect(0px,60px,200px,0px);
+}
+```
+##### @media @viewpoint
+https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/
 
 ## Outline
 ![outline](https://cloud.githubusercontent.com/assets/14355257/18029801/67e9a206-6c70-11e6-9c42-01c07208a1e3.jpg)  
@@ -451,9 +470,6 @@ outline: 5px dotted red
 ```
 
 
-## @media @viewpoint
-https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/
-
 
 
 ## Text  
@@ -465,15 +481,11 @@ https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/
 6. word-spacing: 10px;  specifies space between words in text;
 7. direction:rtl; changes text direction for some languages; 
 8. text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; (horizental, vertical, blur, color); 
-
-9. column-count: 3; number of columns in this text window;  
-  column-gap: 1em; distances between columns;   
+9. column-related properties (not very compatible) http://quirksmode.org/css/columns/; 
 
 line-height: 2;            // specifies space between lines
 vertical-align
 unicode-bidi
-
-
 
 ## Font
 1. Start with the font you want, and end with a generic family
@@ -542,238 +554,15 @@ tr:nth-child(odd) {background-color: white}
 </div>
 ```
 
-## Use combinators to target an element  
-  
-Descendant Selector: select all descendants  
-```
-div p {...;}
 
-<div>
-  <p>Paragraph 1 in the div.</p>
-  <span><p>Paragraph 2 in the div.</p></span> // will change
-</div>
+## Cursor
+Change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
 ```
-Child Selector: select only immediate children  
-```
-div > p {...;}
-<div>
-  <p>Paragraph 1 in the div.</p>              // will change
-  <p>Paragraph 2 in the div.</p>              // will change
-  <span><p>Paragraph 3 in the div.</p></span> // will not change
-</div>
-```
-
-Adjacent Sibling Selector: have the same parent, immediately following
-```
-div + p {...;}
-<div>
-  <p>Paragraph 1 in the div.</p>
-  <p>Paragraph 2 in the div.</p>
-</div>
-<p>Paragraph 3. Not in a div.</p> // only this will change
-<p>Paragraph 4. Not in a div.</p>
-
-// More
-div + div > p {...;}
-<div>
-  <p>Paragraph 1 in the div.</p>
-</div>
-<div>
-  <p>Paragraph 2. Not in a div.</p> // only this will change
-</div>
-```
-General Sibling Selector: have the same parent, following
-```
-div ~ p {...,}
-<p>Paragraph 1. Not in a div.</p>
-<div>
-  <p>Paragraph 2 in the div.</p>
-</div>
-<p>Paragraph 3. Not in a div.</p>
-<p>Paragraph 4. Not in a div.</p>
-```
-
-Select all elements  
-```
-* {font-family: "Arial Black", sans-serif;}
-```
-Select all elements with a tag  
-```
-div * {font-family:"Comic Sans MS, cursive;}
-```
-Select all elements with attribute "alt" whose value is "value"  
-```
-*[alt~="value"] {...;}
-```
-Select all elements with the class "testclass"
-```
-.testclass {...;}
-```
-Select all elements with the id "testid"
-```
-#testid {...;}
-```
-
-Select elements with certain tag that has the class: <p class="testclass">
-```
-p.testclass {...;}
-```
-
-Select elements with a certain tag that has the id <p id="testid">
-```
-p#testid{...;}
-```
-
-Select elements with a certain tag that has an attribute, including html elements, class, id
-```
-// elements with this attribute
-p[attribute]{...;}            
-
-// elements with a certain value
-p[attribute="value"]{...;}
-
-// elements that contain a certain value
-p[attribute~="value"]{...;}     // only separate words, "value x" is ok, but ""value-x" and "values" will not work 
-p[attribute*="value"]{...;}     // any place
-
-// elements that start with a certain value
-p[attribute|="value"]{...;}    // only single word or with "-", "value" and "value-x", not "value x"
-p[attribute^="value"]{...;}    // any place
-
-// elements that end with a certain value, no rules, "-value", "_value", "xvalue" will all be ok
-p[attribute$="value"]{...;}  
-```
-
-Example:  
-```
-input[type="text"] {
-    width: 150px;
-    display: block;
-    margin-bottom: 10px;
-    background-color: yellow;
-}
-
-Firstname:<input type="text" name="Name" value="Peter" size="20">
+<span style="cursor:help">help</span><br>
 ```
 
 
-
-Select the children elements whose parent element's parent element has an id of "testid"
-#testid ol li {...;}
-#testid ul li {...;}
-```
-<div id="testid">
-<ol>
-  <li>ElementOne</li>
-</ol>
-<ul>
-  <li>ElementTwo</li>
-</ul>
-</div>
-```
-
-##Pseudo-class
-Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.asp  
-#####Links
-```
-// unvisited link
-a:link {color: red;}
-
-// visited link
-a:visited {color: green;}
-
-// mouse over link
-a:hover {color: hotpink;}
-
-// Selected link: the moment you click it
-a:active {color: blue;}
-
-text-decoration: none;
-background-color:red;
-```
-1. a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective;  
-2. a:active MUST come after a:hover in the CSS definition in order to be effective; 
-
-#####hover: to change a child, hover on div will change its child p
-```
-p {display: none;}
-
-div:hover p {display: block;}
-
-<div>
-  <p>Tada! Here I am!</p> // will be displayed
-</div>
-<p>Tada! Here I am!</p>   // will not be displayed
-```
-```
-div:hover .test{background:blue;}
-.test {background:yellow;}
-
-<div>
-  <p class="test">Tada! Here I am!</p> // will change color
-</div>
-<p class="test">Tada! Here I am!</p>   // will not change color
-```
-#####first-child: matches a specified element that is the first child of another element
-```
-p:first-child {color: blue;}
-
-<p>This is some text.</p>   // will change
-<p>This is some text.</p>
-<div>
-  <p>This is some text.</p> // will change
-  <p>This is some text.</p>
-</div>
-
-// More
-p:first-child i {color: blue;}
-
-<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p> // both <i> will change
-<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
-```
-
-#####p:lang(anything): define special rules for different language  
-```
-q:lang(en) {
-  quotes:"prefix "" postfix";
-  background:lightblue;
-}
-
-q:lang(cn) {
-  quotes:"1""2";
-  background:pink;
-}
-
-<p>Some text <q lang="en">English</q> Some text.</p>
-<p>Some text <q lang="cn">Chinese</q> Some text.</p>
-```
-
-#####focus: take actions when the element gains focus   
-```
-input:focus {background-color: yellow;}
-```
-
-## Pseudo elements  
-All references: http://www.w3schools.com/css/css_pseudo_elements.asp  
-  
-1. p::after:	Insert content after every p element  
-2. p::before:	Insert content before every p element  
-3. p::first-letter:	Selects the first letter of every p element  
-4. p::first-line:	Selects the first line of every p element  
-5. p::selection:	Selects the portion of an element that is selected by a user  
-
-## Opacity  
-Can be used on many element, not only image  
-```
-// ways to apply opacity
-img {
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
-    background: rgba(76, 175, 80, 0.3) /* Green background with 30% opacity */
-}
-```
-
-##Positioning  
+## Positioning  
 1. Position to right: left:100%;
 2. Hardcode position: If you increase its padding, also increase the value of the top property to ensure that it stays in the middle
 ```
