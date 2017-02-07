@@ -457,27 +457,32 @@ https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/
 
 
 ## Text  
-```
-text-align: justify;        // makes words spread and have the same width in each line
-// center, left, right  
+1. text-align: justify; makes words spread and have the same width in each line. Also with: center/left/right;
+2. text-decoration: none; removes hyper link underline. Also with: overline/line-through/underline  
+3. text-transform: uppercase/lowercase/capitalize;
+4. text-indent: 50px;
+5. letter-spacing: 3px; specifies space between characters in text;
+6. word-spacing: 10px;  specifies space between words in text;
+7. direction:rtl; changes text direction for some languages; 
+8. text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; (horizental, vertical, blur, color); 
 
-text-decoration: none        // removes hyper link underline
-// overline, line-through, underline  
+9. column-count: 3; number of columns in this text window;  
+  column-gap: 1em; distances between columns;   
 
-text-transform: uppercase    // specifies upper or lower case 
-// uppercase, lowercase, capitalize  
-
-text-indent: 50px;
-letter-spacing: 3px;       // specifies space between characters in text
-word-spacing: 10px;        // specifies space between words in text
 line-height: 2;            // specifies space between lines
-direction:rtl;             // changes text direction  
-white-space: nonrap;        // specifies how white-space inside an element is handled. No new lines  
 vertical-align
 unicode-bidi
-text-shadow: text-shadow:1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;  // multiple: horizental, vertical, blur, color
-```
-1. For <**div**>, use: box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 white;  
+
+
+
+## Font
+1. Start with the font you want, and end with a generic family
+2. If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman"
+3. "italic" is a special version of font, whereas "oblique" just inclines the font a bit. Since not all fonts have italic version, we use "oblique" to make the font italic when italic version is absent
+4. If font-size is not specified, the default size is 16px, which is also the default of 1em
+5. 1em is equal to the font size of the parent element
+6. Google fonts
+
 ```
 font-style: italic       // normal, italic, obelique 
 font-size                // length, em, %
@@ -489,13 +494,6 @@ font-family: "Times New Roman", Times, serif;\\
 font:italic bold small-caps 12px/30px Georgia, serif; // style, weight, variant, font-size/line space, font-family
 
 ```
-## Font
-1. Start with the font you want, and end with a generic family
-2. If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman"
-3. "italic" is a special version of font, whereas "oblique" just inclines the font a bit. Since not all fonts have italic version, we use "oblique" to make the font italic when italic version is absent
-4. If font-size is not specified, the default size is 16px, which is also the default of 1em
-5. 1em is equal to the font size of the parent element
-6. Google fonts
 
 ## List  
 ```
