@@ -354,7 +354,7 @@ length
 1. position:static; default value. Not affected by top/bottom/left/right properties;  
 2. position:relative; make elements relative to their regular position in the flow (through top/bottom/left/right), the rest of the contents will not be affected;
 3. position:fixed; the elements will always be in the same position of the page (fixed navbar); 
-4. position:absolute; similar to fix, but the element position is fixed to the closest ancestor that is relative/absolute/fixed(everything except static?). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
+4. position:absolute; similar to fix, but the element position is fixed to the closest ancestor that is positioned (any kind except static). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
 
   
 ##### Overlapping: an overlapping element has to be positioned(except static). An element with greater stack order is always in front of an element with a lower stack order. If two elements have the same stack, the one declared later will be displayed on the top;  
