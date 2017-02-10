@@ -435,7 +435,7 @@ Move the element out of the normal flow (into a new flow)
 	
 3. display:inline-block; ~= float + clear (http://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block);  
 
-**Example 1** Before/After clear is in effect:  
+**Example 1** Before/After clear is in effect [(codepen)](http://codepen.io/PhoenixPan/pen/xgQEzx):  
 
 Before:  Two elements both located according to the upper-left cornor of their parents:  
 
