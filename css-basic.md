@@ -356,14 +356,15 @@ Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins
 	```
 
 3. For adjacent siblings: The margins of adjacent siblings are collapsed unless cleared;
-4. For parent and first/last child: The margin-top/bottom of a block from the margin-top/nottom of its first child block collapse if there is no border, padding, inline content, block_formatting_context created or clearance to separate . The collapsed margin ends up **outside the parent**;
+4. For parent and first/last child: The margin-top/bottom of a block from the margin-top/nottom of its first child block collapse if there is no border, padding, inline content, block_formatting_context created or clearance on parent (something solid between the parent and the child). The collapsed margin ends up **outside the parent**;
 5. For empty blocks: If there is no border, padding, inline content, height, or min-height to separate a block's margin-top from its margin-bottom, then its top and bottom margins collapse;
 6. For negative margins: The margin is the sum of the largest positive margin and the smallest (most negative) negative margin;
-
-
+7. Use single-direction margin to avoid dealing with margin collapsing: https://csswizardry.com/2012/06/single-direction-margin-declarations/  
+  
+  
 **Example 1:** Both top and bottom margins of the only child are collapsed into parent's, the value equals to whichever is larger. At the same time, the collapsed bottom margin outside container collapses with the top margin of outsider's top margin.    
 
-![mc1](https://cloud.githubusercontent.com/assets/14355257/22817430/36a26c80-efb7-11e6-8e26-64b524b68868.png)  
+![mc1](https://cloud.githubusercontent.com/assets/14355257/22817430/36a26c80-efb7-11e6-8e26-64b524b68868.png)   
 
 	```
 	#container {
@@ -386,9 +387,9 @@ Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins
 	}
 	```
 
-**Example 2:** Multiple empty element will collapse and overlap with each other based on the same top line.   
+**Example 2:** Multiple empty element will collapse and overlap with each other based on the same top line.    
 
-![sm](https://cloud.githubusercontent.com/assets/14355257/22817900/f9e47024-efb9-11e6-9d34-86d5522aafa8.png)  
+![sm](https://cloud.githubusercontent.com/assets/14355257/22817900/f9e47024-efb9-11e6-9d34-86d5522aafa8.png)   
 
 	```
 	#outsider-large {
