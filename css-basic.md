@@ -325,6 +325,7 @@ Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.a
 
 
 ## Margin 
+1. Margin backgrounds are always transparent;  
 
 ```
 margin:50px 25px 50px; /*top, left and right, bottom*/
@@ -633,6 +634,23 @@ tr:nth-child(odd) {background-color: white}
 //... table content ...
 </table>
 </div>
+```
+
+## Filter
+Nice to have it for some special effects.  
+
+```
+filter: url("filters.svg#filter-id");
+filter: blur(5px);
+filter: brightness(0.4);
+filter: contrast(200%);
+filter: drop-shadow(16px 16px 20px blue);
+filter: grayscale(50%);
+filter: hue-rotate(90deg);
+filter: invert(75%);
+filter: opacity(25%);
+filter: saturate(30%);
+filter: sepia(60%);
 ```
 
 ## Other properties
