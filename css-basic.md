@@ -298,7 +298,7 @@ Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.a
 		<p>Some text <q lang="cn">Chinese</q> Some text.</p>
 	```
 
-# Box model: Positioning of CSS
+# Normal Flow: Block formatting contexts
 
 ![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)    
 
@@ -332,7 +332,6 @@ margin:auto;           /*make it center, for image, also make it a block element
 margin: 50%;           /* % of parent element*/
 ```
 
-
 ### Margin collapsing  
 Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins   
 
@@ -362,7 +361,7 @@ Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins
 7. Use single-direction margin to avoid dealing with margin collapsing: https://csswizardry.com/2012/06/single-direction-margin-declarations/  
   
   
-**Example 1:** Both top and bottom margins of the only child are collapsed into parent's, the value equals to whichever is larger. At the same time, the collapsed bottom margin outside container collapses with the top margin of outsider's top margin.    
+**Example 1** Both top and bottom margins of the only child are collapsed into parent's, the value equals to whichever is larger. At the same time, the collapsed bottom margin outside container collapses with the top margin of outsider's top margin.    
 
 ![mc1](https://cloud.githubusercontent.com/assets/14355257/22817430/36a26c80-efb7-11e6-8e26-64b524b68868.png)   
 
@@ -387,7 +386,7 @@ Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins
 	}
 	```
 
-**Example 2:** Multiple empty element will collapse and overlap with each other based on the same top line.    
+**Example 2** Multiple empty element will collapse and overlap with each other based on the same top line.    
 
 ![sm](https://cloud.githubusercontent.com/assets/14355257/22817900/f9e47024-efb9-11e6-9d34-86d5522aafa8.png)   
 
@@ -421,8 +420,10 @@ padding:50px 25px 50px;       // top, left and right, bottom
 4. position:absolute; similar to fix, but the element position is fixed to the closest ancestor that is positioned (any kind except static). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
 
 ## Float  
+Move the element out of the normal flow (into a new flow)
 
-1. clear: left; specify a clear property for the element after the floating boxes to offset float;  
+### Clear 
+1. clear: requires (the top border edge of the) box to be below (the bottom outer edge of) any left/right/both-floating elements **earlier** in the source document.
 2. clearfix for image overflow. "overflow:auto" extend the border to include all contents. Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_layout_clearfix   
 
 	```
@@ -434,7 +435,46 @@ padding:50px 25px 50px;       // top, left and right, bottom
 	
 3. display:inline-block; ~= float + clear (http://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block);  
 
-##### Relationships among float, diaplay, position:  
+**Example 1** Before/After clear is in effect:  
+
+Before:  Two elements both located according to the upper-left cornor of their parents:  
+
+![beforeclear](https://cloud.githubusercontent.com/assets/14355257/22825928/ac02b408-efdf-11e6-963b-4d48e92ee142.png)   
+
+After:  The element with clear property moved below the floating element as expected. Notice, margin collapsing occured here.  
+
+![afterclear](https://cloud.githubusercontent.com/assets/14355257/22825929/acec753e-efdf-11e6-9d19-23887ab351ab.png)  
+  
+
+	```
+ 	<div id="container">
+ 		<p class="floated">floated</p>
+ 		<p class="cleared">cleared</p>
+ 	</div>
+	```
+	```
+	#container {
+	background-color: gold;
+	width: 500px;
+	margin: 100px 0;
+	}
+
+	.cleared {
+		background-color: pink;
+		margin: 50px 0;
+		/*clear: left;*/
+	}
+
+	.floated {
+		background-color: yellow;
+		margin: 50px 0;
+		float:left;
+	}
+	```
+
+
+
+## Relationships among float, diaplay, position:  
 1. If "display" is "none", both "float" and "position" do not apply; 
 2. If "display" is not "none":
   1.
