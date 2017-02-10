@@ -338,7 +338,7 @@ Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins
 1. Horizontal margins never collapse;
 2. Floating and absolutely positioned elements never collapse;  
 
-	![ab](https://cloud.githubusercontent.com/assets/14355257/22824643/a5a60fda-efd8-11e6-99f4-fc6b68468e70.png)  
+	![ab](https://cloud.githubusercontent.com/assets/14355257/22824643/a5a60fda-efd8-11e6-99f4-fc6b68468e70.png)
 
 	```
 	.floated {
@@ -363,7 +363,7 @@ Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins
   
 **Example 1** Both top and bottom margins of the only child are collapsed into parent's, the value equals to whichever is larger. At the same time, the collapsed bottom margin outside container collapses with the top margin of outsider's top margin.    
 
-![mc1](https://cloud.githubusercontent.com/assets/14355257/22817430/36a26c80-efb7-11e6-8e26-64b524b68868.png)   
+![mc1](https://cloud.githubusercontent.com/assets/14355257/22817430/36a26c80-efb7-11e6-8e26-64b524b68868.png)
 
 	```
 	#container {
@@ -388,7 +388,7 @@ Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins
 
 **Example 2** Multiple empty element will collapse and overlap with each other based on the same top line.    
 
-![sm](https://cloud.githubusercontent.com/assets/14355257/22817900/f9e47024-efb9-11e6-9d34-86d5522aafa8.png)   
+![sm](https://cloud.githubusercontent.com/assets/14355257/22817900/f9e47024-efb9-11e6-9d34-86d5522aafa8.png)
 
 	```
 	#outsider-large {
@@ -424,7 +424,7 @@ Move the element out of the normal flow (into a new flow)
 
 ### Clear 
 1. clear: requires (the top border edge of the) box to be below (the bottom outer edge of) any left/right/both-floating elements **earlier** in the source document.
-2. clearfix for image overflow. "overflow:auto" extend the border to include all contents. Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_layout_clearfix   
+2. clearfix for image overflow. "overflow:auto" extend the border to include all contents. Example: http://www.w3schools.com/css/tryit.asp?filename=trycss_layout_clearfix
 
 	```
 	.clearfix {
@@ -439,12 +439,11 @@ Move the element out of the normal flow (into a new flow)
 
 Before:  Two elements both located according to the upper-left cornor of their parents:  
 
-![beforeclear](https://cloud.githubusercontent.com/assets/14355257/22825928/ac02b408-efdf-11e6-963b-4d48e92ee142.png)   
+![beforeclear](https://cloud.githubusercontent.com/assets/14355257/22825928/ac02b408-efdf-11e6-963b-4d48e92ee142.png)
 
 After:  The element with clear property moved below the floating element as expected. Notice, margin collapsing occured here.  
 
-![afterclear](https://cloud.githubusercontent.com/assets/14355257/22825929/acec753e-efdf-11e6-9d19-23887ab351ab.png)  
-  
+![afterclear](https://cloud.githubusercontent.com/assets/14355257/22825929/acec753e-efdf-11e6-9d19-23887ab351ab.png)
 
 	```
  	<div id="container">
