@@ -326,24 +326,42 @@ Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.a
 
 ## Margin 
 
-
 ```
 margin:50px 25px 50px; /*top, left and right, bottom*/
 margin:auto;           /*make it center, for image, also make it a block element*/
 margin: 50%;           /* % of parent element*/
 ```
 
+
 ### Margin collapsing  
-Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins  
+Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins   
 
 1. Horizontal margins never collapse;
-2. Floating and absolutely positioned elements never collapse;
+2. Floating and absolutely positioned elements never collapse;  
+
+	![ab](https://cloud.githubusercontent.com/assets/14355257/22824643/a5a60fda-efd8-11e6-99f4-fc6b68468e70.png)  
+
+	```
+	.floated {
+	background-color: yellow;
+	margin: 50px 0;
+	float:left;
+	}
+
+	.absolute {
+		background-color: pink;
+		margin: 100px 0;
+		position: absolute;
+	}
+	```
+
 3. For adjacent siblings: The margins of adjacent siblings are collapsed unless cleared;
 4. For parent and first/last child: The margin-top/bottom of a block from the margin-top/nottom of its first child block collapse if there is no border, padding, inline content, block_formatting_context created or clearance to separate . The collapsed margin ends up **outside the parent**;
 5. For empty blocks: If there is no border, padding, inline content, height, or min-height to separate a block's margin-top from its margin-bottom, then its top and bottom margins collapse;
 6. For negative margins: The margin is the sum of the largest positive margin and the smallest (most negative) negative margin;
 
-**Example 1: ** Both top and bottom margins of the only child are collapsed into parent's, the value equals to whichever is larger. At the same time, the collapsed bottom margin outside container collapses with the top margin of outsider's top margin.    
+
+**Example 1:** Both top and bottom margins of the only child are collapsed into parent's, the value equals to whichever is larger. At the same time, the collapsed bottom margin outside container collapses with the top margin of outsider's top margin.    
 
 ![mc1](https://cloud.githubusercontent.com/assets/14355257/22817430/36a26c80-efb7-11e6-8e26-64b524b68868.png)  
 
@@ -368,7 +386,7 @@ Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins
 	}
 	```
 
-** Example 2:** Multiple empty element will collapse and overlap with each other based on the same top line.   
+**Example 2:** Multiple empty element will collapse and overlap with each other based on the same top line.   
 
 ![sm](https://cloud.githubusercontent.com/assets/14355257/22817900/f9e47024-efb9-11e6-9d34-86d5522aafa8.png)  
 
