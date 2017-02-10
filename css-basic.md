@@ -343,6 +343,8 @@ Top and bottom margins of blocks are sometimes collapsed into a single margin wh
 
 Example 1: Both top and bottom margins of the only child are collapsed into parent's, the value equals to whichever is larger. At the same time, the collapsed bottom margin outside container collapses with the top margin of outsider's top margin.   
 
+![mc1](https://cloud.githubusercontent.com/assets/14355257/22817430/36a26c80-efb7-11e6-8e26-64b524b68868.png)  
+
 	```
 	#container {
 		background-color: gold;
