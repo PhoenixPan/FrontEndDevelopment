@@ -489,7 +489,6 @@ https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/css-lay
 3. padding: 8px; Since block elements take up the full width available, they cannot float next to each other. Therefore, specify some padding to make them look good  
 4. overflow:hidden is added to the ul element to prevent li elements from going outside of the list.  
 
-
 ## Overflow  
 ```
 overflow: visiable;   // default, won't clip, let the content leaks out
@@ -548,7 +547,6 @@ img {
 ```
 ##### @media @viewpoint
 https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/
-
 
 ## Text  
 1. text-align: justify; makes words spread and have the same width in each line. Also with: center/left/right;
@@ -634,6 +632,18 @@ tr:nth-child(odd) {background-color: white}
 //... table content ...
 </table>
 </div>
+```
+
+## Variables
+
+```
+:root {
+  --mycolor: #000000;
+}
+
+p {
+  background-color: var(--mycolor);
+}
 ```
 
 ## Filter
