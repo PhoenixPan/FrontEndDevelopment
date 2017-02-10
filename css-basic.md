@@ -333,15 +333,16 @@ margin:auto;           /*make it center, for image, also make it a block element
 margin: 50%;           /* % of parent element*/
 ```
 
-##### Margin collapsing
-Top and bottom margins of blocks are sometimes collapsed into a single margin whose size is the largest of the margins combined into it. Left and right margin won't collapse. 
+##### Margin collapsi
+Top and bottom margins of blocks are sometimes collapsed into a single margin whose size is the largest of the margins combined into it. Left and right margin won't collapse.   
+
 1. Never collapsed for floating and absolutely positioned elements;
 2. For adjacent siblings: The margins of adjacent siblings are collapsed unless cleared;
 3. For parent and first/last child: The margin-top/bottom of a block from the margin-top/nottom of its first child block collapse if there is no border, padding, inline content, block_formatting_context created or clearance to separate . The collapsed margin ends up **outside the parent**;
 4. For empty blocks: If there is no border, padding, inline content, height, or min-height to separate a block's margin-top from its margin-bottom, then its top and bottom margins collapse;
 5. For negative margins: The margin is the sum of the largest positive margin and the smallest (most negative) negative margin;
 
-Example 1: Both top and bottom margins of the only child are collapsed into parent's, the value equals to whichever is larger. At the same time, the collapsed bottom margin outside container collapses with the top margin of outsider's top margin.   
+**Example 1: **Both top and bottom margins of the only child are collapsed into parent's, the value equals to whichever is larger. At the same time, the collapsed bottom margin outside container collapses with the top margin of outsider's top margin.    
 
 ![mc1](https://cloud.githubusercontent.com/assets/14355257/22817430/36a26c80-efb7-11e6-8e26-64b524b68868.png)  
 
