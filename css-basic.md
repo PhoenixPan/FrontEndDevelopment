@@ -324,23 +324,20 @@ Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.a
 5. Every element is a box!
 
 
-## Margin
-1. Top and bottom margins sometimes collapse into one single margin, which is the larger value of the two.  
-2. Left and right margin won't collapse.   
-3. margin:auto: make it center, for image, also make it a block element.  
+## Margin 
+
+
+
+##### Margin collapsing
+Top and bottom margins of blocks are sometimes collapsed into a single margin whose size is the largest of the margins combined into it. Left and right margin won't collapse.   
+
 
 ```
-// Prefix
-margin:50px 25px 50px 25px;  // top, right, bottom, left
-margin:50px 25px 50px;       // top, left and right, bottom
-margin:50px 25px;            // top and bottom, left and right
-
-// Postfix
-auto    // margin:auto; align center
-length: px, pt, cm, etc.
-%       // % of parent element 
-inherit: inherit from the parent
+margin:50px 25px 50px; /*top, left and right, bottom*/
+margin:auto;           /*make it center, for image, also make it a block element*/
+margin: 50%;           /* % of parent element*/
 ```
+
 
 ## Padding
 1. Most elements do not havea default padding, so use a lot of "padding:0" will increase unnecessary burden for loading pages; 
