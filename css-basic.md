@@ -327,16 +327,20 @@ Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.a
 ## Margin 
 
 
-
-##### Margin collapsing
-Top and bottom margins of blocks are sometimes collapsed into a single margin whose size is the largest of the margins combined into it. Left and right margin won't collapse.   
-
-
 ```
 margin:50px 25px 50px; /*top, left and right, bottom*/
 margin:auto;           /*make it center, for image, also make it a block element*/
 margin: 50%;           /* % of parent element*/
 ```
+
+##### Margin collapsing
+Top and bottom margins of blocks are sometimes collapsed into a single margin whose size is the largest of the margins combined into it. Left and right margin won't collapse. 
+1. Never collapsed for floating and absolutely positioned elements;
+2. For adjacent siblings: The margins of adjacent siblings are collapsed unless cleared;
+3. For parent and first/last child: The margin-top/bottom of a block from the margin-top/nottom of its first child block collapse if there is no border, padding, inline content, block_formatting_context created or clearance to separate . The collapsed margin ends up **outside the parent**;
+4. For empty blocks: If there is no border, padding, inline content, height, or min-height to separate a block's margin-top from its margin-bottom, then its top and bottom margins collapse;
+5. For negative margins: The margin is the sum of the largest positive margin and the smallest (most negative) negative margin;
+
 
 
 ## Padding
