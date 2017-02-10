@@ -341,37 +341,37 @@ Top and bottom margins of blocks are sometimes collapsed into a single margin wh
 4. For empty blocks: If there is no border, padding, inline content, height, or min-height to separate a block's margin-top from its margin-bottom, then its top and bottom margins collapse;
 5. For negative margins: The margin is the sum of the largest positive margin and the smallest (most negative) negative margin;
 
+Example 1: Both top and bottom margins of the only child are collapsed into parent's, the value equals to whichever is larger. At the same time, the collapsed bottom margin outside container collapses with the top margin of outsider's top margin.   
+
+	```
+	#container {
+		background-color: gold;
+		height: 50px;
+		width: 500px;
+		margin: 30px 0;
+	}
+
+	#child {
+		background-color: red;
+		height:50px;
+		width:50px;
+		margin:50px 0;
+	}
+
+	#outsider {
+		background-color: pink;
+		margin: 50px 0;
+	}
+	```
+
 
 
 ## Padding
 1. Most elements do not havea default padding, so use a lot of "padding:0" will increase unnecessary burden for loading pages; 
 ```
-// Prefix
-padding:50px 25px 50px 25px;  // top, right, bottom, left
 padding:50px 25px 50px;       // top, left and right, bottom
-padding:50px 25px;            // top and bottom, left and right
-
-// Postfix
-length
-%
-inherit
 ```
 
-## Height / Width (only the content area)
-```
-// Prefix
-height
-max-height
-min-height
-width       // when the screen becomes small, the view will not shrink to multiple lines to ensure readability
-max-width   // unlike with width, it will shrink like default setting
-min-width
-
-// Postfix
-auto
-length
-%
-```
 
 ## Display  
 1. display:block;  A block-level element always starts on a new line and takes up the full width available;  
