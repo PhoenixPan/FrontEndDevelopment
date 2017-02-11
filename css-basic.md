@@ -690,23 +690,27 @@ For timing function, we have:
 
 ### Transform
 
+1. transform: translate(10px, 10px)/translateX(10px)/translateY(10px) - change the position of this element; 
+2. transform: scale(10px, 10px)/scaleX(10px)/scaleY(10px) - enlarge or shrink the element;
+3. transform: rotate(90deg)/rotateX(90deg)/rotateY(90deg)/rotateZ(90deg) - rotate the element;
 
+**Example 1** Transition and transform can be performed at the same time:
 
-```
-div {
-    width: 100px;
-    height: 100px;
-    background: red;
-    transition: width 2s, height 2s, transform 2s;
-}
+	```
+	div {
+	    width: 100px;
+	    height: 100px;
+	    background: red;
+	    transition: width 2s, height 2s, transform 2s;
+	}
 
-div:hover {
-    width: 300px;
-    height: 300px;
-    transform: rotate(180deg);
-}
-```
-	
+	div:hover {
+	    width: 300px;
+	    height: 300px;
+	    transform: rotate(180deg);
+	}
+	```
+
 
 ## Other properties
 ##### Cursor: Change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
