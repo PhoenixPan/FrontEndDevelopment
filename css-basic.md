@@ -663,6 +663,32 @@ filter: saturate(30%);
 filter: sepia(60%);
 ```
 
+## Transition & Transform
+
+### Transition
+Transitions provide a way to control animation speed when changing CSS properties.  
+Check all animatable properties: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties  
+
+```
+/*shorthand*/
+transition: property1 duration1 timing-function1 delay1, property2 duration2 timing-function2 delay2; 
+
+/*complete*/
+transition-property: 
+transition-duration: 
+transition-timing-function: 
+transition-delay: 
+```
+
+For timing function, we have:  
+	ease - slow start, then fast, then end slowly (this is default)  
+	linear - the same speed from start to end  
+	ease-in - slow start  
+	ease-out - slow end  
+	ease-in-out - slow start and end  
+	cubic-bezier(n,n,n,n) - cubic-bezier function. Can be used to achieve bounce effects  
+	
+
 ## Other properties
 ##### Cursor: Change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
 ```
