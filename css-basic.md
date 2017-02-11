@@ -681,12 +681,31 @@ transition-delay:
 ```
 
 For timing function, we have:  
-	ease - slow start, then fast, then end slowly (this is default)  
-	linear - the same speed from start to end  
-	ease-in - slow start  
-	ease-out - slow end  
-	ease-in-out - slow start and end  
-	cubic-bezier(n,n,n,n) - cubic-bezier function. Can be used to achieve bounce effects  
+1. ease - slow start, then fast, then end slowly (this is default)  
+2. linear - the same speed from start to end  
+3. ease-in - slow start  
+4. ease-out - slow end  
+5. ease-in-out - slow start and end  
+6. cubic-bezier(n,n,n,n) - cubic-bezier function. Can be used to achieve bounce effects
+
+### Transform
+
+
+
+```
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+div:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+}
+```
 	
 
 ## Other properties
