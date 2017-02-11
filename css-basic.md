@@ -693,8 +693,13 @@ For timing function, we have:
 1. transform: translate(10px, 10px)/translateX(10px)/translateY(10px) - change the position of this element; 
 2. transform: scale(10px, 10px)/scaleX(10px)/scaleY(10px) - enlarge or shrink the element;
 3. transform: rotate(90deg)/rotateX(90deg)/rotateY(90deg)/rotateZ(90deg) - rotate the element;
+4. Perform multiple transform in one line
 
-**Example 1** Transition and transform can be performed at the same time:
+	```
+	transform: translate(100px) rotate(20deg);
+	```
+
+Transition and transform can be performed at the same time on animatable elements:
 
 	```
 	div {
