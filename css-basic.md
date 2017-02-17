@@ -452,6 +452,7 @@ After:  The element with clear property moved below the floating element as expe
  		<p class="cleared">cleared</p>
  	</div>
 	```
+	
 	```
 	#container {
 	background-color: gold;
@@ -490,6 +491,7 @@ https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/css-lay
 4. overflow:hidden is added to the ul element to prevent li elements from going outside of the list.  
 
 ## Overflow  
+
 ```
 overflow: visiable;   // default, won't clip, let the content leaks out
 overflow: hidden;     // hide additional content(no scroll bar)
@@ -505,10 +507,13 @@ Check whether the information about flex is obsolete: https://css-tricks.com/old
 
 ## Align  
 To center an element or image  
+
 ```
 margin:auto;
 ```
+
 Left or right align using position or float. When aligning elements with position and float, always define margin and padding for the `<body>` element. This is to avoid visual differences in different browsers. Absolute positioned elements are removed from the normal flow, and can overlap elements, whereas float cannot;  
+
 ```
 body {
     margin: 0;
@@ -524,10 +529,12 @@ body {
     float: right;
 }
 ```
+
 To center vertically, use padding:  
 or setting line-height equal to height: http://www.w3schools.com/css/tryit.asp?filename=trycss_align_line-height
 or using transform: http://www.w3schools.com/css/tryit.asp?filename=trycss_align_transform
 ```
+
 .center {
     padding: 10px 0;
     border: 3px solid green;
