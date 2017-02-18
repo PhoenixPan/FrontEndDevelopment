@@ -87,3 +87,6 @@ In line: a button with "like" icon
 1. .form-group: Wrap labels and controls in .form-group (in div) for an automatic spacing optimization
 2. .form-control: All textual <**input**>, <**textarea**>, and <**select**> elements with .form-control are set to width: 100%; by default. If removed, elements will become browser default design (no corners, spacing, padding, etc.)
 3. <**form class="form-inline"**>: makes this form in line
+
+### navbar
+The hight of navbar is by default decided by the elements inside. For instance, if elements have large top/bottom margin/padding, the navbar will adjust itself to include the elements.  
