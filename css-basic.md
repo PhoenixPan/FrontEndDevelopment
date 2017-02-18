@@ -424,12 +424,14 @@ padding:50px 25px 50px;       // top, left and right, bottom
 z-index property specifies the z-order of a positioned element and its descendants. When elements overlap, an element with larger z-index covers an element with lower one.
 
 ```
+/*Text will cover image*/
+
 #header-image {
   position: absolute;
   z-index: 0;
 }
 
-#personal-div {
+#personal-text {
   position:relative;
   z-index: 1;
 }
