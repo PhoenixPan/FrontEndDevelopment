@@ -8,6 +8,11 @@
 5. Compress each CSS item in one line for easier read and search (optional);
 
 ## New things learned
+1. Remove default button effects when clicked
+
+  ```
+  button:focus {outline:0;}
+  ```
 
 2. Why the height of this element doesn't extend until we add inline-block?
 
