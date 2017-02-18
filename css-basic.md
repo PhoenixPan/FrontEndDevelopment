@@ -420,6 +420,21 @@ padding:50px 25px 50px;       // top, left and right, bottom
 3. position:fixed; the elements will always be in the same position of the page (fixed navbar); 
 4. position:absolute; similar to fix, but the element position is fixed to the closest ancestor that is positioned (any kind except static). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
 
+### z-index
+z-index property specifies the z-order of a positioned element and its descendants. When elements overlap, an element with larger z-index covers an element with lower one.
+
+```
+#header-image {
+  position: absolute;
+  z-index: 0;
+}
+
+#personal-div {
+  position:relative;
+  z-index: 1;
+}
+```
+
 ## Float  
 Move the element out of the normal flow (into a new flow)
 
