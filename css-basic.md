@@ -746,7 +746,9 @@ Transition and transform can be performed at the same time on animatable element
 	```
 	
 ## Units
-##### Difference between em and rem: em is based on the font size of the current element while rem is based on the font size of html element.  
+### Difference between em and rem
+em is based on the font size of the current element while rem is based on the font size of html element.  
+https://webdesign.tutsplus.com/zh-hans/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984  
 
 ## Other properties
 ##### Cursor: Change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
