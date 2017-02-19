@@ -744,7 +744,9 @@ Transition and transform can be performed at the same time on animatable element
 	    transform: rotate(180deg);
 	}
 	```
-
+	
+## Units
+##### Difference between em and rem: em is based on the font size of the current element while rem is based on the font size of html element.  
 
 ## Other properties
 ##### Cursor: Change the cursor https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
