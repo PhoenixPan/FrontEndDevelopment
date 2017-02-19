@@ -1,10 +1,14 @@
 ## Center contents 
-### Horizontally 
+## Horizontally 
 1. margin: 0 auto;
 2. width: calc(100% - 100px);
 
-### Vertically
-
+## Vertically
+### Vertically align text in a div
+1. Text will be vertically centered in its line
+```
+  line-height: (height of the element);
+```
 
 ## Auto adjustment
 1. max-width/max-height: use them to avoid the appearance of the scroll bar;
