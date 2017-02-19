@@ -30,3 +30,14 @@
   outline:0;
 }
 ```
+
+#### Why 100vw cause x-axis overflow?
+Since browsers currently vertical scroll bar as part of the view. Add this to prevent such overflow:
+```
+  height:100vh;
+  width:100vw;
+  max-width: 100%;   /*Solution 1*/
+  overflow-x:hidden; /*Solution 2*/
+```
+
+However, if the element have no width-limit ancesters, simply use `width: 100%` to fit the window.
