@@ -14,3 +14,19 @@
 
 ## Others
 1. Want transparent background but not texts? use rgba() instead of opacity;  
+
+
+#### Remove hyperlink styles:
+```
+#move-down {
+  color: white;
+  text-decoration: none;
+}
+```
+
+#### Remove default button effects when pressed (that blue circle)
+```
+#move-down:focus {
+  outline:0;
+}
+```
