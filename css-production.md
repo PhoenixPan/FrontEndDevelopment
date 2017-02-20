@@ -11,6 +11,18 @@
 ### Block - Horizontally
 1. margin: 0 auto;
 2. width: calc(100% - 100px);
+3. text-align: center; - works after making inner element inline-block. However, inner element will inherit text-align:center, you may want to make it back to text-align:initial
+
+    ```
+    #outer {
+      width: 100%;
+      text-align: center;
+    }
+
+    #inner {
+      display: inline-block;
+    }
+    ```
 
 ### Block - Vertically
 1. equal padding on top and bottom;
@@ -19,7 +31,7 @@
 1. text-align: center;
 
 ### Text - Vertically
-1. line-height: (height of the element);
+1. line-height: (height of the element) - limitation: usually works for only one line
 
 
 
