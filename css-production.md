@@ -1,11 +1,26 @@
 ## Center contents 
-### For all
+### Very center
 1. position
 ```
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /*move the element accordingly*/
+```
+2. Set the distances of all four directions to 0
+```
+#outer {
+  position: relative;
+}
+
+#inner {
+  margin: auto;  
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+} 
 ```
 
 ### Block - Horizontally
