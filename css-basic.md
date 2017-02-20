@@ -95,27 +95,19 @@ There are multiple style sheets & override priority.
 
 
 ## Background Image
-There will be default margin between images, use float to remove them.  
-```
-body {
-  background-image: url("gradient_bg.png");
-    
-  /*Rules for repeating image*/
-  background-repeat: repeat; /*default*/
-  background-repeat: repeat-x;
-  background-repeat: repeat-y;
-  background-repeat: no-repeat;
-  
-  /*Stretch the image to fit the screen*/
-  background-size: cover;
-  
-  background-position: right top;
-  background-attachment: fixed; /*image will not move as you scroll*/
-  
-  /*Shorthand property in order: color, image, repeat, attachment, position*/
-  background: pink url("img_tree.png") no-repeat fixed right top; 
-}
-```
+1. There will be default margin between images, use float to remove them
+2. background-repeat: repeat(default)/repeat-x/repeat-y/no-repeat
+3. background-size: cover; - Stretch the image to fit the screen
+4. background-position: left/right top/bottom;
+
+  ```
+  background-position: center center;
+  background-position: 70% center; /*Image moves to left a by 30%*/
+  ```
+5. background-attachment: fixed; - Image will not move as you scroll
+6. background: pink url("img_tree.png") no-repeat fixed right top; - Shorthand in color, image, repeat, attachment, position
+
+
 
 ## Border 
 1. Mainly consists of three attributes: width, color, and style:  
