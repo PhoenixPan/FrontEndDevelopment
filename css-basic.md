@@ -521,7 +521,6 @@ Check whether the information about flex is obsolete: https://css-tricks.com/old
 
 ## Align  
 To center an element or image  
-
 ```
 margin:auto;
 ```
@@ -570,7 +569,7 @@ img {
 https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/
 
 ## Text  
-1. text-align: justify; makes words spread and have the same width in each line. Also with: center/left/right;
+1. text-align: justify; - describes how **inline content** like text (not only text, a div with display:inline-block will work) is aligned in its parent block element. 
 2. text-decoration: none; removes hyper link underline. Also with: overline/line-through/underline  
 3. text-transform: uppercase/lowercase/capitalize;
 4. text-indent: 50px;
