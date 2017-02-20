@@ -34,6 +34,12 @@ Meta: used in many services and serarch engine;
 3. `<tbody>`- table body
   `<td>` - table cell
 4. `<tfoot>` - table foot
+5. Use colspan and rowspan properties to merge cells
+
+  ```
+  /*This cell will take up three columns*/
+  <td colspan="3">Total</td>
+  ```
 
 ## `<a>`    
 target=    
