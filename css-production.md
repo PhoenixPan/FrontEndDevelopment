@@ -1,16 +1,27 @@
 ## Center contents 
-## Horizontally 
+### For all
+1. position
+```
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*move the element accordingly*/
+```
+
+### Block - Horizontally
 1. margin: 0 auto;
 2. width: calc(100% - 100px);
 
-## Vertically
+### Block - Vertically
+1. equal padding on top and bottom;
+
+### Text - Horizontally 
+1. text-align: center;
+
+### Text - Vertically
+1. line-height: (height of the element);
 
 
-### Text in `<div>`
-1. Text will be vertically centered in its line
-```
-  line-height: (height of the element);
-```
 
 ## Auto adjustment
 1. max-width/max-height: use them to avoid the appearance of the scroll bar;
