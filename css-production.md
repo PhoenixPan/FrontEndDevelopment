@@ -4,7 +4,9 @@
 2. width: calc(100% - 100px);
 
 ## Vertically
-### Vertically align text in a div
+
+
+### Text in `<div>`
 1. Text will be vertically centered in its line
 ```
   line-height: (height of the element);
