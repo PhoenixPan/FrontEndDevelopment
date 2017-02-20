@@ -241,7 +241,7 @@ For HTML documents, browsers use a DOCTYPE in the **beginning** of the document 
 ```
 XHTML does not require this line as everything will be in full standards mode.  
 #Charactistics  
-1. Format: spaces in source code will be reduced to one and in-text newline does not work either. Use one or more "<**br /**>". 
+1. Format: spaces in source code will be reduced to one and in-text newline does not work either. Use one or more `<br />`. 
 2. Conditional annotation  
 ```
 <!--[if IE 8]>
