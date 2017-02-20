@@ -6,6 +6,35 @@ All elements:
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element  
 http://www.w3school.com.cn/tags/index.asp  
 
+## `<head>` - Container of metadata
+Title: define the title in browser tag and in search engine;  
+Base: provides default link and target;  
+Link: links to outside resources, such as style;  
+Meta: used in many services and serarch engine;  
+```
+<head>
+  <title>Title of the document</title> 
+  <base href="http://www.w3school.com.cn/images/" />
+  <base target="_blank" />
+  <link rel="stylesheet" type="text/css" href="mystyle.css" />
+  <meta name="description" content="Free Web tutorials on HTML, CSS, XML" />
+  <meta name="author" content="w3school.com.cn">
+</head>
+```
+
+## `<list>`  
+1. Change labels: `<ol type="A">`;  
+2. Change marks: style="list-style-type:square";  
+
+## `<table>`
+1. `<caption>` - table title
+2. `<thead>`- table head
+  `<tr>` - table row
+  `<th>` - table heading
+3. `<tbody>`- table body
+  `<td>` - table cell
+4. `<tfoot>` - table foot
+
 ## `<a>`    
 target=    
 **_self** - default. Opens the linked document in the same frame as it was clicked;  
@@ -28,13 +57,13 @@ Another mailto link:
 </p>
 ```
 
-### Text  
+## Text  
 1. `<b>` and `<i>` are presentationl elements that convey no extra importance;  
-2. <**strong**> and <**em**> are phrase elements that strength SEO, while <**strong**> is stronger than <**em**>;  
-3. <**mark**> to highlight;  
-4. <**sub**> and <**sup**> to subscript or superscript;  
-5. <**blockquote**> to quote and cite;  
-6. <**bdo dir="rtl"**> to inverse a text;  
+2. `<strong>` and `<em>` are phrase elements that strength SEO, while `<strong>` is stronger than `<em>`;  
+3. `<mark>` to highlight;  
+4. `<sub>` and `<sup>` to subscript or superscript;  
+5. `<blockquote>` to quote and cite;  
+6. `<bdo dir="rtl">` to inverse a text;  
 7. Provide useful information for search engine or translation: abbrevation, cite, define  
 ```
 <p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
@@ -42,26 +71,20 @@ Another mailto link:
 <p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> was founded in 1948.</p>
 ```
 
-
-### Image  
-1. Use as background (gif and jpg only).   
-  
-	```
-	<body background="/i/eg_background.jpg">
-	```
-2. Use alt to display a text message when the picture is unavailable.  
+## `<image>`  
+1. Use alt to display a text message when the picture is unavailable.  
   
 	```
 	<img src="boat.gif" alt="This image is not available">
 	```
 
-3. Insert image in other elements and align it accordingly (bottom, middle, top).  
+2. Insert image in other elements and align it accordingly (bottom, middle, top).  
   
 	```
 	<p>Picture <img src="/i/eg_cute.gif" align="bottom"> in text.</p>
 	```
 
-4. Image map: http://www.w3school.com.cn/tiy/t.asp?f=html_areamap  
+3. Image map: http://www.w3school.com.cn/tiy/t.asp?f=html_areamap  
 
 	```
 	<img src="/i/eg_planets.jpg" usemap="#planetmap" />
@@ -75,41 +98,7 @@ Another mailto link:
 	</map>
 	```
 
-5. Use "background-size: cover;" to commend fill an image into the full html size. However since html size ends where lays the last element, the image have to repreat to take over the rest of the window space, which is not ususally want we want. Use these lines to let the html takes the entire window, so the image will cover the entire window, which works fine.   
-
-	```
-	html {
-		height: 100%;
-	}
-	```
-
-6. background-position: center;
-
-### Head - Container of metadata
-Title: define the title in browser tag and in search engine;  
-Base: provides default link and target;  
-Link: links to outside resources, such as style;  
-Meta: used in many services and serarch engine;  
-```
-<head>
-  <title>Title of the document</title> 
-  <base href="http://www.w3school.com.cn/images/" />
-  <base target="_blank" />
-  <link rel="stylesheet" type="text/css" href="mystyle.css" />
-  <meta name="description" content="Free Web tutorials on HTML, CSS, XML" />
-  <meta name="author" content="w3school.com.cn">
-</head>
-```
-
-### div and span  
-Ways of grouping things together. The scope of div is larger than span. div is a block-level element that will incur a new line.    
-```
-<div>
-<p><span style="color:red">some text.</span>some other text.</p>
-</div>
-```
-
-### Form
+## `<form>`
 form is a block-level element that will incur a new line.   
 1. Action: where the form send data to  
 2. Method: what HTTP method (get/post). If no action, goes to the same page which equals to refresh   
@@ -145,16 +134,15 @@ form is a block-level element that will incur a new line.
 </form>
 ```
 
-### Input
-1. type: text, radio, color, radio, email, etc.
+## `<input>`
+1. type: text, radio, color, radio, email, password, etc.
+
+  ```
+  <input type="password" pattern=".{5,10}" title="Password has to be 5 to 10 characters" required>
+  ```
 2. placeholder
 3. name/value: displayed in the url querying string
 4. required
-
-Password
-```
-<input type="password" pattern=".{5,10}" title="Password has to be 5 to 10 characters" required>
-```
 
 Other Examples
 ```
@@ -178,10 +166,10 @@ Other Examples
 	</form>
 ```
 
-### Select
+## `<select>`
 1. option
 
-```
+	```
 	<form>
 		<select name="color">
 			<option value="Yellow">Red</option>
@@ -190,9 +178,9 @@ Other Examples
 		</select>
 		<button>Go</button>
 	</form>
-```
+	```
 
-### pre - to maintain format
+## `<pre>` - to maintain format
 ```
 <p>
 <pre>
@@ -207,7 +195,7 @@ Other Examples
 </p>
 ```
 
-### Frameset  
+## `<frameset>`  
 Display multiple htmls in the same page.  
 ```
 <html>
@@ -224,37 +212,27 @@ Display multiple htmls in the same page.
 </html>
 ```
 
-### List  
-1. Change labels: <**ol type="A"**>;  
-2. Change marks: style="list-style-type:square";  
 
-### Table
-1. `<caption>` - table title
-2. `<thead>`- table head
-  `<tr>` - table row
-  `<th>` - table heading
-3. `<tbody>`- table body
-  `<td>` - table cell
-4. `<tfoot>` - table foot
-
-### Depreciated tags (replace with style):
+## Depreciated tags (replace with CSS):
 ```
 <center>
 <font> and <basefont> (style="font-family:verdana")
 <s> and <strike>	
 <u>
 ```
+http://www.w3school.com.cn/tags/html_ref_standardattributes.asp  
 
 # Named character references
-When you want to display a greater-than symbol in the text, you can use a named character reference. You should know these four common named character references:
+When you want to display a greater-than symbol in the text, you can use a named character reference. You should know these four common named character references:  
 
-&gt; denotes the greater-than sign (>)
-&lt; denotes the less-than sign (<)
-&amp; denotes the ampersand (&)
-&quot; denotes double quote (")
+%20 - space  
+&gt - denotes the greater-than sign (>)  
+&lt - denotes the less-than sign (<)  
+&amp - denotes the ampersand (&)  
+&quot - denotes double quote (")  
 
-http://w3c.github.io/html/syntax.html#named-character-references
-http://www.w3school.com.cn/tags/html_ref_entities.html 
+http://w3c.github.io/html/syntax.html#named-character-references  
+http://www.w3school.com.cn/tags/html_ref_entities.html  
 
 # Quirks Mode and Standards Mode
 For HTML documents, browsers use a DOCTYPE in the **beginning** of the document to decide whether to handle it in quirks mode or standards mode. For full standards mode, use:   
@@ -262,7 +240,6 @@ For HTML documents, browsers use a DOCTYPE in the **beginning** of the document 
 <!DOCTYPE html>
 ```
 XHTML does not require this line as everything will be in full standards mode.  
-
 #Charactistics  
 1. Format: spaces in source code will be reduced to one and in-text newline does not work either. Use one or more "<**br /**>". 
 2. Conditional annotation  
@@ -273,31 +250,4 @@ XHTML does not require this line as everything will be in full standards mode.
 ```
 
 
-# Attributes  
-1. alignment: style="text-align:center"  
-2. background: style="background-color:yellow"  
-3. quotation: use either " or '. Use ' when " is in text: name='Bill "HelloWorld" Gates'  
-4. placeholder: provides hint in text  
-5. size: the length of input area  
-Divide line:  
-```
-<p>Paragraph A</p>
-<hr />
-<p>Paragraph B</p>
-```
 
-Action:  
-```
-<form action="www.google.com">
-<input></input>
-</form>
-```
-
-##### Depreciated(replace with style):
-```
-align
-bgcolor
-color
-```
-
-http://www.w3school.com.cn/tags/html_ref_standardattributes.asp  
