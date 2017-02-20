@@ -6,29 +6,15 @@ All elements:
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element  
 http://www.w3school.com.cn/tags/index.asp  
 
-### Anchor (hyper link)    
-Target  
-**_self**: default. Opens the linked document in the same frame as it was clicked;  
-**_blank**: Opens the linked document in a new window or tag;  
-**_parent**: Opens the linked document in the parent frame;  
-**_top**: Opens the linked document in the full body of the window;  
-**_framename**: 	Opens the linked document in a named frame;  
+## `<a>`    
+target=    
+**_self** - default. Opens the linked document in the same frame as it was clicked;  
+**_blank** - Opens the linked document in a new window or tag;  
+**_parent** - Opens the linked document in the parent frame;  
+**_top** - Opens the linked document in the full body of the window;  
+**_framename** - Opens the linked document in a named frame;  
   
-Open links with the same target in the target window or the same window
-```
-<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
-<p><a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a></p> //Open in "iframe_a"
-
-// Open a new tag when clicked the first time, but uses the same page for more clicks  
-<h3>Table of Contents</h3>
-<ul>
-  <li><a href="/example/html/pref.html" target="view_window">Preface</a></li>
-  <li><a href="/example/html/chap1.html" target="view_window">Chapter 1</a></li>
-  <li><a href="/example/html/chap2.html" target="view_window">Chapter 2</a></li>
-  <li><a href="/example/html/chap3.html" target="view_window">Chapter 3</a></li>
-</ul>
-```
-
+### Use `<a>`  as anchor
 Use name to jump to a tag in the same page (of course other pages as well). Grant each section a name anchor to organize the page. If the anchor is not found, the page will return to the top. No errors.    
 ```
 <a name="tips">Mainpage - Help</a>
@@ -43,7 +29,7 @@ Another mailto link:
 ```
 
 ### Text  
-1. <**b**> and <**i**> are presentationl elements that convey no extra importance;  
+1. `<b>` and `<i>` are presentationl elements that convey no extra importance;  
 2. <**strong**> and <**em**> are phrase elements that strength SEO, while <**strong**> is stronger than <**em**>;  
 3. <**mark**> to highlight;  
 4. <**sub**> and <**sup**> to subscript or superscript;  
@@ -99,7 +85,7 @@ Another mailto link:
 
 6. background-position: center;
 
-### <**head**> - Container of metadata
+### Head - Container of metadata
 Title: define the title in browser tag and in search engine;  
 Base: provides default link and target;  
 Link: links to outside resources, such as style;  
@@ -115,7 +101,7 @@ Meta: used in many services and serarch engine;
 </head>
 ```
 
-### <**div**> and <**span**>  
+### div and span  
 Ways of grouping things together. The scope of div is larger than span. div is a block-level element that will incur a new line.    
 ```
 <div>
@@ -123,7 +109,7 @@ Ways of grouping things together. The scope of div is larger than span. div is a
 </div>
 ```
 
-### <**form**>
+### Form
 form is a block-level element that will incur a new line.   
 1. Action: where the form send data to  
 2. Method: what HTTP method (get/post). If no action, goes to the same page which equals to refresh   
@@ -159,11 +145,7 @@ form is a block-level element that will incur a new line.
 </form>
 ```
 
-### <**label**>  
-Set the label target using: for="id"  
-
-
-### <**input**>
+### Input
 1. type: text, radio, color, radio, email, etc.
 2. placeholder
 3. name/value: displayed in the url querying string
@@ -196,7 +178,7 @@ Other Examples
 	</form>
 ```
 
-### <**select**>
+### Select
 1. option
 
 ```
@@ -210,7 +192,7 @@ Other Examples
 	</form>
 ```
 
-### <**pre**> to maintain format
+### pre - to maintain format
 ```
 <p>
 <pre>
@@ -242,9 +224,18 @@ Display multiple htmls in the same page.
 </html>
 ```
 
-### <**list**>  
+### List  
 1. Change labels: <**ol type="A"**>;  
 2. Change marks: style="list-style-type:square";  
+
+### Table
+1. `<caption>` - table title
+2. `<thead>`- table head
+  `<tr>` - table row
+  `<th>` - table heading
+3. `<tbody>`- table body
+  `<td>` - table cell
+4. `<tfoot>` - table foot
 
 ### Depreciated tags (replace with style):
 ```
