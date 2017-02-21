@@ -407,9 +407,10 @@ padding:50px 25px 50px;       // top, left and right, bottom
 
 
 ## Display  
-1. display:block;  A block-level element always starts on a new line and takes up the full width available;  
-2. display:inline; An inline element does not start on a new line and only takes up as much width as necessary;  
-3. display:none; commonly used with JavaScript to hide and show elements. "display:none" does not take up any space, whereas "visibility:hidden" does;  
+1. display: block; - a block-level element always starts on a new line and takes up the full width available;  
+2. display: inline; - an inline element does not start on a new line and only takes up as much width as necessary;  
+3. display: none; - commonly used with JavaScript to hide and show elements. "display:none" does not take up any space, whereas "visibility:hidden" does;  
+4. display: inline-block; - will be affected by text-align and vertical-align
 
 ## Position
 1. position:static; default value. Not affected by top/bottom/left/right properties;  
