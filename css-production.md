@@ -26,7 +26,7 @@
     } 
     ```
 
-3. inline-block with `text-align: center;` and `vertical-align: middle`
+3. inline-block with `text-align: center;` and `vertical-align: middle`. For multiple-line text, add `line-height: normal` to prevent the inner element from inheriting line-height from the outer element
 
     ```
     #outer {
