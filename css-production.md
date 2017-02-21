@@ -26,11 +26,11 @@
     } 
     ```
 
-3. inline-block with `text-align: center;` and `vertical-align: middle`. For multiple-line text, add `line-height: normal` to prevent the inner element from inheriting line-height from the outer element
+3. inline-block with `text-align: center;` and `vertical-align: middle`. The line-height of the parent element has to be set. For multiple-line text, add `line-height: normal` to prevent the inner element from inheriting line-height from the outer element.
 
     ```
     #outer {
-        height: 300px;
+        height: 100%;
         line-height: 300px;
         text-align:center;
     }
