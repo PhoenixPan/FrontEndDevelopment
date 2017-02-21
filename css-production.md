@@ -48,7 +48,24 @@
 ### Text - Vertically
 1. line-height: (height of the element) - limitation: usually works for only one line
 
+## Spacing
+1. There are default spaces between inline-blocks (horizontal `<li>`, display: inline-block, etc). It's similar to spaces between letters, you need to connect the tags to remove the space.
 
+  ```
+  /*Use comments to connect*/
+  <li>one</li><!--
+  --><li>two</li><!--
+  --><li>three</li>
+  
+  /*Connect tags*/
+   <li>
+   one</li><li>
+   two</li><li>
+   three</li>
+   
+  /*Remove the closing tag (ok for HTML5)*/
+  /*Set font size to 0*/
+  ```
 
 ## Auto adjustment
 1. max-width/max-height: use them to avoid the appearance of the scroll bar;
@@ -62,7 +79,7 @@
 
 #### Remove hyperlink styles:
 ```
-#move-down {
+a {
   color: white;
   text-decoration: none;
 }
@@ -70,7 +87,7 @@
 
 #### Remove default button effects when pressed (that blue circle)
 ```
-#move-down:focus {
+button:focus {
   outline:0;
 }
 ```
