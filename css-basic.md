@@ -1,34 +1,10 @@
 # CSS Basic
 
-## Good practice:
-1. 
-2. Separation of containers and content: objects should look the same no matter where you put them;
-3. Order items in alphabetic order;
-4. Use indentation to indicate items with the same parent;
-5. Compress each CSS item in one line for easier read and search (optional);
-
-## New things learned
-1. Remove default button effects when clicked
-
-  ```
-  button:focus {outline:0;}
-  ```
-
-2. Why the height of this element doesn't extend until we add inline-block?
-
-	```
-	.delete-button {
-		background: rgb(235, 80, 80);
-		color: white;
-		display: inline-block;
-		width: 0;
-		margin-right: 10px;
-		opacity: 0;
-		text-align: center;
-		transition: all 0.2s ease;
-	}
-	```
-
+## Good practice: 
+1. Separation of containers and content: objects should look the same no matter where you put them;
+2. Order items in alphabetic order;
+3. Use indentation to indicate items with the same parent;
+4. Compress each CSS item in one line for easier read and search (optional);
 
 ## Ways to apply CSS
 1. External (preferred): refer in head tag: `<link rel="stylesheet" type="text/css" href="mystyle.css">`;  
@@ -104,10 +80,9 @@ There are multiple style sheets & override priority.
   background-position: center center;
   background-position: 70% center; /*Image moves to left a by 30%*/
   ```
+  
 5. background-attachment: fixed; - Image will not move as you scroll
 6. background: pink url("img_tree.png") no-repeat fixed right top; - Shorthand in color, image, repeat, attachment, position
-
-
 
 ## Border 
 1. Mainly consists of three attributes: width, color, and style:  
@@ -138,35 +113,16 @@ There are multiple style sheets & override priority.
 	    border-color: black transparent transparent transparent;
 	}
 	```
-
-3. All border styles:  
-
-	```
-	border-style: dotted;
-	border-style: dashed;
-	border-style: solid;
-	border-style: double;
-	border-style: groove;
-	border-style: ridge;
-	border-style: inset;
-	border-style: outset;
-	border-style: none;
-	border-style: hidden;
-	border-style: dotted dashed solid double;
-	```
+	
 ## Outline
 ![outline](https://cloud.githubusercontent.com/assets/14355257/18029801/67e9a206-6c70-11e6-9c42-01c07208a1e3.jpg)  
-1. The outline is NOT a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.  
-2. Declare the outline-style property if you'll apply the outline-color property, no style, no color.  
+1. The outline is NOT a part of an element's dimensions; the element's total width and height is not affected by the width of the outline
+2. Declare the outline-style property if you'll apply the outline-color property, no style, no color
+3. Debug layout by adding a `outline: 1px solid red` to all elements *
 
 ```
 outline-color:invert; /*Opposite to the background color*/	
 outline-offset; /*Specifies the space between an outline and the edge or border of an element*/
-outline-style;
-outline-width;
-
-/*Shorthand property in order: width style(required) color*/
-outline: 5px dotted red
 ```
 
 ## Selectors & Pseudo classes
@@ -262,8 +218,6 @@ outline: 5px dotted red
 	```
 
 ### Pseudo classes
-Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.asp   
-
 1. before and after: http://www.w3schools.com/cssref/sel_before.asp  
 	
 	insert content before or after the selected elements (and also style it)  
@@ -275,11 +229,11 @@ Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.a
 	}
 	```
 2. Relates to links:  
-  1. a:link {color: red}; unvisited link;  
+  1. a:link {color: red}; - unvisited link;  
   2. a:visited {color: green}; 
-  3. a:hover; MUST come after a:link and a:visited in the CSS definition in order to be effective;  
-  4. a:active; MUST come after a:hover in the CSS definition in order to be effective; 
-3. p:lang(anything): define special rules for different language:  
+  3. a:hover; - MUST come after a:link and a:visited in the CSS definition in order to be effective;  
+  4. a:active; - MUST come after a:hover in the CSS definition in order to be effective; 
+3. p:lang(anything) - define special rules for different language:  
 	```
 		q:lang(en) {
 		  quotes:"prefix "" postfix";
@@ -299,13 +253,13 @@ Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.a
 
 ![boxmodel](https://cloud.githubusercontent.com/assets/14355257/18029725/1e3362f2-6c6e-11e6-8484-af0b88e33bc2.jpg)    
 
-1. Internet Explorer 8 and earlier versions include padding and border in the width property. To fix this, add a <!DOCTYPE html> to the HTML page. However, sometimes this is what we want, we can then use "box-sizing:border-box" to achieve this;  
+1. Internet Explorer 8 and earlier versions include padding and border in the width property. To fix this, add a <!DOCTYPE html> to the HTML page. However, sometimes this is what we want, we can then use "box-sizing:border-box" to achieve this  
 
 	```
 	box-sizing: border-box // include padding and border
 	box-sizing: content-box // exclude padding and border
 	```
-2. When you set margin or padding top/bottom in percentage, they refer to the **width** of their parent element instead of height. The following example makes a 3xn matrix of squares: (See more at: https://segmentfault.com/a/1190000004231995);  
+2. When you set margin or padding top/bottom in percentage, they refer to the **width** of their parent element instead of height. The following example makes a 3xn matrix of squares: (See more at: https://segmentfault.com/a/1190000004231995) 
 
 	```
 	.tile {
@@ -322,12 +276,11 @@ Check all pseudo-classes here: http://www.w3schools.com/css/css_pseudo_classes.a
 
 
 ## Margin 
-1. Margin backgrounds are always transparent;  
+1. Margin backgrounds are always transparent
 
 ```
 margin:50px 25px 50px; /*top, left and right, bottom*/
 margin:auto;           /*make it center, for image, also make it a block element*/
-margin: 50%;           /* % of parent element*/
 ```
 
 ### Margin collapsing  
@@ -400,9 +353,9 @@ Check: https://www.w3.org/TR/CSS2/box.html#collapsing-margins
 
 
 ## Padding
-1. Most elements do not havea default padding, so use a lot of "padding:0" will increase unnecessary burden for loading pages; 
+1. Most elements do not havea default padding, so use a lot of unnecessary "padding:0" will increase burden for loading pages; 
 ```
-padding:50px 25px 50px;       // top, left and right, bottom
+padding:50px 25px 50px; /*top, left and right, bottom*/
 ```
 
 
@@ -413,10 +366,10 @@ padding:50px 25px 50px;       // top, left and right, bottom
 4. display: inline-block; - will be affected by text-align and vertical-align
 
 ## Position
-1. position:static; default value. Not affected by top/bottom/left/right properties;  
-2. position:relative; make elements relative to their regular position in the flow (through top/bottom/left/right), the rest of the contents will not be affected;
-3. position:fixed; the elements will always be in the same position of the page (fixed navbar); 
-4. position:absolute; similar to fix, but the element position is fixed to the closest ancestor that is positioned (any kind except static). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
+1. position:static; - default value. Not affected by top/bottom/left/right properties;  
+2. position:relative; - make elements relative to their regular position in the flow (through top/bottom/left/right), the rest of the contents will not be affected;
+3. position:fixed; - the elements will always be in the same position of the page (fixed navbar); 
+4. position:absolute; - similar to fix, but the element position is fixed to the closest ancestor that is positioned (any kind except static). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling;  
 
 ### z-index
 z-index property specifies the z-order of a positioned element and its descendants. When elements overlap, an element with larger z-index covers an element with lower one.
@@ -488,32 +441,27 @@ After:  The element with clear property moved below the floating element as expe
 	}
 	```
 
-
-
 ## Relationships among float, diaplay, position:  
 1. If "display" is "none", both "float" and "position" do not apply; 
-2. If "display" is not "none":
-  1.
-  2. 
   
 https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/css-layout.html
 	
 
 
-1. float: left; use float to get block elements to slide next to each other;
-2. display: block; Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify padding (and height, width, margins, etc. if you want);
-3. padding: 8px; Since block elements take up the full width available, they cannot float next to each other. Therefore, specify some padding to make them look good  
-4. overflow:hidden is added to the ul element to prevent li elements from going outside of the list.  
+1. float: left; - use float to get block elements to slide next to each other;
+2. display: block; - Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify padding (and height, width, margins, etc. if you want);
+3. padding: 8px; - Since block elements take up the full width available, they cannot float next to each other. Therefore, specify some padding to make them look good  
+4. overflow:hidden; - added to the ul element to prevent li elements from going outside of the list.  
 
 ## Overflow  
 
 ```
-overflow: visiable;   // default, won't clip, let the content leaks out
-overflow: hidden;     // hide additional content(no scroll bar)
-overflow: scroll;     // add two scrollbars anyway
-overflow: auto;       // add a scrollbar only when necessary
-overflow-x: hidden;   // add a scrollbar horizentally, white-space: nowrap;
-overflow-y: scroll;   // add a scrollbar vertically
+overflow: visiable;   /* default, won't clip, let the content leaks out */
+overflow: hidden;     /* hide additional content(no scroll bar) */
+overflow: scroll;     /* add two scrollbars anyway */
+overflow: auto;       /* add a scrollbar only when necessary */
+overflow-x: hidden;   /* add a scrollbar horizentally, white-space: nowrap; */
+overflow-y: scroll;   /* add a scrollbar vertically */
 ```
 
 ## Flex
@@ -521,11 +469,6 @@ overflow-y: scroll;   // add a scrollbar vertically
 Check whether the information about flex is obsolete: https://css-tricks.com/old-flexbox-and-new-flexbox/
 
 ## Align  
-To center an element or image  
-```
-margin:auto;
-```
-
 Left or right align using position or float. When aligning elements with position and float, always define margin and padding for the `<body>` element. This is to avoid visual differences in different browsers. Absolute positioned elements are removed from the normal flow, and can overlap elements, whereas float cannot;  
 
 ```
@@ -544,20 +487,10 @@ body {
 }
 ```
 
-To center vertically, use padding:  
-or setting line-height equal to height: http://www.w3schools.com/css/tryit.asp?filename=trycss_align_line-height
-or using transform: http://www.w3schools.com/css/tryit.asp?filename=trycss_align_transform
-```
-
-.center {
-    padding: 10px 0;
-    border: 3px solid green;
-}
-```
 ## Other properties relate to positioning
 ##### Overlapping: an overlapping element has to be positioned(except static). An element with greater stack order is always in front of an element with a lower stack order. If two elements have the same stack, the one declared later will be displayed on the top;  
 ```
-z-index: -1;  // set the stack order of an element
+z-index: -1;  /* set the stack order of an element */
 ```
 ##### Chip: can chip only absolutely positioned element
 ```
@@ -584,9 +517,6 @@ https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/
 	```
 	user-select: none;
 	```
-line-height: 2;            // specifies space between lines
-vertical-align
-unicode-bidi
 
 ## Font
 1. Start with the font you want, and end with a generic family
@@ -597,15 +527,14 @@ unicode-bidi
 6. Google fonts
 
 ```
-font-style: italic       // normal, italic, obelique 
-font-size                // length, em, %
-font-variant: small-caps // small-caps or normal
-font-weight              // normal, bold, bolder, lighter, initial(default value), inherit, 100-900
-font-family: "Times New Roman", Times, serif;\\
+font-style: italic       /* normal, italic, obelique  */
+font-size                /* length, em, % */
+font-variant: small-caps /* small-caps or normal */
+font-weight              /* normal, bold, bolder, lighter, initial(default value), inherit, 100-900 */
+font-family: "Times New Roman", Times, serif;
 
-// Shorthand property
-font:italic bold small-caps 12px/30px Georgia, serif; // style, weight, variant, font-size/line space, font-family
 
+font:italic bold small-caps 12px/30px Georgia, serif; /* style, weight, variant, font-size/line space, font-family */
 ```
 
 ## List  
