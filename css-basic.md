@@ -443,6 +443,8 @@ After:  The element with clear property moved below the floating element as expe
 
 ## Relationships among float, diaplay, position:  
 1. If "display" is "none", both "float" and "position" do not apply; 
+2. Else if "position" is either "fixed" or "absolute", "float" does not apply. The position of the box will be calculated by top/bottom/left/right;
+3. Otherwise (position is not fixed and float is not none) the element is set on float;
   
 https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/css-layout.html
 	
