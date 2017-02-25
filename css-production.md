@@ -103,7 +103,7 @@ button:focus {
 ```
 
 #### body and html height
-`height: 100%` means 100% of the viewpoint's height. If you give both of them `height: 100%`, unexpected effects may occur. It prevents body from expanding with its contents once they start to grow beyond the viewport height. However, if you use `min-height: 100%` in `<body>`, body will expand as contents grow.  
+They have `height: auto` by default. `height: 100%` means 100% of the viewpoint's height. If you give both of them `height: 100%`, unexpected effects may occur. It prevents body from expanding with its contents once they start to grow beyond the viewport height. However, if you use `min-height: 100%` in `<body>`, body will expand as contents grow.  
 
 With problem:  
 ![html-body](https://cloud.githubusercontent.com/assets/14355257/23329818/db8f9fd6-fb8f-11e6-9f83-1d398b3cba1d.png)  
@@ -114,7 +114,7 @@ Resolved: http://codepen.io/PhoenixPan/pen/RpNZXK
 html {height: 100%;background: #cb564f;}
 body {min-height: 100%;background: #435f6b;}
 ```
-
+Reference: http://stackoverflow.com/questions/6739601/what-is-the-difference-between-applying-css-rules-to-html-compared-to-body
 
 #### Why 100vw cause x-axis overflow?
 Since browsers currently vertical scroll bar as part of the view. If page contents are more than one page, causing the vertical scroll bar to appear, there will be an overflow on x-axis. Add this to prevent such overflow:
