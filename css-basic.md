@@ -668,6 +668,13 @@ Transition and transform can be performed at the same time on animatable element
 	}
 	```
 	
+## @media
+
+The below media query will only apply if the media type is TV, the viewport is 700px wide or wider, and the display is in landscape.
+```
+@media tv and (min-width: 700px) and (orientation: landscape) { ...  }
+```
+
 ## Units
 ### Difference between em and rem
 em is based on the font size of the current element while rem is based on the font size of html element.  
