@@ -1,30 +1,22 @@
 # JavaScript
 
-## Basic
-1. JavaScript uses Unicode
-2. Load js at the end of the body to make sure its success. You can also use jQuery.
-
-
 ## Convention  
 1. Unlike HTML and CSS, we encourage space around operations(= + - * / );  
-2. Declare all variables at the beginning of a script;  
-
-## Best practice 
-1. Avoid global variable and always declare local variable, otherwise it will become global variables;  
-2. Declare and initialize all variable on the top, including loop index;  
-3. 
+2. Avoid global variable and always declare local variable, otherwise it will become global variables;  
+3. Declare all global variables at the beginning of a script, including loop index;  
+4. 
 
 ## The order of importing scripts matter!
-If "client" uses functions from "mqttws31", import it later. Otherwise an "class not defined" error will raise.  
+Load js at the end of the body to make sure its success. You can also use jQuery.  If "client" uses functions from "mqttws31", import it later. Otherwise an "class not defined" error will raise.  
 ```
 <script type="text/javascript" src="mqttws31.js"></script>
 <script type="text/javascript" language="javascript" src="client.js"></script>
 ```
 
 ## How to implement
-1. JavaScript, both internal and external ones, can be placed within <**head**> or <**body**> or both of them;   
-2. Use external .js file <**script src="myScript.js"**><**/script**>   
-2. <**script type="text/javascript"**> is no longer required, as JS is the default scripting language in HTML;    
+1. JavaScript, both internal and external ones, can be placed within `<head>` or `<body>` or both of them;   
+2. Use external .js file `<script src="myScript.js"></script>`   
+2. `<script type="text/javascript">` is no longer required, as .js is the default scripting language in HTML;    
 3. Advantage of separate file: clean and easy to maintain, cached JavaScript files can speed up page loads.  
 
 ## Output  
@@ -40,12 +32,12 @@ If "client" uses functions from "mqttws31", import it later. Otherwise an "class
 
 ## Operations  
 ##### Operations:  
-===:	equal value and equal type   
-!==:	not equal value or not equal type  
-?:	ternary operator  
-innerHTML = typeof "John";	Returns the type of a variable  
-instanceof:	Returns true if an object is an instance of an object type  
-Exponentiation:	10 ** 2  
+1. === - equal value and equal type   
+2. !== - not equal value or not equal type  
+3. ? - ternary operator  
+4. innerHTML = typeof "John"; - Returns the type of a variable  
+5. instanceof - Returns true if an object is an instance of an object type  
+6. Exponentiation: 10 ** 2  
   
 Examples:
 ```
@@ -63,7 +55,6 @@ true == "1";       // true
 false == 0;        // true
 null == undefined; // true
 NaN == NaN;        // false
-
 ```
 
 ##### Operate string with number
@@ -95,24 +86,23 @@ function test() {
 ```
 
 ## Variable
-1. objects and functions are also variables;  
-2. You can re-declare a variable. If you don't assign a new value, it will keep the old one:  
+1. objects and functions are also variables
+2. Declared but not initialized variables will give "undefined" value and type: var num
+3. null is explicit empty. The value of person is null, but typeof person is object, which is considered a bug.
 
-##### undefined
-declared but not initialized variables will give "undefined" value and type: var num; 
-```
-var carName = "Volvo";
-var carName;  // still "Vovlo"
-```
-
-##### null
-null is explicit empty. The value of person is null, but typeof person is object, which is considered a bug.
-```
-var person = null;
-```
+	```
+	var person = null;
+	```
+	
+4. You can re-declare a variable. If you don't assign a new value, it will keep the old one:  
+  
+	```
+	var carName = "Volvo";
+	var carName;  // still "Vovlo"
+	```
 
 ##### scope  
-1. We have local(variable declared within function and function arguments) and global scope. However, variable assigned within a function that has not been declared is global:  
+1. We have local(variable declared within function and function arguments) and global scope. Variable assigned within a function that has not been declared is global:  
 
 	```
 	document.getElementById("demo").innerHTML = "I can display " + carName;
@@ -122,6 +112,7 @@ var person = null;
 	    // var carName = "Volvo"; // local
 	}
 	```
+	
 2. The global scope is the window object, all global variables belong to it. 
 
 	```
