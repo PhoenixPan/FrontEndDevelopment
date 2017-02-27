@@ -31,7 +31,6 @@ Load js at the end of the body to make sure its success. You can also use jQuery
 2. Ending 0s will be omitted: 10.50 ---display--> 10.5;  
 
 ## Operations  
-##### Operations:  
 1. === - equal value and equal type   
 2. !== - not equal value or not equal type  
 3. ? - ternary operator  
@@ -57,7 +56,7 @@ null == undefined; // true
 NaN == NaN;        // false
 ```
 
-##### Operate string with number
+### Operate string with number
 A string will be recognized as a number as long as it's not in PLUS operation and it consisits only numeric values  
 ```
 //Same as Java
@@ -71,11 +70,7 @@ A string will be recognized as a number as long as it's not in PLUS operation an
 "10" * "10" // 100
 
 ```
-##### Add new line in output
-```
-document.getElementById("demo").innerHTML = x1 + "<br>" + x2 + "<br>" + y + "<br>" + z
-```
-##### Automatic transform
+### Automatic transform
 ```
 var x = 5; // var will be treated as a number:6,7,8...
 // var x = prompt("Give me a number");  //var will be treated as string: 51,511,5111...
@@ -87,42 +82,89 @@ function test() {
 
 ## Variable
 1. objects and functions are also variables
-2. Declared but not initialized variables will give "undefined" value and type: var num
-3. null is explicit empty. The value of person is null, but typeof person is object, which is considered a bug.
+2. Declared but not initialized variables `var num1;` (unassigned variables) will give "undefined" value and type:
 
 	```
-	var person = null;
+	var num1 = 1, num2;  
+	document.getElementById("demo").innerHTML =num2 + "<br>" + (num1 + num2)+ "<br>" + typeof (num1 + num2);
 	```
-	
+	These give: 
+	undefined  
+	NaN  
+	number  
+
+3. null is explicit empty. `var person = null` The value of person is null but typeof person is object, which is considered a bug
+4. Empty an var / object: Both null and undefined can be used to empty an var or object  
+
+	```
+	typeof undefined             // undefined
+	typeof null                  // object
+	null === undefined           // false
+	null == undefined            // true
+	```
 4. You can re-declare a variable. If you don't assign a new value, it will keep the old one:  
   
 	```
 	var carName = "Volvo";
 	var carName;  // still "Vovlo"
 	```
-
-##### scope  
-1. We have local(variable declared within function and function arguments) and global scope. Variable assigned within a function that has not been declared is global:  
+5. Dynamic types:
 
 	```
-	document.getElementById("demo").innerHTML = "I can display " + carName;
+	var x;               // Now x is undefined
+	var x = 5;           // Now x is a Number
+	var x = "John";      // Now x is a String
+	```
+6. Shorthand statement:
 
+	```
+	var person = "John Doe", carName = "Volvo", price = 200;
+	// is equal to
+	var person = "John Doe", 
+	carName = "Volvo", 
+	price = 200;
+	```
+
+### Variable Scope  
+1. Variables declared within a JavaScript function, become LOCAL to the function. A variable declared outside a function, becomes GLOBAL. Variable assigned within a function that has not been declared becomes GLOBAL:  
+
+	```
+	var numOfWheels = 4; // global
 	function myFunction() {
 	    carName = "Volvo";        // global
 	    // var carName = "Volvo"; // local
 	}
 	```
-	
-2. The global scope is the window object, all global variables belong to it. 
+2. Hoisting: Variable declarations are processed before any code is executed, declaring a variable anywhere in the code is equivalent to declaring it at the top. : 
 
 	```
-	window.carName;
+	var x = 5;
+
+	(function () {
+	    console.log(x);
+	    var x = 10;
+	    console.log(x); 
+	})();
+	// What's the result? 5 and 10?
 	```
-3. Define a same-name local variable will temporarily override global variable
+	is equivalent to
+	```
+	var x = 5;
+
+	(function () {
+	    var x;
+	    console.log(x);
+	    x = 10;
+	    console.log(x); 
+	})();
+	// Give undefined and 10 actually
+	```
+3. Lifetime: Local variables are deleted when the function is completed; Global variables are deleted when you close the page
+4. The global scope is the window object, all global variables belong to it: `window.numOfWheels`
+5. Define a same-name local variable will temporarily override global variable
 
 	```
 	var text = "X";
-
 	function test() {
 		var text = "Y";
 		console.log(text);  // give Y
@@ -130,46 +172,71 @@ function test() {
 	console.log(text); // give X
 	```
 
-##### Lifetime
-Local variables are deleted when the function is completed.  
-Global variables are deleted when you close the page.  
+6. Lexical Scope or Static Scope: a function within another function, the inner function has access to the scope in the outer function. It does not work backwards, meaning local variables in children functions cannot be accessed in parent functions  
+7. Closure: The closure concept we’ve used here makes our scope inside sayHello inaccessible to the public scope. 
+
+	```
+	var sayHello = function (name) {
+	  var text = 'Hello, ' + name;
+	  return function () {
+	    console.log(text);
+	  };
+	};
+	sayHello('Todd'); // do nothing
+	
+	var helloTodd = sayHello('Todd');
+	helloTodd();  // this will do
+	```
+8. Private method: used to protect global namespace and scope from polluted by unnecessary functions:
+
+	```
+	var Module = (function () {
+	  var privateMethod = function () {
+
+	  };
+	  return {
+	    publicMethod: function () {
+
+	    }
+	  };
+	})();
+	```
+More about code structure - second half of: https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/  
+
+### this
+1. By default this refers to the outer most global object, the window
+
+	```
+	var myFunction = function () {
+	  console.log(this); // this = window
+	};
+	myFunction();
+
+	var myObject = {};
+	myObject.myMethod = function () {
+	  console.log(this); // this = myObject
+	};
+
+	var nav = document.querySelector('.nav');
+	var toggleNav = function () {
+	  console.log(this); // this = <nav> element
+	  setTimeout(function () {
+	    console.log(this); // this = window
+	  }, 1000);
+	};
+	
+	var nav = document.querySelector('.nav');
+	var toggleNav = function () {
+	  var save = this;
+	  console.log(save); // <nav> element
+	  setTimeout(function () {
+	    console.log(save); // <nav> element
+	  }, 1000);
+	};
+	```
+
   
-##### One statement
-```
-var person = "John Doe", carName = "Volvo", price = 200;
-// or
-var person = "John Doe", 
-carName = "Volvo", 
-price = 200;
-```
-##### Dynamic types
-```
-var x;               // Now x is undefined
-var x = 5;           // Now x is a Number
-var x = "John";      // Now x is a String
-```
-##### Unassigned value 
-```
-var num1;
-```
-Value and type are both undefined  
-```
-var num1 = 1, num2;  
-document.getElementById("demo").innerHTML =num2 + "<br>" + (num1 + num2)+ "<br>" + typeof (num1 + num2);
-```
-These give: 
-undefined  
-NaN  
-number  
-  
-##### empty an var / object  
-Both null and undefined can be used to empty an var or object  
-```
-typeof undefined             // undefined
-typeof null                  // object
-null === undefined           // false
-null == undefined            // true
-```
+
 
 ## Function
 1. Two ways to define functions
