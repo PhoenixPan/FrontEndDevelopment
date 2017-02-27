@@ -171,7 +171,7 @@ function test() {
 	    carName = "Volvo";        // global
 	    var carName = "Volvo";    // local
 	}
-	console.log("Outer:" + carName); // not defined
+	console.log("Outer:" + carName); // not defined, override
 	```
 
 2. Lifetime: Local variables are deleted when the function is completed; Global variables are deleted when you close the page
@@ -218,6 +218,45 @@ function test() {
 	```
 More about code structure - second half of: https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/  
 Examples: http://stackoverflow.com/questions/500431/what-is-the-scope-of-variables-in-javascript  
+
+### let 
+1. 'let' allows you to limit the scope to the block, statement, or expression on which it is used, unlike `var`, which defines variables for at least the scope of a function
+
+	```
+	function varTest() {
+	  var x = 1;
+	  if (true) {
+	    var x = 2;  // same variable!
+	    console.log(x);  // 2
+	  }
+	  console.log(x);  // 2
+	}
+
+	function letTest() {
+	  let x = 1;
+	  if (true) {
+	    let x = 2;  // different variable
+	    console.log(x);  // 2
+	  }
+	  console.log(x);  // 1
+	}
+	```
+2. `let` does not create a property on the global object
+
+	```
+	var x = 'global';
+	let y = 'global';
+	console.log(this.x); // global
+	console.log(this.y); // undefined
+	```
+3. 'let' cannot declared multiple times, it will raise syntax error. 'seitch' is considered as one block, there should be no duplicated 'let' in it.
+
+	```
+	let a = 5;
+	let a = 6;
+	```
+4. Though 'let' will hoist, it will be in a "dead zone", so referring it before declaration will cause ReferenceError
+
 
 ### this
 1. By default this refers to the outer most global object, the window
