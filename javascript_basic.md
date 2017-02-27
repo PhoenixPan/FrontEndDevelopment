@@ -102,20 +102,57 @@ function test() {
 	null === undefined           // false
 	null == undefined            // true
 	```
-4. You can re-declare a variable. If you don't assign a new value, it will keep the old one:  
+5. Hoisting: Variable declarations are processed before any code is executed, declaring a variable anywhere in the code is equivalent to declaring it at the top: (This does not happen in Java, where order of variable declarations matter)
+
+	Example 1:  
+	```
+	var x = 5;
+
+	(function () {
+	    console.log(x);
+	    var x = 10;
+	    console.log(x); 
+	})();
+	// What's the result? 5 and 10?
+	// Give undefined and 10 actually, since declaration of x jumpts to the top
+	```
+	is equivalent to
+	```
+	var x = 5;
+
+	(function () {
+	    var x;
+	    console.log(x);
+	    x = 10;
+	    console.log(x); 
+	})();
+	```
+	
+	Example 2:  
+	```
+	var x = y, y = 'A';
+	console.log(x + y); // undefinedA
+	```
+	```
+	var x = y, y = 'A';
+	console.log(y);     
+	console.log(x + y); // AA
+	```
+	
+6. You can re-declare a variable. If you don't assign a new value, it will keep the old one:  
   
 	```
 	var carName = "Volvo";
 	var carName;  // still "Vovlo"
 	```
-5. Dynamic types:
+7. Dynamic types:
 
 	```
 	var x;               // Now x is undefined
 	var x = 5;           // Now x is a Number
 	var x = "John";      // Now x is a String
 	```
-6. Shorthand statement:
+8. Shorthand statement:
 
 	```
 	var person = "John Doe", carName = "Volvo", price = 200;
@@ -135,33 +172,10 @@ function test() {
 	    // var carName = "Volvo"; // local
 	}
 	```
-2. Hoisting: Variable declarations are processed before any code is executed, declaring a variable anywhere in the code is equivalent to declaring it at the top. : 
 
-	```
-	var x = 5;
-
-	(function () {
-	    console.log(x);
-	    var x = 10;
-	    console.log(x); 
-	})();
-	// What's the result? 5 and 10?
-	```
-	is equivalent to
-	```
-	var x = 5;
-
-	(function () {
-	    var x;
-	    console.log(x);
-	    x = 10;
-	    console.log(x); 
-	})();
-	// Give undefined and 10 actually
-	```
-3. Lifetime: Local variables are deleted when the function is completed; Global variables are deleted when you close the page
-4. The global scope is the window object, all global variables belong to it: `window.numOfWheels`
-5. Define a same-name local variable will temporarily override global variable
+2. Lifetime: Local variables are deleted when the function is completed; Global variables are deleted when you close the page
+3. The global scope is the window object, all global variables belong to it: `window.numOfWheels`
+4. Define a same-name local variable will temporarily override global variable
 
 	```
 	var text = "X";
@@ -172,8 +186,8 @@ function test() {
 	console.log(text); // give X
 	```
 
-6. Lexical Scope or Static Scope: a function within another function, the inner function has access to the scope in the outer function. It does not work backwards, meaning local variables in children functions cannot be accessed in parent functions  
-7. Closure: The closure concept we’ve used here makes our scope inside sayHello inaccessible to the public scope. 
+5. Lexical Scope or Static Scope: a function within another function, the inner function has access to the scope in the outer function. It does not work backwards, meaning local variables in children functions cannot be accessed in parent functions  
+6. Closure: The closure concept we’ve used here makes our scope inside sayHello inaccessible to the public scope. 
 
 	```
 	var sayHello = function (name) {
@@ -187,7 +201,7 @@ function test() {
 	var helloTodd = sayHello('Todd');
 	helloTodd();  // this will do
 	```
-8. Private method: used to protect global namespace and scope from polluted by unnecessary functions:
+7. Private method: used to protect global namespace and scope from polluted by unnecessary functions:
 
 	```
 	var Module = (function () {
@@ -234,9 +248,6 @@ More about code structure - second half of: https://toddmotto.com/everything-you
 	  }, 1000);
 	};
 	```
-
-  
-
 
 ## Function
 1. Two ways to define functions
