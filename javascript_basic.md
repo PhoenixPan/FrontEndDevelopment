@@ -169,8 +169,9 @@ function test() {
 	var numOfWheels = 4; // global
 	function myFunction() {
 	    carName = "Volvo";        // global
-	    // var carName = "Volvo"; // local
+	    var carName = "Volvo";    // local
 	}
+	console.log("Outer:" + carName); // not defined
 	```
 
 2. Lifetime: Local variables are deleted when the function is completed; Global variables are deleted when you close the page
@@ -216,6 +217,7 @@ function test() {
 	})();
 	```
 More about code structure - second half of: https://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/  
+Examples: http://stackoverflow.com/questions/500431/what-is-the-scope-of-variables-in-javascript  
 
 ### this
 1. By default this refers to the outer most global object, the window
@@ -248,6 +250,9 @@ More about code structure - second half of: https://toddmotto.com/everything-you
 	  }, 1000);
 	};
 	```
+
+### let
+
 
 ## Function
 1. Two ways to define functions
