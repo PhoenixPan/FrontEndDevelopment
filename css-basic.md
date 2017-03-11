@@ -73,14 +73,13 @@ There are multiple style sheets & override priority.
 ## Background Image
 1. There will be default margin between images, use float to remove them
 2. background-repeat: repeat(default)/repeat-x/repeat-y/no-repeat
-3. background-size: cover; - Stretch the image to fit the screen
+3. background-size: cover; - Stretch the image to fit the screen / contain; - fit the parent element
 4. background-position: left/right top/bottom;
 
-  ```
-  background-position: center center;
-  background-position: 70% center; /*Image moves to left a by 30%*/
-  ```
-  
+	  ```
+	  background-position: center center;
+	  background-position: 70% center; /*Image moves to left a by 30%*/
+	  ```
 5. background-attachment: fixed; - Image will not move as you scroll
 6. background: pink url("img_tree.png") no-repeat fixed right top; - Shorthand in color, image, repeat, attachment, position
 
