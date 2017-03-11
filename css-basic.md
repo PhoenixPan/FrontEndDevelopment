@@ -525,17 +525,24 @@ https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/
 3. "italic" is a special version of font, whereas "oblique" just inclines the font a bit. Since not all fonts have italic version, we use "oblique" to make the font italic when italic version is absent
 4. If font-size is not specified, the default size is 16px, which is also the default of 1em
 5. 1em is equal to the font size of the parent element
-6. Google fonts
+6. Font size can also have a fallback, like font family  
+
+	```
+	p {
+	    font-size: 16px; 
+	    font-size: 4vw;
+	}
+	```
+7. Google fonts are useful
 
 ```
 font-style: italic       /* normal, italic, obelique  */
-font-size                /* length, em, % */
 font-variant: small-caps /* small-caps or normal */
-font-weight              /* normal, bold, bolder, lighter, initial(default value), inherit, 100-900 */
 font-family: "Times New Roman", Times, serif;
-
-
 font:italic bold small-caps 12px/30px Georgia, serif; /* style, weight, variant, font-size/line space, font-family */
+
+/*Responsive font size*/
+font-size: calc(3vw + 3vh);
 ```
 
 ## List  
