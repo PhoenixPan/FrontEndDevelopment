@@ -81,7 +81,7 @@
 1. max-width/max-height: use them to avoid the appearance of the scroll bar;
 
 ## Border
-1. border: 0 / border: none: use border: 0. It's shorter and works fine on old browsers before IE9;   
+1. border: 0 or border: none? border: 0. It's shorter and works fine on old browsers before IE9;   
 
 ## Others
 1. Want transparent background but not texts? use rgba() instead of opacity;  
@@ -125,3 +125,21 @@ Since browsers currently vertical scroll bar as part of the view. If page conten
   overflow-x:hidden; /*Solution 2*/
 ```
 However, if the element have no width-limit ancesters, simply use `width: 100%` to fit the window.
+
+## Responsive 
+
+
+### Simply with auto-adjustment
+
+1. These two blocks will align side by side at the beginning and split to two lines when minimum width is reached  
+```
+<div style="">
+    <div style="float:left;width:50%;min-width:200px">
+        <h3 style="width:90%">1976</h3>
+    </div>
+
+    <div style="float:left;width:50%;min-width:200px">
+        <h3 style="width:90%">2012</h3>
+    </div>
+</div>
+```
