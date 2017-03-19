@@ -576,20 +576,3 @@ true, because x is now 10, and 10 is true
 var x = 0;
 if (x = 10)
 ```
-
-## JSON 
-```
-<p id="demo"></p>
-
-<script>
-var text = '{"employees":[' +
-'{"firstName":"John","lastName":"Doe" },' +
-'{"firstName":"Anna","lastName":"Smith" },' +
-'{"firstName":"Peter","lastName":"Jones" }]}';
-
-obj = JSON.parse(text);
-document.getElementById("demo").innerHTML =
-obj.employees[1].firstName + " " + obj.employees[1].lastName;
-</script>
-
-```
