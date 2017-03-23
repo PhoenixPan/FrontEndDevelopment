@@ -248,7 +248,9 @@ li[data-type='veg'] {
 
 ```
 // JS manipulation
-var ratings = restaurant.getAttribute("data-ratings");
+var ratings = restaurant.getAttribute("data-ratings"); // or
+var ratings = restaurant.dataset.ratings;
+
 restaurant.setAttribute("data-owner-name", "someName");
 ```
 
