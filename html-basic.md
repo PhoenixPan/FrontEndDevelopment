@@ -218,7 +218,6 @@ Display multiple htmls in the same page.
 </html>
 ```
 
-
 ## Depreciated tags (replace with CSS):
 ```
 <center>
@@ -227,6 +226,33 @@ Display multiple htmls in the same page.
 <u>
 ```
 http://www.w3school.com.cn/tags/html_ref_standardattributes.asp  
+
+
+# HTML5
+
+## data-type
+
+It takes three steps to transform a custom data attribute into a DOMStringMap key:  
+1. The data- prefix is removed from the attribute name
+2. Any hyphen followed by a lower case letter is removed from the name and the letter following it is converted to uppercase
+3. Other characters will remain unchanged. This means that any hyphen that is not followed by a lowercase letter will also remain unchanged.
+
+```
+/*html & css*/
+<li data-type="veg" data-distance="2miles" data-identifier="10318">Salad King</li>
+
+li[data-type='veg'] {
+  background: #8BC34A;
+}
+```
+
+```
+// JS manipulation
+var ratings = restaurant.getAttribute("data-ratings");
+restaurant.setAttribute("data-owner-name", "someName");
+```
+
+Reference: https://www.sitepoint.com/how-why-use-html5-custom-data-attributes/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning
 
 # Named character references
 When you want to display a greater-than symbol in the text, you can use a named character reference. You should know these four common named character references:  
