@@ -161,7 +161,7 @@ outline-offset; /*Specifies the space between an outline and the edge or border 
 	  
 	  /*X Y: select all descendant Ys within X*/
 	  /*X + Y: only the sibling Y immediately follow X (have the same parent)*/
-	  /*X ~ Y: select all sibling Ys of X (have the same parent)*/
+	  /*X ~ Y: select all preceding sibling Ys of X (have the same parent)*/
 	  /*X > Y: select only immediate descendant Y of X (the first child of the parent)*/
 
 	  /*X:nth-of-type(n)*/
@@ -227,7 +227,23 @@ outline-offset; /*Specifies the space between an outline and the edge or border 
 	    font-weight: bold;
 	}
 	```
-2. Relates to links:  
+	
+	combined usage with hover  
+	```
+	nav li a:after { 
+	  content: "";
+	  height: 100%; 
+	  left: 0; 
+	  top: 0; 
+	  width: 0px;  
+	  position: absolute; 
+	  transition: all 0.3s ease 0s; 
+	}
+	
+	nav li a:hover:after{ width: 100%; } // hover effect: bar will grow from left to right and occupy 100% of the element
+	```
+	
+2. Relates to links:  
   1. a:link {color: red}; - unvisited link;  
   2. a:visited {color: green}; 
   3. a:hover; - MUST come after a:link and a:visited in the CSS definition in order to be effective;  
