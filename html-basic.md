@@ -251,7 +251,8 @@ li[data-type='veg'] {
 var ratings = restaurant.getAttribute("data-ratings"); // or
 var ratings = restaurant.dataset.ratings;
 
-restaurant.setAttribute("data-owner-name", "someName");
+restaurant.setAttribute("data-owner-name", "someName"); // or
+restaurant.dataset["owner-name"] = newOwner;
 ```
 
 Reference: https://www.sitepoint.com/how-why-use-html5-custom-data-attributes/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning
