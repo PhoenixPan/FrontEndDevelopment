@@ -111,3 +111,24 @@ is a popular javascript library.
   </div>
 </div>
 ```
+# Selector
+1. nth-child() and last-child()
+
+```
+<parent>
+  <son>
+    <grandson>
+    </grandson>
+  </son>
+  <son>
+    <grandson>
+    </grandson>
+  </son>
+  /*...*/
+</parent>
+```    
+How to give each son a different background?      
+
+```
+$("#parent .son:last-child grandson:nth-child(1)").css("background-image", "url(\'" + imageUrl + "\')");
+```
