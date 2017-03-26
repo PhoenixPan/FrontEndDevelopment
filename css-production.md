@@ -126,6 +126,11 @@ Since browsers currently vertical scroll bar as part of the view. If page conten
 ```
 However, if the element have no width-limit ancesters, simply use `width: 100%` to fit the window.
 
+#### Floated element: how to include them into the div?
+```
+overflow: hidden;
+```
+
 ## Responsive 
 
 
