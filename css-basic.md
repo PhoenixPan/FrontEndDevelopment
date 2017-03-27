@@ -380,6 +380,9 @@ padding:50px 25px 50px; /*top, left and right, bottom*/
 3. display: none; - commonly used with JavaScript to hide and show elements. "display:none" does not take up any space, whereas "visibility:hidden" does;  
 4. display: inline-block; - will be affected by text-align and vertical-align
 
+#### Difference between display:none and visability: hidden
+Elements with visability: hidden/visable will take up spaces on the pages whereas elements with display:none will not.   
+
 ## Position
 1. position:static; - default value. Not affected by top/bottom/left/right properties;  
 2. position:relative; - make elements relative to their regular position in the flow (through top/bottom/left/right), the rest of the contents will not be affected;
