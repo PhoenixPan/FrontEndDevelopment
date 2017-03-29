@@ -3,13 +3,21 @@
 
 In traditional website we use `/getBook.action?id=1` (verb) to get resources. It's a procedural-oriented style. However, in RESTful, we use noun to specify where the resources are `/books/1` and apply proper request to access the same endpoint, such as GET, POST, PUT, and DELETE. It's a resource-oriented style.  
 
-1. Representations
-2. Messages
-3. URIs
-4. Uniform interface
-5. Stateless: The server does not keep any session information. If serves keep session info, then a request has to be handled by a particular server. To achieve, a RESTful request should contain all info that servers might need. Without this burden on the server side, any server in the cluster can handle this request. Since we no longer need to worry about the context of the request, it dramatically reduces the complexity and improves the efficiency.
+Some servers use GET request to obtain resources and POST request to create, update, and delete resources. These are not real RESTful and sometimes call hybrid RESTful.   
+
+**We know what you want to do through HTTP request**   
+**We know what you want through URI**  
+**We know how things going through status code**  
+
+1. Representations: Different resources have differect representations, such as txt, html, xml for text,jpg or png for image. json is currently the most popular representation but other formats are also fine if appropriate. 
+2. Uniform interface: Allowing atomic CRUD(create, read, update, and delete) operations. Different technical structure on each side will not affect communication, as long as APIs are provided. 
+3. URIs: Each URI indicates a specific resource, like `/books/1`. 
+4. Stateless: The server does not keep any session information. If serves keep session info, then a request has to be handled by a particular server. To achieve, a RESTful request should contain all info that servers might need. Without this burden on the server side, any server in the cluster can handle this request. Since we no longer need to worry about the context of the request, it dramatically reduces the complexity and improves the efficiency.
+5. Messages
 6. Links between resources
 7. Caching 
+
+
 
 ### Design Server API
 1. URL root: 
