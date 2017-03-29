@@ -7,7 +7,7 @@ In traditional website we use `/getBook.action?id=1` (verb) to get resources. It
 2. Messages
 3. URIs
 4. Uniform interface
-5. Stateless: The server does not save any session information. If serves keep session info, a request has to be handled by a particular server. Without this burden, any server in the cluster can handle this request. Now we don't need to worry about the context of the request. It dramatically reduces the complexity and improves the efficiency.
+5. Stateless: The server does not keep any session information. If serves keep session info, then a request has to be handled by a particular server. To achieve, a RESTful request should contain all info that servers might need. Without this burden on the server side, any server in the cluster can handle this request. Since we no longer need to worry about the context of the request, it dramatically reduces the complexity and improves the efficiency.
 6. Links between resources
 7. Caching 
 
