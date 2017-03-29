@@ -9,14 +9,16 @@ Some servers use GET request to obtain resources and POST request to create, upd
 **We know what you want through URI**  
 **We know how things going through status code**  
 
-1. Representations: Different resources have differect representations, such as txt, html, xml for text,jpg or png for image. json is currently the most popular representation but other formats are also fine if appropriate. 
-2. Uniform interface: Allowing atomic CRUD(create, read, update, and delete) operations. Different technical structure on each side will not affect communication, as long as APIs are provided. 
-3. URIs: Each URI exposes a specific resource, like `/books/1`. 
-4. Stateless: The server does not keep any session information. If serves keep session info, then a request has to be handled by a particular server. To achieve, a RESTful request should contain all info that servers might need. Without this burden on the server side, any server in the cluster can handle this request. Since we no longer need to worry about the context of the request, it dramatically reduces the complexity and improves the efficiency.
-5. Messages
-6. Links between resources
-7. Caching 
 
+1. Representations: Different resources have differect representations, such as txt, html, xml for text,jpg or png for image. json is currently the most popular representation but other formats are also fine if appropriate. 
+2. URIs: Each URI exposes a specific resource, like `/books/1`. 
+3. Client-Server: Separation of user interface concerns and the data storage concerns. 
+4. Stateless: The server does not keep any session information. If serves keep session info, then a request has to be handled by a particular server. To achieve, a RESTful request should contain all info that servers might need. Without this burden on the server side, any server in the cluster can handle this request. Since we no longer need to worry about the context of the request, it dramatically reduces the complexity and improves the efficiency.
+5. Cache: Data within a response to a request must be labeled as cacheable or non-cacheable. If a response is cacheable, then a client cache is given the right to reuse that response data for later or equivalent requests. Increase efficiency, scalability, and performance by partially or completely eliminating some interactions.
+6. Uniform interface: Allowing atomic CRUD(create, read, update, and delete) operations. Different technical structure on each side will not affect communication, as long as APIs are provided. 
+7. Layered system: Add intermediary layers between the end server and the clients. This may improve system scalability by enabling load balancing and by providing shared caches.
+
+\*Client-Server model: partitions tasks or workloads between clients and servers. 
 
 ### Design Server API
 1. URL root: 
@@ -45,6 +47,7 @@ Some servers use GET request to obtain resources and POST request to create, upd
 4. Encrypt the payload before send out if necessary
 
 
+### References
 http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
 http://www.ruanyifeng.com/blog/2011/09/restful.html
 
