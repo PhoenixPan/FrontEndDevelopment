@@ -1,6 +1,18 @@
 # WebApplication
 
 Questions & temp notes  
+Why's the difference between:
+```
+$(document).on("click", ".add-project-btn", function() {
+    console.log($(this).parents(".project-container").);
+});
+
+$(".add-project-btn").on("click", function() {
+    console.log($(this).parents(".project-container").);
+});
+```
+
+
 ```
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
