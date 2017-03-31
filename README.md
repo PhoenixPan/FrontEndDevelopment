@@ -1,12 +1,15 @@
 # WebApplication
 
 Questions & temp notes  
-Why's the difference between:
+
+## What's the difference between:
 ```
+// Working
 $(document).on("click", ".add-project-btn", function() {
     console.log($(this).parents(".project-container").);
 });
 
+// Not working
 $(".add-project-btn").on("click", function() {
     console.log($(this).parents(".project-container").);
 });
@@ -30,8 +33,7 @@ footer, header, hgroup, menu, nav, section {
 http://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_responsive
 ```
 
-
-Why doesn't work with "#navbar-container"?
+## Why doesn't work with "#navbar-container"?
 ```
 #navbar-container button {
 	border: none;
