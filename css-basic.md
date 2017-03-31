@@ -700,6 +700,22 @@ The below media query will only apply if the media type is TV, the viewport is 7
 @media tv and (min-width: 700px) and (orientation: landscape) { ...  }
 ```
 
+## box-shadow
+```
+box-shadow: 3px 3px 5px 6px #ccc;
+```
+From left to right, they represent:  
+1. horizontal offset: positive on right, negative on left
+2. vertical offset: positive on below, negative on above
+3. blur radius: 0 is sharp
+4. spread radius: if negative, the shadow may be short than one edge
+5. color 
+
+Inner shadow:
+```
+box-shadow: inset 0 0 10px #000000;
+```
+
 ## Units
 ### Difference between em and rem
 em is based on the font size of the current element while rem is based on the font size of html element.  
