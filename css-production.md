@@ -77,6 +77,17 @@
   /*Set font size to 0 in parent element*/
   ```
 
+## Override parent padding
+
+Use negative margin, which only take effect on one side. To resolve this, make width more than 100%;
+```
+.project-image-container {
+    margin-left: -15px;
+    width: calc(100% + 30px);
+}
+```
+This leave a 15px margin on both side. 
+
 ## Auto adjustment
 1. max-width/max-height: use them to avoid the appearance of the scroll bar;
 
