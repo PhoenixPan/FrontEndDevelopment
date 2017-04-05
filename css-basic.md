@@ -1,5 +1,9 @@
 # CSS Basic
 
+## Good references
+The invisable parts of CSS  
+https://madebymike.com.au//writing/the-invisible-parts-of-CSS/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning
+
 ## Good practice: 
 1. Separation of containers and content: objects should look the same no matter where you put them;
 2. Order items in alphabetic order;
