@@ -8,8 +8,7 @@ is a popular javascript library.
     3. Remember, what you get is raw DOM element, so you can only use js manipulation such as innerHTML rather than jQuery ones such as .text();
     4. It never returns null, or another type. If one element is found, the jQuery object will have only one child. If no elements are found, the jQuery object will be empty.
 
-
-3. Manipulate css: $().css("property","value") or $().css(object);
+2. Manipulate css: $().css("property","value") or $().css(object);
 
   ```
   var styles = {
@@ -17,7 +16,7 @@ is a popular javascript library.
     fontSize: "100px"
   };
   ```
-4. Use $(this) to stand for "this", use $(variable) to use a variable that contains a select result
+3. Use $(this) to stand for "this", use $(variable) to use a variable that contains a select result
 
 ## Basic Methods
 1. val(): Get the current value of the **first** element in the set of matched elements or set the value of **every** matched element. Case: get contents from input or select box;
