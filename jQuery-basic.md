@@ -9,12 +9,12 @@ is a popular javascript library.
 4. It never returns null, or another type. If one element is found, the jQuery object will have only one child. If no elements are found, the jQuery object will be empty.
 5. Manipulate css: $().css("property","value") or $().css(object);
 
-  ```
-  var styles = {
-    backgroundColor: "pink", // It's illegal to use "-" in between, so we use camel case
-    fontSize: "100px"
-  };
-  ```
+	```
+	var styles = {
+	backgroundColor: "pink", // It's illegal to use "-" in between, so we use camel case
+	fontSize: "100px"
+	};
+	```
 6. Use $(this) to stand for "this", use $(variable) to use a variable that contains a select result
 
 ### Select children
