@@ -168,6 +168,7 @@ outline-offset; /*Specifies the space between an outline and the edge or border 
 	  /*X ~ Y: select all preceding sibling Ys of X (have the same parent)*/
 	  /*X > Y: select only immediate descendant Y of X (the first child of the parent)*/
 
+	  /*Only apply to node-selectors, not class names*/
 	  /*X:nth-of-type(n)*/
 	  div:nth-of-type(3) p {
 	    font-size:25px;
@@ -176,6 +177,7 @@ outline-offset; /*Specifies the space between an outline and the edge or border 
 	  /*X:only-of-type*/
 	  /*X:first-of-type*/
 
+	  /*Only the last element in the container*/
 	  /*X:first-child*/
 	  /*X:last-child*/
 	  /*X:nth-last-child(n)*/
