@@ -1,7 +1,7 @@
 # jQuery
 is a popular javascript library.
 
-1. Selector: We use $() to select elements in CSS style (similar to querySelector in javascript). The selector returns a list even there's only one item. Use $(this) to stand for "this" in js;
+1. Selector: We use $() to select elements in CSS style (similar to querySelector in javascript). The selector returns a list even there's only one item. Use $(this) to stand for "this" in js. $ always returns the jQuery object, known as the "wrapped set," which is an array-like structure that contains all the selected DOM elements. It never returns null, or another type. If one element is found, the jQuery object will have only one child. If no elements are found, the jQuery object will be empty.
 2. Manipulate css: $().css("property","value") or $().css(object);
 
   ```
@@ -10,7 +10,7 @@ is a popular javascript library.
     fontSize: "100px"
   };
   ```
-3. Next
+3. next
 
 ## Basic Methods
 1. val(): Get the current value of the **first** element in the set of matched elements or set the value of **every** matched element. Case: get contents from input or select box;
