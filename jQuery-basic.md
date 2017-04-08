@@ -132,3 +132,10 @@ How to give each son a different background?
 ```
 $("#parent .son:last-child grandson:nth-child(1)").css("background-image", "url(\'" + imageUrl + "\')");
 ```
+
+2. not() or :not: select all except the given one
+
+	```
+	var menu = $(this).siblings(".menu");
+	$(".conflict-btn-group1").not(menu).css("display","none");
+	```
