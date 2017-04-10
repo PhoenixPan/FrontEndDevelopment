@@ -43,6 +43,7 @@ Some servers use GET request to obtain resources and POST request to create, upd
     POST /products : will add a product to the collection  
     GET /products/4 : will retrieve product #4PATCH/  
     PUT /products/4 : will update product #4  
+    **Let the keywords do what they suppose to do! not just GET and POST anymore**
     
 4. Encrypt the payload before send out if necessary
 
