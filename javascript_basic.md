@@ -650,6 +650,10 @@ m:	Perform multiline matching
 str.replace(/"target"/flag, "newchar");
 ```
 
+## Read input or uploaded files
+[My solution](https://github.com/PhoenixPan/WebDevelopment/blob/master/Widget/upload-file.html) that includes both input upload and drag-and-drop.   
+References: https://www.html5rocks.com/en/tutorials/file/dndfiles/
+
 ## Mistakes
 true, because x is now 10, and 10 is true
 ```
