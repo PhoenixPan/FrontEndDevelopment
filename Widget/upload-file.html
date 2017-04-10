@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculator</title>
+  <style type="text/css">
+  	.drop-zone {
+  		border: 5px dashed grey;
+  		height: 150px;
+  		width: 300px;
+  		line-height: 150px;
+  		text-align: center;
+  	}
+  </style>
+</head>
+<body>
+
+<div class="drop-zone">Drop your file here:</div>
+<p class="dropped-file-name"></p>
+
+<p>Or upload file:</p>
+
+<input type="file" class="upload-input" accept=".csv*">
+<p class="uploaded-file-name"></p>
+
+<script type="text/javascript">
+  var file;
+
+  // Drag and drop
+  function handleDroppedFile(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+
+    var files = evt.dataTransfer.files; // Get an array of files uploaded
+    if (files.length != 1) {
+    	alert("Please upload one file at a time!");
+    }
+    else {
+    	file = files[0];
+    	document.querySelector('.uploaded-file-name').innerHTML = "";
+	    document.querySelector('.dropped-file-name').innerHTML = 
+	    	"<strong>" + file.name + "</strong> - " + (file.size/1000).toFixed(2) + " Kb";
+ 	  }
+  }
+   // Explicitly show this is a copy
+  function handleDragOver(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    evt.dataTransfer.dropEffect = 'copy'; 
+  }
+  // Setup the dnd listeners.
+  var dropZone = document.querySelector('.drop-zone');
+  dropZone.addEventListener('dragover', handleDragOver, false);
+  dropZone.addEventListener('drop', handleDroppedFile, false);
+
+  // Upload from input
+  function handleUploadedFile(evt) {
+    var files = evt.target.files; // Get an array of files uploaded
+    if (files.length != 1) {
+    	alert("Please upload one file at a time!");
+    }
+    else {
+    	file = files[0];
+	    document.querySelector('.dropped-file-name').innerHTML = "";
+	    document.querySelector('.uploaded-file-name').innerHTML = 
+	    	"<strong>" + file.name + "</strong> - " + (file.size/1000).toFixed(2) + " Kb";
+ 	  }
+  }
+  document.querySelector('.upload-input').addEventListener('change', handleUploadedFile, false);
+</script>
+</body>
+</html>
