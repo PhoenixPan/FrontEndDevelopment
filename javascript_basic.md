@@ -5,10 +5,6 @@
 2. Avoid global variable and always declare local variable, otherwise it will become global variables;  
 3. Declare all global variables at the beginning of a script, including loop index;  
 
-
-
-
-
 ## The order of importing scripts matter!
 Load js at the end of the body to make sure its success. You can also use jQuery.  If "client" uses functions from "mqttws31", import it later. Otherwise an "class not defined" error will raise.  
 ```
@@ -650,9 +646,24 @@ m:	Perform multiline matching
 str.replace(/"target"/flag, "newchar");
 ```
 
-## Read input or uploaded files
+## Get input or uploaded files
 [My solution](https://github.com/PhoenixPan/WebDevelopment/blob/master/Widget/upload-file.html) that includes both input upload and drag-and-drop.   
 References: https://www.html5rocks.com/en/tutorials/file/dndfiles/
+
+## Read files
+### csv
+File & FileReader
+```
+var f = new File([""], "data1.csv");
+
+var reader = new FileReader();
+reader.onload = function(e) {
+  var text = reader.result;
+  console.log(text);
+}
+
+reader.readAsText(f);
+```
 
 ## Mistakes
 true, because x is now 10, and 10 is true
