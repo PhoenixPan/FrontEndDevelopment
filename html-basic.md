@@ -28,11 +28,11 @@ Meta: used in many services and serarch engine;
 
 ## `<table>`
 1. `<caption>` - table title
-2. `<thead>`- table head
-  `<tr>` - table row
-  `<th>` - table heading
-3. `<tbody>`- table body
-  `<td>` - table cell
+2. `<thead>`- table head  
+  `<tr>` - table row  
+  `<th>` - table heading  
+3. `<tbody>`- table body  
+  `<td>` - table cell  
 4. `<tfoot>` - table foot
 5. Use colspan and rowspan properties to merge cells
 
