@@ -665,6 +665,49 @@ reader.onload = function(e) {
 reader.readAsText(f);
 ```
 
+### http request
+```
+readTextFile("/custom/acfi/acfi1_adl.csv");
+
+function readTextFile(file) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                console.log(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+```
+
+### jQuery ajax
+```
+$(document).ready(function() {
+    $.ajax({
+        type: "GET",
+        url: "acfi1_adl.csv",
+        dataType: "text",
+        success: function(data) {processData(data);}
+     });
+});
+
+function processData(allText) {
+    var allTextLines = allText.split(/\r\n|\n/);
+    var headers = allTextLines[0].split(',');
+    var lines = [];
+
+    for (var i=1; i<allTextLines.length; i++) {
+      console.log(escape(allTextLines[i]));
+}
+```
+
 ## Mistakes
 true, because x is now 10, and 10 is true
 ```
