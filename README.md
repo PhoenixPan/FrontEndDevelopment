@@ -55,6 +55,17 @@ http://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_respons
 	python -m SimpleHTTPServer
 	```
 	
+## use "$(this)" inside a listener to represent the element to be bounded
+
+```
+    var filters = $(".plan-filter-options .font-subtitle");
+    for (var i = 0; i < filters.length; i++) {
+        $(filters[i]).on("tap", function() {
+            $(this).next().slideToggle(200);
+            $(this).siblings(".font-subtitle").next().css("display", "none");
+        });
+    }
+```
 	
 
 ## Knowledge Structure of Frontend Development
