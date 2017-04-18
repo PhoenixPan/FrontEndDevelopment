@@ -66,6 +66,16 @@ http://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_respons
         });
     }
 ```
+
+## Get selected text
+```
+val() only gives the "value" of the option, like value="name"
+
+user["gender"] = $("#register-gender option:selected").text();
+
+// Get a list of checked:
+var categories = $("input[name='interests']:checked");
+```
 	
 
 ## Knowledge Structure of Frontend Development
