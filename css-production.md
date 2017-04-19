@@ -230,3 +230,12 @@ https://www.w3.org/TR/CSS21/box.html#collapsing-margins
 </body>
 </html>
 ```
+
+## Print
+### 1
+```
+@media print {
+	body * { visibility: hidden; }
+	#acfi-calculator * { visibility: visible; }
+}
+```
