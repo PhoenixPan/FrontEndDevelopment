@@ -618,7 +618,7 @@ tr:nth-child(odd) {background-color: white}
 ```
 
 ## Variables
-
+Basic  
 ```
 :root {
   --mycolor: #000000;
@@ -628,6 +628,19 @@ p {
   background-color: var(--mycolor);
 }
 ```
+Variables also cascade  
+```
+:root {
+  --color: red;
+}
+body {
+  --color: orange;
+}
+h2 {
+  color: var(--color);
+}
+```
+Any h2 will be orange since it will be a child of body  
 
 ## Filter
 Nice to have it for some special effects.  
