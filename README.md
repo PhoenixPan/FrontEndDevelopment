@@ -55,6 +55,8 @@ http://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_respons
 	python -m SimpleHTTPServer
 	```
 	
+## If there should be no IDs but only classes, what are we going to do with label and input?
+
 ## use "$(this)" inside a listener to represent the element to be bounded
 
 ```
