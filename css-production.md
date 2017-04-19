@@ -232,10 +232,23 @@ https://www.w3.org/TR/CSS21/box.html#collapsing-margins
 ```
 
 ## Print
-### 1
+### 1. Print only visiable parts
 ```
 @media print {
 	body * { visibility: hidden; }
-	#acfi-calculator * { visibility: visible; }
+	#mydiv * { visibility: visible; }
+}
+```
+### 2. Print and stretch to the entire page
+```
+@media print {
+    #mydiv {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
 }
 ```
