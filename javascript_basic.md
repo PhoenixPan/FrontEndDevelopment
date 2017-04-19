@@ -708,6 +708,20 @@ function processData(allText) {
 }
 ```
 
+## Check false value
+```
+if (!value) {
+    // ...
+}
+```
+The six falsy values of JavaScript are  
+1. undefined
+2. null
+3. false
+4. the empty string
+5. 0 (of type number)
+6. NaN.
+
 ## Mistakes
 true, because x is now 10, and 10 is true
 ```
