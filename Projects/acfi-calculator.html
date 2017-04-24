@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculator</title>
+  <style type="text/css">
+    :root {
+      --acfi-calc-background: #eee6d8;
+      --acfi-calc-background-light: #fbf9f6;
+      --acfi-calc-background-dark: #b5985a; 
+    }
+
+    #acfi-calculator .leading-div {
+      margin: 16px auto;
+      height: 32px;
+      line-height: 32px;
+      width: 90%;
+    }
+
+    #acfi-calculator .leading-div label {
+      float: left;
+      font-size: calc(1em + 4px);
+      width: 90px;
+    }
+
+    #acfi-calculator .leading-div input {
+      border: none;
+      border-bottom: 2px solid var(--acfi-calc-background-dark);
+      float: left;
+      height: 100%;
+      outline: none;
+      padding-left: 5px;
+      width: 300px;
+    }
+
+    #acfi-calculator caption {
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+
+    #acfi-calculator caption:first-child {
+      font-size: 2em;
+    }
+
+    #acfi-calculator table {
+      margin: 2em auto;
+      width: 90%;
+    }
+
+    #acfi-calculator td {
+      height: 1.2em;
+      padding: 0 0 0 10px;
+      vertical-align: middle;
+    }
+
+    #acfi-calculator tr {
+      background-color: var(--acfi-calc-background-light);
+    }
+
+    #acfi-calculator tr.table-header-row {
+      background-color: var(--acfi-calc-background-dark);
+    }
+
+    #acfi-calculator tr.table-subtitle-row {
+      height: 2em;
+      background-color: var(--acfi-calc-background);
+    }
+
+    #acfi-calculator select {
+      margin: 3px auto;
+      vertical-align: middle;
+    }
+
+    #acfi-calculator .total-payment-display {
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: right;
+      width: 90%;
+    }
+
+    #acfi-calculator .total-payment-display span {
+      float:right;
+      width: 80px;
+    }
+
+    #acfi-calculator .warning-box {
+      color: red;
+    }
+
+    #acfi-calculator .print-btn-container {
+      text-align: center;
+    }
+
+    #acfi-calculator .print-btn {
+      border-radius: 5px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      font-size: 2em;
+      height: 50px;
+      width: 200px;
+    }
+
+/*    @media print {
+      * {
+        color: black;
+      }
+
+      #acfi-calculator {
+          height: 100%;
+          width: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          margin: 0;
+          padding: 15px;
+      }
+    }*/
+}
+
+  </style>
+  <script src="jquery-1.12.1.js"></script>
+</head>
+<body>
+<div id="acfi-calculator">
+  <div class="leading-div">
+    <label for="acfi-calc-name">Name: </label>
+    <input type="text" name="name" id="acfi-calc-name">
+  </div>
+  <div class="leading-div">
+    <label for="acfi-calc-date">Date: </label> 
+    <input type="date" name="data" id="acfi-calc-date"> 
+  </div>
+  <div class="leading-div">
+    <label for="acfi-calc-comment">Comment: </label>
+    <input type="text" name="comment" id="acfi-calc-comment">
+  </div>
+
+
+  <table class="acfi-main-table">
+    <caption>ACFI SCORES & FUNDING CATEGORIES</caption>
+    <caption>(Aged Care Funding Instrument)</caption>
+    <thead>
+      <tr class="table-header-row">
+        <th>QUESTION NUMBER</th>
+        <th>QUESTION</th>
+        <th>RATING</th>
+        <th>SCORES</th>
+        <th>CATEGORY CUT POINTS</th>
+        <th>FUNDING</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-subtitle-row">
+        <td colspan="6">ACTIVITIES OF DAILY LIVING (ADL) DOMAIN</td>
+      </tr>
+      <tr>
+        <td class="item-id">1</td>
+        <td>Nutrition</td>
+        <td>
+          <select class="rating-input">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+        <td class="score-adl"></td>
+        <td class="cut-points-adl" rowspan="5">NIL</td>
+        <td rowspan="5">$<span class="funding-adl">0</span></td>
+      </tr>
+      <tr>
+        <td class="item-id">2</td>
+        <td>Mobility</td>
+        <td>
+          <select class="rating-input">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+        <td class="score-adl"></td>
+      </tr>
+      <tr>
+        <td class="item-id">3</td>
+        <td>Personal Hygiene</td>
+        <td>
+          <select class="rating-input">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+        <td class="score-adl"></td>
+      </tr>
+      <tr>
+        <td class="item-id">4</td>
+        <td>Toileting</td>
+        <td>
+          <select class="rating-input">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+        <td class="score-adl"></td>
+      </tr>
+      <tr>
+        <td class="item-id">5</td>
+        <td>Continence</td>
+        <td>
+          <select class="rating-input">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+        <td class="score-adl"></td>
+      </tr>
+
+      <tr class="table-subtitle-row">
+        <td colspan="6">BEHAVIOUR DOMAIN</td>
+      </tr>
+      <tr>
+        <td class="item-id">6</td>
+        <td>Cognitive Skills</td>
+        <td>
+          <select class="rating-input">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+        <td class="score-beh"></td>
+        <td class="cut-points-beh" rowspan="5">NIL</td>
+        <td rowspan="5">$<span class="funding-beh">0</span></td>
+      </tr>
+      <tr>
+        <td class="item-id">7</td>
+        <td>Wandering</td>
+        <td>
+          <select class="rating-input">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+        <td class="score-beh"></td>
+      </tr>
+      <tr>
+        <td class="item-id">8</td>
+        <td>Verbal Behaviour</td>
+        <td>
+          <select class="rating-input">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+        <td class="score-beh"></td>
+      </tr>
+      <tr>
+        <td class="item-id">9</td>
+        <td>Physical Behaviour</td>
+        <td>
+          <select class="rating-input">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+        <td class="score-beh"></td>
+      </tr>
+      <tr>
+        <td class="item-id">10</td>
+        <td>Depression</td>
+        <td>
+          <select class="rating-input">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+        <td class="score-beh"></td>
+      </tr>
+
+      <tr class="table-subtitle-row">
+        <td colspan="6">COMPLEX HEALTH CARE DOMAIN</td>
+      </tr>
+      <tr>
+        <td class="item-id">11</td>
+        <td>Medication</td>
+        <td>
+          <select class="rating-input rating-med">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+        <td class="score-med" rowspan="2"></td>
+        <td class="cut-points-med" rowspan="2">NIL</td>
+        <td rowspan="2">$<span class="funding-med">0</span></td>
+      </tr>
+      <tr>
+        <td class="item-id">12</td>
+        <td>Complex Health Care</td>
+        <td>        
+          <select class="rating-input rating-med">
+            <option disabled selected value>--</option>
+            <option value="A">A</option>  
+            <option value="B">B</option>  
+            <option value="C">C</option>  
+            <option value="D">D</option>  
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="total-payment-display">ACFI payment: $<span class="total-payment">0</span></p>
+  <ul class="warning-box"></ul>
+  <div class="print-btn-container">
+    <button class="print-btn">Print</button>
+  </div>
+</div>
+
+<script type="text/javascript">
+/************************************************************************************************
+It is possible that the standards to determind low, medium, and high may change. 
+The standards are now been hardcoded inside calculateAdlCutPoints function and calculateBehCutPoints 
+function, please find and change them if in need
+************************************************************************************************/
+
+// Load data reference
+var adlReference = [];
+var behReference = [];
+var medReference = {};
+var cutPointsReference = {};
+var fundingReference = [];
+dataPreparation();
+
+var ratingIndex = {
+  "A": 0,
+  "B": 1,
+  "C": 2,
+  "D": 3
+}
+
+// var adlReference = [
+//   [0, 0, 0, 0, 0],
+//   [6.69, 6.88, 6.88, 6.11, 5.79],
+//   [13.39, 13.76, 13.76, 12.21, 11.53],
+//   [20.09, 20.65, 20.65, 18.31, 17.31]
+//   ];
+
+// var behReference = [
+//   [0, 0, 0, 0, 0],
+//   [6.98, 5.91, 7.04, 7.7, 5.71],
+//   [13.91, 11.82, 14.1, 15.4, 11.43],
+//   [20.88, 17.72, 21.14, 23.11, 17.15]
+//   ];
+
+// var medReference = {
+//   "AA": 0,
+//   "AB": 0,
+//   "AC": 1,
+//   "AD": 2,
+//   "BA": 1,
+//   "BB": 1,
+//   "BC": 2,
+//   "BD": 3,
+//   "CA": 1,
+//   "CB": 2,
+//   "CC": 2,
+//   "CD": 3,
+//   "DA": 1,
+//   "DB": 2,
+//   "DC": 3,
+//   "DD": 3
+//   };
+
+// var cutPointsReference = {
+//   0: "NIL",
+//   1: "LOW",
+//   2: "MED",
+//   3: "HIGH"
+// }
+
+// var fundingReference = [
+//   [110.55, 36.19, 67.32],
+//   [36.65, 8.37, 16.37],
+//   [79.80, 17.36, 46.62]
+//   ];
+
+
+jQuery(document).ready(function() {
+
+  // Initialize rating listeners
+  initializeListeners();
+
+  // Set date to today
+  setDefaultDate();
+
+  // Print button
+  jQuery(".print-btn").on("click", verifyPrint);
+});
+
+
+// Initialize listener that trigger events when rating options have changed
+function initializeListeners() {
+  var inputs = jQuery(".rating-input");
+  var score = 0;
+  var i;
+
+  // Add a listener to each rating input box
+  for(i = 0; i < inputs.length; i++) {
+      inputs.get(i).addEventListener("change", function() {
+        var rating = jQuery(this).val(); // Get rating from user input
+        var id = parseInt(jQuery(this).parent().siblings(".item-id").html());
+
+        if (rating == "") { // Reset the individual score if the input is empty
+          jQuery(this).parent().next().html(0);
+          if (id < 6) {
+            calculateAdlCutPoints();
+          }
+          else if (id < 11) {
+            calculateBehCutPoints();
+          }
+          else {
+            calculateMedCutPoints();
+          }
+          calculateTotalPayment();
+        }
+        else if (ratingIndex[rating] != null) { // If rating input is valid, update total score and funding
+          if (id < 6) {
+            score = adlReference[ratingIndex[rating]][id - 1]; // id - 1: iterate the array from 0
+            jQuery(this).parent().next().html(score); // Update score
+            calculateAdlCutPoints(); // Update cut points
+          }
+          else if (id < 11) {
+            score = behReference[ratingIndex[rating]][id - 6]; // id - 6: iterate the array from 0
+            jQuery(this).parent().next().html(score);
+            calculateBehCutPoints();
+          }
+          else {
+            calculateMedCutPoints();
+          }  
+          calculateTotalPayment(); // Update total payment amount        
+        } 
+      });
+  }
+}
+
+// Re-calculate the cut points for ADL when scores change
+function calculateAdlCutPoints() {
+  var adlScores = jQuery(".score-adl");
+  var adlTotal = 0;
+  var i;
+  var score = 0;
+  var cutPoints = "";
+  var funding = 0;
+  
+  // Get ADL total score
+  for(i = 0; i < adlScores.length; i++) {
+    score = adlScores[i].innerHTML;
+    if (score != "") {
+      adlTotal += parseFloat(score);
+    }
+  }
+
+  // Determine cut points based on total score
+  cutPoints = getCutPoints(adlTotal, 18, 62, 88)
+  jQuery(".cut-points-adl").html(cutPoints);
+
+  // Update funding amount
+  funding = getFunding(cutPoints, 0);
+  jQuery(".funding-adl").html(funding);
+}
+
+// Re-calculate the cut points for ADL when scores change
+function calculateBehCutPoints() {
+  var behScores = jQuery(".score-beh");
+  var behTotal = 0;
+  var i = 1;
+  var score = 0;
+  var cutPoints = "";
+  var funding = 0;
+  
+  // Get BEH total score
+  for(i = 0; i < behScores.length; i++) {
+    score = behScores[i].innerHTML;
+    if (score != "") {
+      behTotal += parseFloat(score);
+    }
+  }
+
+  // Determine cut points based on total score
+  cutPoints = getCutPoints(behTotal, 13, 30, 50)
+  jQuery(".cut-points-beh").html(cutPoints);
+
+  // Update funding amount
+  funding = getFunding(cutPoints, 1);
+  jQuery(".funding-beh").html(funding);
+}
+
+// Re-calculate the cut points for ADL when scores change
+function calculateMedCutPoints() {
+  var elementRating = jQuery(".rating-med option:selected");
+  var rating1 = jQuery(elementRating[0]).val();
+  var rating2 = jQuery(elementRating[1]).val();
+  
+  // If both ratings are filled, calculate the scores
+  if (rating1 != "" && rating2 != "") {
+    var elementCutPoints = jQuery(".cut-points-med");
+    var eleemntScore = jQuery(".score-med");
+    var concatRatings = rating1 + rating2;
+    var totalScore = medReference[concatRatings];
+    var cutPoints = "";
+    var funding = 0;
+    
+    if (totalScore != null) {
+      cutPoints = cutPointsReference[totalScore];
+      elementCutPoints.html(cutPoints);
+      eleemntScore.html(totalScore);
+    }
+    else {
+      elementCutPoints.html("NIL");
+      eleemntScore.html(0);
+    }
+
+    // Update funding amount
+    funding = getFunding(cutPoints, 2);
+    jQuery(".funding-med").html(funding);
+  }
+}
+
+// Get cut points with given standards of low, medium, and high
+function getCutPoints(total, low, mid, high) {
+  var cutPoints;
+  if (total < low) {
+    cutPoints = "NIL";
+  }
+  else if (total < mid) {
+    cutPoints = "LOW";
+  } 
+  else if (total < high) {
+    cutPoints = "MED";
+  }
+  else {
+    cutPoints = "HIGH";
+  }
+  return cutPoints;
+}
+
+// Given cut points and category index, find funding amount from the reference
+function getFunding(cutPoints, index) {
+  var funding = 0;
+  if (cutPoints == "HIGH") {
+    funding = fundingReference[0][index];
+  }
+  else if (cutPoints == "LOW") {
+    funding = fundingReference[1][index];
+  }
+  else if (cutPoints == "MED") {
+    funding = fundingReference[2][index];
+  }
+  return funding;
+}
+
+// Calculate total amount of ACFI payment
+function calculateTotalPayment() {
+  var adlFunding = parseFloat(jQuery(".funding-adl").html());
+  var behFunding = parseFloat(jQuery(".funding-beh").html());
+  var medFunding = parseFloat(jQuery(".funding-med").html());
+  var totalPayment = Math.round((adlFunding + behFunding + medFunding) * 100) / 100;
+  jQuery(".total-payment").html(totalPayment);
+}
+
+// Load data from .csv files
+function dataPreparation() {
+  jQuery.ajax({
+    type: "GET",
+    url: "/custom/acfi/acfi1_adl.csv",
+    dataType: "text",
+    success: function(data) {processData(adlReference, data, 6);}
+   });
+
+  jQuery.ajax({
+    type: "GET",
+    url: "/custom/acfi/acfi2_beh.csv",
+    dataType: "text",
+    success: function(data) {processData(behReference, data, 6);}
+   });
+
+  jQuery.ajax({
+    type: "GET",
+    url: "/custom/acfi/acfi3_med1.csv",
+    dataType: "text",
+    success: function(data) {
+      var allLines = data.split(/\r\n|\n/);
+      var i;
+      for(i = 1; i < 17; i++) {
+        var lineElements = allLines[i].split(",");
+        medReference[lineElements[0]] = lineElements[1];
+      }
+    }
+   });
+
+  jQuery.ajax({
+    type: "GET",
+    url: "/custom/acfi/acfi3_med2.csv",
+    dataType: "text",
+    success: function(data) {
+      var allLines = data.split(/\r\n|\n/);
+      var i;
+      for(i = 1; i < 4; i++) {
+        var lineElements = allLines[i].split(",");
+        cutPointsReference[lineElements[0]] = lineElements[1];
+      }
+    }
+   });
+
+  jQuery.ajax({
+    type: "GET",
+    url: "/custom/acfi/acfi4_fund.csv",
+    dataType: "text",
+    success: function(data) {processData(fundingReference, data, 4);}
+   });
+}
+
+// Load the reference with data rechieved from .csv files
+function processData(reference, data, lineWidth) {
+  var allLines = data.split(/\r\n|\n/);
+  var i;
+  var j;
+
+  for (i = 2; i < 6; i++) {
+    var lineElements = allLines[i].split(",");
+    var temp = [];
+    for (j = 1; j < lineWidth; j++) {
+      temp.push(lineElements[j]);
+    }
+    reference.push(temp);
+  }
+}
+
+// Set default date to today
+function setDefaultDate() {
+  var now = new Date();
+  var day = ("0" + now.getDate()).slice(-2);
+  var month = ("0" + (now.getMonth() + 1)).slice(-2);
+  var today = now.getFullYear() + "-" + (month) + "-" + (day) ;
+  jQuery("#acfi-calc-date").val(today);
+}
+
+// Verify the correctness of information upon submission
+function verifyPrint() {
+  var warningBox = jQuery(".warning-box");
+  var ratings = jQuery(".rating-input");
+  var i;
+  var print = true;
+  warningBox.empty();
+
+  // Check whether any rating is left empty 
+  // for (i = 0; i < ratings.length; i++) {
+  //   if (!jQuery(ratings[i]).val()) {
+  //     warningBox.append("<li>You need to rate all 12 categories.</li>");
+  //     print = false;
+  //     break;
+  //   }
+  // }
+
+  if (print) {
+        // var acfiTable = jQuery(".acfi-main-table")[0];
+    var acfiTable = jQuery("#acfi-calculator")[0];
+    console.log(acfiTable);
+    var winPrint = window.open();
+    winPrint.document.write('<head><title>Southern Cross Care</title>');
+    winPrint.document.write('<style type="text/css"> .acfi-main-table {border-collapse:collapse;} .acfi-main-table td {border: 2px solid black;} @media print{ #acfi-calculator .print-btn {display:none;}} </style>');
+    winPrint.document.write('<style type="text/css"> #acfi-calculator .leading-div { margin: 16px auto; height: 32px; line-height: 32px; width: 90%; } #acfi-calculator .leading-div label { float: left; font-size: calc(1em + 4px); width: 90px; } #acfi-calculator .leading-div input { border: none; border-bottom: 2px solid black; float: left; height: 2em; outline: none; padding-left: 5px; width: 300px; } #acfi-calculator caption { margin-bottom: 15px; font-size: 1.5em; } #acfi-calculator caption:first-child { font-size: 2em; } #acfi-calculator table { margin: 2em auto; width: 90%; } #acfi-calculator td { height: 1.2em; padding: 0 0 0 10px; vertical-align: middle; } #acfi-calculator tr.table-subtitle-row { height: 2em;} #acfi-calculator select { margin: 3px auto; vertical-align: middle; } #acfi-calculator .total-payment-display { font-size: 1.6em; font-weight: bold; margin-left: auto; margin-right: auto; text-align: right; width: 90%; } #acfi-calculator .total-payment-display span { float:right; width: 80px; } #acfi-calculator .warning-box { color: red; } #acfi-calculator .print-btn-container { text-align: center; } #acfi-calculator .print-btn { border-radius: 5px; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); font-size: 2em; height: 50px; width: 200px; } </style>');
+    winPrint.document.write('</head><body>');
+    winPrint.document.write(acfiTable.outerHTML);
+    winPrint.document.write('</body>');
+    winPrint.document.close();
+    console.log(winPrint.document.body);
+    winPrint.focus();
+    winPrint.print();
+    winPrint.close();
+
+    // window.print();
+  }
+}
+</script>
+</body>
+</html>
