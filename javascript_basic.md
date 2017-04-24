@@ -722,6 +722,27 @@ The six falsy values of JavaScript are
 5. 0 (of type number)
 6. NaN.
 
+## Difference between innerHTML and outerHTML
+innerHTML: give only the contents between the tags;  
+outerHTML: give the entire html element including the tags.  
+
+## Print a div
+1. Print in a new window:
+```
+    var prtContent = document.getClassesByName(".acfi-main-table")[0];
+    var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+    WinPrint.document.write('<head><title>ACFI Calculator</title>');
+    WinPrint.document.write('<style type="text/css"> * {border: 1px solid black;}</style>');
+    WinPrint.document.write('</head><body>');
+    WinPrint.document.write(prtContent.outerHTML);
+    WinPrint.document.write('</body>');
+    WinPrint.document.close();
+    WinPrint.focus();
+    WinPrint.print();
+    WinPrint.close();
+```
+
+
 ## Mistakes
 true, because x is now 10, and 10 is true
 ```
