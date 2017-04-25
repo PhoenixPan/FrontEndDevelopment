@@ -728,6 +728,10 @@ outerHTML: give the entire html element including the tags.
 
 ## Use setTimeout to replace setInterval
 http://stackoverflow.com/questions/6685396/execute-the-setinterval-function-without-delay-the-first-time
+
+1. It could have immediate first call
+2. No need for expelicit stop (clearInterval)
+
 ```
 function countdownDate() {
     // Get todays date and time
