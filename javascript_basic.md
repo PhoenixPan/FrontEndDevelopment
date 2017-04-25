@@ -726,6 +726,34 @@ The six falsy values of JavaScript are
 innerHTML: give only the contents between the tags;  
 outerHTML: give the entire html element including the tags.  
 
+## Use setTimeout to replace setInterval
+http://stackoverflow.com/questions/6685396/execute-the-setinterval-function-without-delay-the-first-time
+```
+function countdownDate() {
+    // Get todays date and time
+    var countDownDate = new Date("May 29, 2017 17:00:00").getTime();
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+    // Display the result in the element with id="demo"
+    var countdownElement = $(".countdown");
+    countdownElement.html("Time left: " + days + " Days " + hours + " Hours");
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+        countdownElement.html("Event expired, thank you for your participation!");
+        $("#page-home .main-container .fmc-style-btn").addClass("ui-state-disabled");
+    }
+    setTimeout(countdownDate, 60000);
+}
+```
+
 ## Print a div
 1. Print in a new window:
 ```
