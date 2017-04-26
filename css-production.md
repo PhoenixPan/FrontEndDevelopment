@@ -265,6 +265,53 @@ https://www.w3.org/TR/CSS21/box.html#collapsing-margins
 If an element is not displayed, then none of its children will be displayed (no matter what their display property is set to).  
 If `*` is used, `<html>` will be hidden so none of the elements will be displayed. Therefore, more selective selector is needed, such as `html body * {}`.   
 
+##### Example 1
+To display only the inner container  
+```
+html body > div:not(.main-container) {
+  display: none;
+}
+
+.main-container > div:not(.sub-container) {
+  display: none;
+}
+
+.sub-container > div:not(.inner-container) {
+  display: none;
+}
+```
+
+##### Example 2
+html
+```
+<p class="p1">text1</p>
+<div class="container">
+  <p class="p2">text2</p>
+</div>
+```
+
+CSS Case 1: The container will show but not the text2 within   
+```
+html body * {display: none;}
+.container {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-color:black;
+}
+p {color: red}
+```
+
+CSS Case 2: text1 will not show but text2 within the div will show   
+```
+html body > * {display: none;}
+```
+
+CSS Case 3: nothing will show up since the body is not displayed   
+```
+html * {display: none;}
+```
+
 ### `*`
 1. Applies style properties to all individual elements;
 2. Replaces inherited style properties, and default 'initial values'. Blocks inheritance;
@@ -276,10 +323,4 @@ If `*` is used, `<html>` will be hidden so none of the elements will be displaye
 3. Style declarations that match an element within body can override the inherited style.
 
 #### Example
-html
-```
-<p class="p1">text1</p>
-<div class="container">
-  <p class="p2"text2</p>
-</div>
-```
+
