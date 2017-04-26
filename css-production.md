@@ -252,3 +252,34 @@ https://www.w3.org/TR/CSS21/box.html#collapsing-margins
     }
 }
 ```
+
+### 3. Display only one div ***
+```
+@media print {
+  body *:not(#primary_container) {
+    display: none;
+  }
+```
+
+## Universal Selector
+If an element is not displayed, then none of its children will be displayed (no matter what their display property is set to).  
+If `*` is used, `<html>` will be hidden so none of the elements will be displayed. Therefore, more selective selector is needed, such as `html body * {}`.   
+
+### `*`
+1. Applies style properties to all individual elements;
+2. Replaces inherited style properties, and default 'initial values'. Blocks inheritance;
+3. Other, more specific css selectors that match an element will replace the style properties applied by *.
+
+### `body`
+1. Applies style properties to body element;
+2. Elements within body may inherit the property values. Some properties default to 'inherit';
+3. Style declarations that match an element within body can override the inherited style.
+
+#### Example
+html
+```
+<p class="p1">text1</p>
+<div class="container">
+  <p class="p2"text2</p>
+</div>
+```
