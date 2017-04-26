@@ -3,44 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <title>Calculator</title>
+  <script src="jquery-1.12.1.js"></script>
   <style type="text/css">
-    :root {
-      --acfi-calc-background: #eee6d8;
-      --acfi-calc-background-light: #fbf9f6;
-      --acfi-calc-background-dark: #b5985a; 
-    }
-
     #acfi-calculator .acfi-title {
       display: none;
       text-align: center;
     }
 
     #acfi-calculator .leading-div {
-      margin: 16px auto;
-      height: 32px;
-      line-height: 32px;
+      margin: 10px auto;
+      height: 28px;
+      line-height: 28px;
       width: 90%;
     }
 
     #acfi-calculator .leading-div label {
       float: left;
       font-size: 16px;
-      width: 90px;
+      margin: 0;
+      width: 100px;
     }
 
     #acfi-calculator .leading-div input {
       border: none;
-      border-bottom: 2px solid var(--acfi-calc-background-dark);
+      border-bottom: 2px solid #b5985a;
       float: left;
       height: 100%;
+      margin: 0;
       outline: none;
-      padding-left: 5px;
+      padding: 0.1em 0.1em 0.1em 0.5em;
       width: 300px;
     }
 
     #acfi-calculator caption {
       margin-bottom: 15px;
       font-size: 1.5em;
+      font-weight: bold;
     }
 
     #acfi-calculator caption:first-child {
@@ -59,16 +57,20 @@
     }
 
     #acfi-calculator tr {
-      background-color: var(--acfi-calc-background-light);
+      background-color: #fbf9f6;
     }
 
     #acfi-calculator tr.table-header-row {
-      background-color: var(--acfi-calc-background-dark);
+      background-color: #b5985a;
     }
 
     #acfi-calculator tr.table-subtitle-row {
       height: 2em;
-      background-color: var(--acfi-calc-background);
+      background-color: #eee6d8;
+    }
+
+    #acfi-calculator tr.table-subtitle-row td {
+      padding: 0.3em;
     }
 
     #acfi-calculator select {
@@ -77,7 +79,7 @@
     }
 
     #acfi-calculator .total-payment-display {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
       margin-left: auto;
       margin-right: auto;
@@ -106,16 +108,25 @@
       width: 200px;
     }
 
+    /*Special formatting for printed version*/
     @media print {
 
-      /*Disable Merlin elements*/
-      .topWrap, .navWrapper, .navContainer, #centricEditModeLink, #primary_container .inner>h1 {
-        display: none !important;
+      /*Disable other elements*/
+      html body > *:not(div), html body > div:not(#outer-wrap) {
+        display: none;
       }
 
-/*      body #acfi-calculator * {
-        display: default !important;
-      }*/
+      #outer-wrap > *:not(div), #outer-wrap > div:not(.internal) {
+        display: none;
+      }
+
+      .internal > *:not(div), .internal > div:not(#primary_container) {
+        display: none;
+      }
+
+      #primary_container .inner>h1 {
+        display: none;
+      }
 
       #acfi-calculator .print-btn {
         display: none;
@@ -129,8 +140,9 @@
         border-collapse: collapse;
       }
 
-      #acfi-calculator .acfi-main-table td {
+      #acfi-calculator .acfi-main-table td, #acfi-calculator .acfi-main-table th {
         border: 2px solid black;
+        font-weight: normal;
       }      
 
       #acfi-calculator {
@@ -144,14 +156,12 @@
           padding: 15px;
       }
     }
-}
-
+  }
   </style>
-  <script src="jquery-1.12.1.js"></script>
 </head>
 <body>
 <div id="acfi-calculator">
-<h1 class="acfi-title">Southern Cross Care ACFI</h1>
+  <h1 class="acfi-title">Southern Cross Care ACFI</h1>
   <div class="leading-div">
     <label for="acfi-calc-name">Name: </label>
     <input type="text" name="name" id="acfi-calc-name">
@@ -164,7 +174,6 @@
     <label for="acfi-calc-comment">Comment: </label>
     <input type="text" name="comment" id="acfi-calc-comment">
   </div>
-
 
   <table class="acfi-main-table">
     <caption>ACFI SCORES & FUNDING CATEGORIES</caption>
@@ -366,7 +375,7 @@
       </tr>
     </tbody>
   </table>
-  <p class="total-payment-display">ACFI payment: $<span class="total-payment">0</span></p>
+  <p class="total-payment-display">Estimated ACFI payment: $<span class="total-payment">0</span></p>
   <ul class="warning-box"></ul>
   <div class="print-btn-container">
     <button class="print-btn">Print</button>
@@ -375,7 +384,7 @@
 
 <script type="text/javascript">
 /************************************************************************************************
-It is possible that the standards to determind low, medium, and high may change. 
+TODO: It is possible that the standards to determind low, medium, or high may change. 
 The standards are now been hardcoded inside calculateAdlCutPoints function and calculateBehCutPoints 
 function, please find and change them if in need
 ************************************************************************************************/
@@ -394,6 +403,7 @@ var ratingIndex = {
   "C": 2,
   "D": 3
 }
+// Hardcoded data referenec
 
 // var adlReference = [
 //   [0, 0, 0, 0, 0],
@@ -466,7 +476,7 @@ function initializeListeners() {
       inputs.get(i).addEventListener("change", function() {
         var rating = jQuery(this).val(); // Get rating from user input
         var id = parseInt(jQuery(this).parent().siblings(".item-id").html());
-
+        
         if (rating == "") { // Reset the individual score if the input is empty
           jQuery(this).parent().next().html(0);
           if (id < 6) {
@@ -711,13 +721,13 @@ function verifyPrint() {
   warningBox.empty();
 
   // Check whether any rating is left empty 
-  // for (i = 0; i < ratings.length; i++) {
-  //   if (!jQuery(ratings[i]).val()) {
-  //     warningBox.append("<li>You need to rate all 12 categories.</li>");
-  //     print = false;
-  //     break;
-  //   }
-  // }
+  for (i = 0; i < ratings.length; i++) {
+    if (!jQuery(ratings[i]).val()) {
+      warningBox.append("<li>You need to rate all 12 categories.</li>");
+      print = false;
+      break;
+    }
+  }
 
   if (print) {
     window.print();
