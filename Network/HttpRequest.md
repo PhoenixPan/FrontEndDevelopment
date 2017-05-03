@@ -13,3 +13,6 @@ response.setHeader("Access-Control-Allow-Origin","*"); // Allow request from all
 
 Referece:  
 http://stackoverflow.com/questions/1077218/are-different-ports-on-the-same-server-considered-cross-domain-ajax-wise
+
+## Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https.
+Don't launch from file system (file://) but from a http location.
