@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+  <script src="jquery-1.12.1.js"></script>
+  <style type="text/css">
+    /*General*/
+    .feedback-subtitle {
+      color: #004990;
+      text-align: center;
+    }
+
+    .feedback-title {
+      color: #004990;
+      font-family: "Sansita", sans-serif;;
+      font-size: 1.2em;
+      font-weight: bold;
+      line-height: 1.8em;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /*Header*/
+    .feedback-container {
+      background-color: #ebe3d2;
+      cursor: default;
+      font-family: "Sansita", sans-serif;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      width: 250px;
+    }
+
+    .feedback-header {
+      background-color: #ffffff;
+      border-top: 3px solid #b5985a;
+      border-bottom: 3px solid #b5985a;
+      line-height: 1.8em;
+    }
+
+
+
+    /*Star rating*/
+    .feedback-stars-container {
+      position: relative;
+      display: inline-block;
+      border: none;
+      font-size: 1em;
+      margin: 15px auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .feedback-stars-container input {
+      border: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      position: absolute !important;
+      opacity: 0;
+    }
+
+    .feedback-stars-container label {
+      position: relative;
+      float: right;
+      color: #C8C8C8;
+    }
+
+    .feedback-stars-container label:before {
+      margin: 5px;
+      content: "\f005";
+      font-family: FontAwesome;
+      display: inline-block;
+      font-size: 1.5em;
+      color: #ffffff;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    .feedback-stars-container input:checked ~ label:before {
+      /*color: #FFC107;*/
+      color: #1F99CD;
+    }
+
+    .feedback-stars-container label:hover ~ label:before {
+      /*color: #ffdb70;*/
+      color: #BDE3F0;
+    }
+
+    .feedback-stars-container label:hover:before {
+      /*color: #FFC107;*/
+      color: #1F99CD;
+    }
+
+    /*Text feedback*/
+    .feedback-comment-container {
+      margin-bottom: 20px;
+      display: none;
+      transition: all 0.3s;
+    }
+
+    .feedback-text {
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+    }
+
+    .feedback-comment {
+      height: 60px;
+      width: 80%;
+    }
+
+    /*Option buttons*/
+    .feedback-options {
+      overflow: hidden;
+    }
+
+    .feedback-options .feedback-left {
+      float:left;
+      width: 50%;
+    }
+
+    .feedback-options .feedback-right {
+      float:right;
+      width:50%;
+    }
+
+    .feedback-options .feedback-btn {
+      background-color: #ffffff;
+      border-radius: 0.25em;
+      border: 2px solid #b5985a;
+      cursor: pointer;
+      margin: 10px auto;
+      padding: 5px 0;
+      width: 80%;
+    }
+
+    .feedback-options .feedback-btn span {
+      position: relative;
+      transition: all 0.5s;
+    }
+
+    .feedback-options span:before {
+      font-family: FontAwesome;
+      opacity: 0;
+      top: 2px;
+      left: -5px;
+      position: absolute;
+      transition: all 0.3s;
+    }
+
+    .feedback-options .feedback-send-btn span:before {
+      content: '\f1d8';
+    }
+
+    .feedback-options .feedback-comment-btn span:before {
+      content: '\f044';
+    }
+
+    .feedback-options .feedback-btn:hover span {
+      padding-left: 20px;
+    }
+
+    .feedback-options .feedback-btn:hover span:before {
+      opacity: 1;
+      left: 0;
+    }
+
+    .feedback-thanksbox {
+      display: none;
+      height: calc(88px + 1em);
+      padding: 0.5em 0 0.5em 0;
+    }
+
+    .feedback-thanksbox p {
+      color: #3366AA;
+      font-family: Sansita, sans-serif;;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="feedback-container">
+    <div class="feedback-header">
+    	<p class="feedback-title">How do you like me?</p>
+    </div>
+    <div class="feedback-stars-container">
+      <input type="radio" name="feedback-rating" id="st5" value="5" />
+      <label for="st5"></label>
+      <input type="radio" name="feedback-rating" id="st4" value="4" />
+      <label for="st4"></label>
+      <input type="radio" name="feedback-rating" id="st3" value="3" />
+      <label for="st3"></label>
+      <input type="radio" name="feedback-rating" id="st2" value="2" />
+      <label for="st2"></label>
+      <input type="radio" name="feedback-rating" id="st1" value="1" />
+      <label for="st1"></label>  
+    </div>
+
+    <div class="feedback-comment-container">
+    	<p class="feedback-subtitle">Please share your feedback here</p>
+    	<div class="feedback-text">
+    		<textarea class="feedback-comment" maxlength="120" placeholder="maximum length is 120 characters"></textarea>
+    	</div>
+    </div>
+
+    <div class="feedback-options">
+    	<div class="feedback-left">
+    		<p class="feedback-btn feedback-send-btn feedback-subtitle"><span>Send</span></p>
+    	</div>
+    	<div class="feedback-right">
+    		<p class="feedback-btn feedback-comment-btn feedback-subtitle"><span>Comment</span></p>
+    	</div>
+    </div>
+
+    <div class="feedback-thanksbox">
+      <p>Thank you for your</p>
+      <p>feedback!</p>
+    </div>
+
+  </div>
+
+    <script type="text/javascript">
+    // Extend comment section
+    jQuery(".feedback-comment-btn").on("click", function() {
+      $(".feedback-comment-container").toggle();
+    })
+
+		// Send out feedback
+    jQuery(".feedback-send-btn").on("click", function() {
+			// Get star rating
+			var ratingValue = 5;
+			var radios = document.getElementsByName("feedback-rating");
+			radios.forEach(function(element) {
+				if (element.checked)
+					ratingValue = element.value;
+			})
+
+			// Get comment
+			var commentValue = document.querySelector(".feedback-comment").value;
+      commentValue == null? commentValue = "" : commentValue;
+
+			// Send post request
+      var jqxhr = $.post( "http://localhost:8080/feedback/feedback-collection.jsp", 
+        {
+          rating: ratingValue,
+          comment: commentValue
+        },
+        function() {
+        console.log("The message is on the way!");
+      })
+      .done(function(html, textStatus, xhr) {
+         console.log("Post successed:" + xhr.status);
+         jQuery(".feedback-stars-container").css("display", "none");
+         jQuery(".feedback-comment-container").css("display", "none");
+         jQuery(".feedback-options").css("display", "none");
+         jQuery(".feedback-right").css("display", "none");
+         jQuery(".feedback-thanksbox").css("display", "block")
+      })
+      .fail(function(xhr, textStatus) {
+        console.log("Post failed:" + xhr.status);
+      })
+    })
+    </script>
+</body>
+</html>
