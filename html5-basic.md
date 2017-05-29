@@ -1,6 +1,6 @@
-#HTML5
+# HTML5
 
-##Basic structrue  
+## Basic structrue  
 ```
 <!DOCTYPE html>
 <html>
@@ -16,13 +16,13 @@ Content of the document......
 </html>
 ```
 
-##What's new?  
+## What's new?  
 New semantic elements like <**header**>, <**footer**>, <**article**>, and <**section**>.  
 New form control attributes like number, date, time, calendar, and range.  
 New graphic elements: <**svg**> and <**canvas**>.  
 New multimedia elements: <**audio**> and <**video**>.  
 
-##Elements removed
+## Elements removed
 Tags removed since HTML5 and their replacements  
 
 |    Removed     | Replacement |
@@ -66,7 +66,7 @@ Tags removed since HTML5 and their replacements
 <!--| <**time**>       	| Defines a date/time                                                                       	|-->
 <!--| <**wbr**>        	| Defines a possible line-break                                                             	|-->
 
-##Arrtibute syntax
+## Arrtibute syntax
 Type: Empty, Unquoted, Single-quoted, and Double-quoted.  
 
 | Syntax       | Result      |
@@ -76,7 +76,7 @@ Type: Empty, Unquoted, Single-quoted, and Double-quoted.
 | "'John Doe'" | 'John Doe'  |
 | ""John Doe"" | None        |
 
-##New Semantic Elements
+## New Semantic Elements
 Why?  
 1. Readability is way much better than a cluster of <**div**>;  
 2. Allow search engines to identify the correct pages;  
@@ -87,11 +87,11 @@ Why?
 
 
 
-##Migration from HTML4 to HTML5  
+## Migration from HTML4 to HTML5  
 (http://www.w3schools.com/html/html5_migration.asp)  
 (Browser support: http://www.w3schools.com/html/html5_browsers.asp )  
 
-#####Change semantic elements and corresponding CSS names
+##### Change semantic elements and corresponding CSS names
 |     Typical HTML4      |   Typical HTML5   |
 |------------------------|-------------------|
 | <**div id="header"**>  | <**header**>      |
@@ -100,21 +100,21 @@ Why?
 | <**div id="post"**>    | <**article**>     |
 | <**div id="footer"**>  | <**footer**>      |  
   
-#####Change Doctype  
+##### Change Doctype  
 ```
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 to
 <!DOCTYPE html>
 ```  
   
-#####Change to HTML5 Encoding  
+##### Change to HTML5 Encoding  
 ```
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 to
 <meta charset="utf-8">
 ```  
   
-#####Add The Shiv  
+##### Add The Shiv  
 Teach old browser HTML5 
 ```
 <!--[if lt IE 9]>
@@ -122,7 +122,7 @@ Teach old browser HTML5
 <![endif]-->
 ```  
   
-##Conventions
+## Conventions
 1. use lower case. use lower case. use lower case.   
 2. Always use lower case file names to avoid consistency issue on different servers;   
 3. Always close empty html elements <**meta charset="utf-8" /**>;  
@@ -154,7 +154,7 @@ p.into {font-family: Verdana; font-size: 16em;}
   
 
   
-##Others
+## Others
 h1 and p will be displayed in default format  
 http://html5.group.iteye.com/group/wiki/3293-html5  
 ```
@@ -171,19 +171,12 @@ http://html5.group.iteye.com/group/wiki/3293-html5
 
 
 
-##Video
+## Video
 
 ```
-<!DOCTYPE html>
-<html>
-<body>
-
 <video width="420" controls>
   <source src="mov_bbb.mp4" type="video/mp4">
   <source src="mov_bbb.ogg" type="video/ogg">
  Your browser does not support the video tag.
 </video>
-
-</body>
-</html>
 ```
