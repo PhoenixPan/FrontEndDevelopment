@@ -166,12 +166,39 @@ http://html5.group.iteye.com/group/wiki/3293-html5
 </div>
 ```
 
+## More About New Tags
+
+### data-type
+
+It takes three steps to transform a custom data attribute into a DOMStringMap key:  
+1. The data- prefix is removed from the attribute name
+2. Any hyphen followed by a lower case letter is removed from the name and the letter following it is converted to uppercase
+3. Other characters will remain unchanged. This means that any hyphen that is not followed by a lowercase letter will also remain unchanged.
+
+```
+/*html & css*/
+<li data-type="veg" data-distance="2miles" data-identifier="10318">Salad King</li>
+
+li[data-type='veg'] {
+  background: #8BC34A;
+}
+```
+
+```
+// JS manipulation
+var ratings = restaurant.getAttribute("data-ratings"); // or
+var ratings = restaurant.dataset.ratings;
+
+restaurant.setAttribute("data-owner-name", "someName"); // or
+restaurant.dataset["owner-name"] = newOwner;
+```
+
+Reference: https://www.sitepoint.com/how-why-use-html5-custom-data-attributes/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning
 
 
 
 
-
-## Video
+### video
 
 ```
 <video width="420" controls>
