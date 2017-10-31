@@ -131,98 +131,47 @@ outline-offset; /*Specifies the space between an outline and the edge or border 
 ## Selectors & Pseudo classes
 
 ### Selectors
-1. The 30 CSS Selectors You Must Memorize: https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048  
 
-	```
-	  /*Element selector*/
-	  h1 {
-	    background-color:blue;
-	  }
+**Basic**  
+* Element selector: `h1 {color:blue;}`
+* ID selector: `#id {color:blue;}`
+* Class selector: `.my-class {color:blue;}`
+* Attribute-based(details in the next section): `input[type="text"] {color:blue;}`
+* All elements: `#id * {color:blue;}`
+* Status: `a:visited {color:blue;}`
+* All children: `X Y {color:blue;}`
+* All direct children: `X > Y {color:blue;}`
+* Immediate sibling: `X + Y {color:blue;}`
+* All preceding sibling: `X ~ Y {color:blue;}`
+* Not (except): `div:not(#div-i-dont-want) {color: blue;}`
+* Child selectors: `X:first-child`
+* `X:nth-child(n)`
+* `X:last-child`
+* `X:nth-last-child`
+* `X:only-child` Apply if X is the only child of its parent
+* Nth of type selectors: `X:nth-of-type(odd) {color:blue;}`, Only apply to node-selectors, not class names
+* `X:nth-of-type(n)`
+* `X:nth-last-of-type(n)`
+* `X:only-of-type` 
+* `X:first-of-type`
 
-	  /*ID selector*/
-	  #id-selector {
-	    background-color:green;
-	  }
-
-	  /*Class selector*/
-	  .class-selector {
-	    background-color: red;
-	  }
-
-	  /*Attribute-based*/
-	  input[type="text"] {
-	    background: grey;
-	  }
-
-	  /*Star: all elements*/
-	  #id-selector * {
-	    margin: 0;
-	    padding: 0;
-	  }
-
-	  /*input:checked*/
-	  /*a:visited*/
-	  
-	  /*X Y: select all descendant Ys within X*/
-	  /*X + Y: only the sibling Y immediately follow X (have the same parent)*/
-	  /*X ~ Y: select all preceding sibling Ys of X (have the same parent)*/
-	  /*X > Y: select only immediate descendant Y of X (the first child of the parent)*/
-
-	  /*Only apply to node-selectors, not class names*/
-	  /*X:nth-of-type(n)*/
-	  div:nth-of-type(3) p {
-	    font-size:25px;
-	  }
-	  /*X:nth-last-of-type(n)*/
-	  /*X:only-of-type*/
-	  /*X:first-of-type*/
-
-	  /*Only the last element in the container*/
-	  /*X:first-child*/
-	  /*X:last-child*/
-	  /*X:nth-last-child(n)*/
-	  /*X:only-child*/
-	  /*X:nth-child(n)*/
-
-	  /*X:not(selector): except*/
-	  div:not(#div-i-dont-want) {
-	    color: blue;
-	  }
+**Select elements with attribute(s)**
+* elements with a certain attribute: `p[attribute]{...;}`            
+* elements with a certain value: `p[attribute="value"]{...;}`
+* elements that contain a certain value:  
+	`p[attribute~="value"]{...;}` only separate words, "value x" is ok, but ""value-x" and "values" will not work
+	`p[attribute*="value"]{...;}` any place
+* elements that start with a certain value:  
+	`p[attribute|="value"]{...;}` only single word or with "-", "value" and "value-x", not "value x"
+	`p[attribute^="value"]{...;}` any place
+* elements that end with a certain value, no rules, "-value", "\_value", "xvalue" will all be ok  
+	`p[attribute$="value"]{...;}`  
 	
-	  /* navbar-nav class inside navbar-inverse class, from which we select all the <a> in <li>*/
-	  .navbar-inverse .navbar-nav>li>a {}
-	```
-
-2. Limit the application of class. In this case, only <**span**> within <**p**> will be affected.
-
-	```
-	p.tip span {
-	  font-weight:bold;
-	  color:#ff9955;
-	}
-	```
-
-3. Select elements with certain attribute(s):
-	```
-	/*elements with this attribute*/
-	p[attribute]{...;}            
-
-	/*elements with a certain value*/
-	p[attribute="value"]{...;}
-
-	/*elements that contain a certain value*/
-	p[attribute~="value"]{...;}     /*only separate words, "value x" is ok, but ""value-x" and "values" will not work */
-	p[attribute*="value"]{...;}     /*any place*/
-
-	/*elements that start with a certain value
-	p[attribute|="value"]{...;}    /*only single word or with "-", "value" and "value-x", not "value x"*/
-	p[attribute^="value"]{...;}    /*any place*/
-
-	/*elements that end with a certain value, no rules, "-value", "_value", "xvalue" will all be ok*/
-	p[attribute$="value"]{...;}  
-	```
+##### Reference  
+[The 30 CSS Selectors You Must Memorize](https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
 
 ### Pseudo classes
+
 1. before and after: http://www.w3schools.com/cssref/sel_before.asp  
 	
 	insert content before or after the selected elements (and also style it)  
@@ -250,10 +199,11 @@ outline-offset; /*Specifies the space between an outline and the edge or border 
 	```
 	
 2. Relates to links:  
-  1. a:link {color: red}; - unvisited link;  
-  2. a:visited {color: green}; 
-  3. a:hover; - MUST come after a:link and a:visited in the CSS definition in order to be effective;  
-  4. a:active; - MUST come after a:hover in the CSS definition in order to be effective; 
+	* a:link {color: red}; - unvisited link;  
+	* a:visited {color: green}; 
+	* a:hover; - MUST come after a:link and a:visited in the CSS definition in order to be effective;  
+	* a:active; - MUST come after a:hover in the CSS definition in order to be effective; 
+	
 3. p:lang(anything) - define special rules for different language:  
 	```
 		q:lang(en) {
